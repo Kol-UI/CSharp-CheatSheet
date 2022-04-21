@@ -11,8 +11,22 @@ namespace CSharp_CheatSheet
         {
             Console.WriteLine("Hello World!"); // dotnet run
             // Exercise 17
+
+            // Student collection
+            IList<Student> studentList = new List<Student>() { 
+                new Student() { StudentID = 1, StudentName = "John", Age = 13} ,
+                new Student() { StudentID = 2, StudentName = "Marc",  Age = 21 } ,
+                new Student() { StudentID = 3, StudentName = "Bill",  Age = 18 } ,
+                new Student() { StudentID = 4, StudentName = "Ram" , Age = 20} ,
+                new Student() { StudentID = 5, StudentName = "Ron" , Age = 15 } ,
+                new Student() { StudentID = 6, StudentName = "Paul", Age = 17} ,
+                new Student() { StudentID = 7, StudentName = "Tom",  Age = 22 } ,
+                new Student() { StudentID = 8, StudentName = "Bob",  Age = 19 } ,
+                new Student() { StudentID = 9, StudentName = "Michel" , Age = 32} ,
+                new Student() { StudentID = 10, StudentName = "Leo" , Age = 7 } 
+            };
             Space();
-            AskExercise();
+            AskExercise(studentList);
 
         }
 
@@ -21,7 +35,7 @@ namespace CSharp_CheatSheet
             System.Console.WriteLine();
         }
 
-        public static void AskExercise()
+        public static void AskExercise(IList<Student> studentList)
         {
             Space();
             Console.WriteLine("Which Exercise ? \n1) User Input\n2) Basic Maths\n3) Swap Variables\n4) Input Maths\n5) Multiplication Table\n6) Containers\n7) Compare Number\n8) Convert Celsius\n9) Word Modifications\n10) LINQ Functions");
@@ -31,48 +45,48 @@ namespace CSharp_CheatSheet
             {
                 case 1:
                     InputExercise();
-                    AskExercise();
+                    AskExercise(studentList);
                     break;
                 case 2:
                     BasicMaths();
-                    AskExercise();
+                    AskExercise(studentList);
                     break;
                 case 3:
                     SwapVariable();
                     SecondSwap();
-                    AskExercise();
+                    AskExercise(studentList);
                     break;
                 case 4:
                     InputMultiplication();
-                    AskExercise();
+                    AskExercise(studentList);
                     break;
                 case 5:
                     MultiplicationTable();
-                    AskExercise();
+                    AskExercise(studentList);
                     break;
                 case 6:
                     ContainerFunction();
-                    AskExercise();
+                    AskExercise(studentList);
                     break;
                 case 7:
                     CompareNumber();
-                    AskExercise();
+                    AskExercise(studentList);
                     break;
                 case 8:
                     ConvertKelvinToFahrenheit();
-                    AskExercise();
+                    AskExercise(studentList);
                     break;
                 case 9:
                     WordModif();
-                    AskExercise();
+                    AskExercise(studentList);
                     break;
                 case 10:
-                    LinqFunctions();
-                    AskExercise();
+                    LinqFunctions(studentList);
+                    AskExercise(studentList);
                     break;
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");
-                    AskExercise();
+                    AskExercise(studentList);
                     break;
             }
         }
@@ -391,7 +405,7 @@ namespace CSharp_CheatSheet
 
 
         // LINQ Functions
-        public static void LinqFunctions()
+        public static void LinqFunctions(IList<Student> studentList)
         {
             Space();
             Console.WriteLine("Which LINQ Function ? \n1) Basic LINQ\n2) Find Positive\n3) Find Number after specifics calculations\n4) Frequency\n5) Query Syntaxe\n6) Operators List");
@@ -417,11 +431,11 @@ namespace CSharp_CheatSheet
                     QuerySyntaxeQuestions();
                     break;
                 case 6:
-                    LINQOperators();
+                    LINQOperators(studentList);
                     break;
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");
-                    LinqFunctions();
+                    LinqFunctions(studentList);
                     break;
             }
             Space();
@@ -594,19 +608,7 @@ namespace CSharp_CheatSheet
             public int Age { get; set; }
         }
 
-        // Student collection
-        IList<Student> studentList = new List<Student>() { 
-            new Student() { StudentID = 1, StudentName = "John", Age = 13} ,
-            new Student() { StudentID = 2, StudentName = "Marc",  Age = 21 } ,
-            new Student() { StudentID = 3, StudentName = "Bill",  Age = 18 } ,
-            new Student() { StudentID = 4, StudentName = "Ram" , Age = 20} ,
-            new Student() { StudentID = 5, StudentName = "Ron" , Age = 15 } ,
-            new Student() { StudentID = 6, StudentName = "Paul", Age = 17} ,
-            new Student() { StudentID = 7, StudentName = "Tom",  Age = 22 } ,
-            new Student() { StudentID = 8, StudentName = "Bob",  Age = 19 } ,
-            new Student() { StudentID = 9, StudentName = "Michel" , Age = 32} ,
-            new Student() { StudentID = 10, StudentName = "Leo" , Age = 7 } 
-        };
+        
 
         delegate bool IsTeenAger(Student stud);
 
@@ -688,7 +690,7 @@ namespace CSharp_CheatSheet
             }
         }
 
-        public static void LINQOperators(){
+        public static void LINQOperators(IList<Student> studentList){
             Space();
             Console.WriteLine("Which LINQ Operator ? \n1) Filtering Operator");
             var InputOperator = Console.ReadLine();
@@ -703,14 +705,14 @@ namespace CSharp_CheatSheet
                     switch (valueInputFilteringOperator)
                     {
                         case 1:
-                            LINQWhereFunction(Student studentList);
+                            LINQWhereFunction(studentList);
                             break;
                         case 2:
                             LINQOfTypeFunction();
                             break;
                         default:
                             Console.WriteLine("--- Warning: not acceptable value ! ---\n");
-                            LINQOperators();
+                            LINQOperators(studentList);
                             break;
                     }
                     break;
@@ -734,7 +736,7 @@ namespace CSharp_CheatSheet
                     break;
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");
-                    LINQOperators();
+                    LINQOperators(studentList);
                     break;
             }
         }
