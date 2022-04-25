@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Threading;
 
@@ -785,8 +786,29 @@ namespace CSharp_CheatSheet
         }
 
         public static void LINQOfTypeFunction(){
-            Console.WriteLine("-- OfType --\n-- Returns values from the collection based on a specified type. However, it will depend on their ability to cast to a specified type --");
+            Space();
+            Console.WriteLine("-- OfType --\n-- Returns values from the collection based on a specified type. However, it will depend on their ability to cast to a specified type --\n");
         
+            IList mixedList = new ArrayList();
+            mixedList.Add(0);
+            mixedList.Add("One");
+            mixedList.Add("Two");
+            mixedList.Add(3);
+            mixedList.Add(new Student() { StudentID = 1, StudentName = "Bill" });
+            
+            var stringResult = from s in mixedList.OfType<string>() select s;
+            var intResult = from s in mixedList.OfType<int>() select s;
+            var stdResult = from s in mixedList.OfType<Student>() select s;
+            
+            Console.WriteLine("OfType String:");
+            foreach (var str in stringResult)
+                Console.WriteLine(str);
+            Console.WriteLine("OfType Int:");
+            foreach (var integer in intResult)
+                Console.WriteLine(integer);
+            Console.WriteLine("OfType Student:");
+            foreach (var std in stdResult)
+                Console.WriteLine(std.StudentName);
         }
 
 
