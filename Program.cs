@@ -693,7 +693,7 @@ namespace CSharp_CheatSheet
 
         public static void LINQOperators(IList<Student> studentList){
             Space();
-            Console.WriteLine("Which LINQ Operator ? \n1) Filtering Operator");
+            Console.WriteLine("Which LINQ Operator ? \n1) Filtering Operator \n2) Sorting Operator");
             var InputOperator = Console.ReadLine();
             int valueInputOperator = int.Parse(InputOperator);
             switch (valueInputOperator)
@@ -718,6 +718,30 @@ namespace CSharp_CheatSheet
                     }
                     break;
                 case 2:
+                    Space();
+                    Console.WriteLine("Which LINQ Sorting Operator ? \n1) OrderBy\n2) OrderByDescending\n3) ThenBy\n4) ThenByDescending");
+                    var InputSortingOperator = Console.ReadLine();
+                    int valueInputSortingOperator = int.Parse(InputSortingOperator);
+                    switch (valueInputSortingOperator)
+                    {
+                        case 1:
+                            // OrderBy
+                            LINQOrderByFunction(studentList);
+                            break;
+                        case 2:
+                            // OrderByDescending
+                            break;
+                        case 3:
+                            // ThenBy
+                            break;
+                        case 4:
+                            // ThenByDescending
+                            break;
+                        default:
+                            Console.WriteLine("--- Warning: not acceptable value ! ---\n");
+                            LINQOperators(studentList);
+                            break;
+                    }
                     break;
                 case 3:
                     break;
@@ -800,17 +824,56 @@ namespace CSharp_CheatSheet
             var intResult = from s in mixedList.OfType<int>() select s;
             var stdResult = from s in mixedList.OfType<Student>() select s;
             
+            // Only String
             Console.WriteLine("OfType String:");
             foreach (var str in stringResult)
                 Console.WriteLine(str);
+            // Only Int
             Console.WriteLine("OfType Int:");
             foreach (var integer in intResult)
                 Console.WriteLine(integer);
+            // Only Student Name
             Console.WriteLine("OfType Student:");
             foreach (var std in stdResult)
                 Console.WriteLine(std.StudentName);
         }
 
+        public static void LINQOrderByFunction(IList<Student> studentList){
+            Space();
+            Console.WriteLine("-- OrderBy --\n-- Sorts the elements in the collection based on specified fields in ascending or decending order --");
+            var orderByResult = from s in studentList
+                   orderby s.StudentName // Sorts the studentList collection in ascending order
+                   select s;
+
+            var orderByDescendingResult = from s in studentList // Sorts the studentList collection in descending order
+                    orderby s.StudentName descending
+                    select s;
+            
+            Space();
+            Console.WriteLine("Ascending Order (Name):");
+            foreach (var std in orderByResult)
+                Console.WriteLine(std.StudentName);
+            Space();
+            Console.WriteLine("Descending Order (Name):");
+            foreach (var std in orderByDescendingResult)
+                Console.WriteLine(std.StudentName);
+            
+            var orderByAgeResult = from s in studentList
+                   orderby s.Age // Sorts the studentList collection in ascending order
+                   select s;
+            Space();
+            Console.WriteLine("Ascending Order (Age):");
+            foreach (var std in orderByAgeResult)
+                Console.WriteLine(std.StudentName + " - Age : " + std.Age + " years old.");
+
+            var orderByAgeDescendingResult = from s in studentList
+                   orderby s.Age descending // Sorts the studentList collection in descending order
+                   select s;
+            Space();
+            Console.WriteLine("Descending Order (Age):");
+            foreach (var std in orderByAgeDescendingResult)
+                Console.WriteLine(std.StudentName + " - Age : " + std.Age + " years old.");
+        }
 
 
 
