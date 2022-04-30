@@ -730,6 +730,7 @@ namespace CSharp_CheatSheet
                             break;
                         case 2:
                             // OrderByDescending
+                            LINQOrderByDescendingFunction(studentList);
                             break;
                         case 3:
                             // ThenBy
@@ -845,37 +846,57 @@ namespace CSharp_CheatSheet
                    orderby s.StudentName // Sorts the studentList collection in ascending order
                    select s;
 
-            var orderByDescendingResult = from s in studentList // Sorts the studentList collection in descending order
-                    orderby s.StudentName descending
+            var orderByAgeResult = from s in studentList
+                   orderby s.Age // Sorts the studentList collection in ascending order
+                   select s;
+
+            var orderByStudentIDResult = from s in studentList
+                    orderby s.StudentID // Sorts the studentList collection in ascending order
                     select s;
-            
+
             Space();
             Console.WriteLine("Ascending Order (Name):");
             foreach (var std in orderByResult)
                 Console.WriteLine(std.StudentName);
-            Space();
-            Console.WriteLine("Descending Order (Name):");
-            foreach (var std in orderByDescendingResult)
-                Console.WriteLine(std.StudentName);
             
-            var orderByAgeResult = from s in studentList
-                   orderby s.Age // Sorts the studentList collection in ascending order
-                   select s;
             Space();
             Console.WriteLine("Ascending Order (Age):");
             foreach (var std in orderByAgeResult)
                 Console.WriteLine(std.StudentName + " - Age : " + std.Age + " years old.");
 
+            Space();
+            Console.WriteLine("Ascending Order (ID)");
+            foreach (var std in orderByStudentIDResult)
+                Console.WriteLine(std.StudentName + " - ID : " + std.StudentID);
+
+        }
+
+        public static void LINQOrderByDescendingFunction(IList<Student> studentList){
+            var orderByDescendingResult = from s in studentList // Sorts the studentList collection in descending order
+                    orderby s.StudentName descending
+                    select s;
             var orderByAgeDescendingResult = from s in studentList
                    orderby s.Age descending // Sorts the studentList collection in descending order
                    select s;
+            var orderByStudentIDDescendingResult = from s in studentList
+                    orderby s.StudentID descending // Sorts the studentList collection in descending order
+                    select s;
+
+            Space();
+            Console.WriteLine("Descending Order (Name):");
+            foreach (var std in orderByDescendingResult)
+                Console.WriteLine(std.StudentName);
+            
             Space();
             Console.WriteLine("Descending Order (Age):");
             foreach (var std in orderByAgeDescendingResult)
                 Console.WriteLine(std.StudentName + " - Age : " + std.Age + " years old.");
+
+            Space();
+            Console.WriteLine("Descending Order (ID)");
+            foreach (var std in orderByStudentIDDescendingResult)
+                Console.WriteLine(std.StudentName + " - ID : " + std.StudentID);
         }
-
-
 
 
     }
