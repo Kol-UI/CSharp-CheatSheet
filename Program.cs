@@ -700,7 +700,7 @@ namespace CSharp_CheatSheet
             int valueInputOperator = int.Parse(InputOperator);
             switch (valueInputOperator)
             {
-                case 1:
+                case 1: // Filtering Operators (Where OfType)
                     Space();
                     Console.WriteLine("Which LINQ Filtering Operator ? \n1) Where\n2) OfType");
                     var InputFilteringOperator = Console.ReadLine();
@@ -719,7 +719,7 @@ namespace CSharp_CheatSheet
                             break;
                     }
                     break;
-                case 2:
+                case 2: // Sorting Operators (OrderBy ThenBy)
                     Space();
                     Console.WriteLine("Which LINQ Sorting Operator ? \n1) OrderBy\n2) OrderByDescending\n3) ThenBy\n4) ThenByDescending");
                     var InputSortingOperator = Console.ReadLine();
@@ -748,7 +748,27 @@ namespace CSharp_CheatSheet
                             break;
                     }
                     break;
-                case 3:
+                case 3: // Grouping Operators (GroupBy ToLookup)
+                    Space();
+                    Console.WriteLine("Which LINQ Grouping Operator ? \n1) GroupBy\n");
+                    var InputGroupingOperator = Console.ReadLine();
+                    int valueInputGroupingOperator = int.Parse(InputGroupingOperator);
+                    switch (valueInputGroupingOperator)
+                    {
+                        case 1:
+                            // GroupBy
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        case 4:
+                            break;
+                        default:
+                            Console.WriteLine("--- Warning: not acceptable value ! ---\n");
+                            LINQOperators(studentList);
+                            break;
+                    }
                     break;
                 case 4:
                     break;
