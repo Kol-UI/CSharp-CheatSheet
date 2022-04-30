@@ -24,7 +24,9 @@ namespace CSharp_CheatSheet
                 new Student() { StudentID = 7, StudentName = "Tom",  Age = 22 } ,
                 new Student() { StudentID = 8, StudentName = "Bob",  Age = 19 } ,
                 new Student() { StudentID = 9, StudentName = "Michel" , Age = 32} ,
-                new Student() { StudentID = 10, StudentName = "Leo" , Age = 7 } 
+                new Student() { StudentID = 10, StudentName = "Leo" , Age = 7 },
+                new Student() { StudentID = 11, StudentName = "Pierre" , Age = 17 },
+                new Student() { StudentID = 10, StudentName = "Patrick" , Age = 18 } 
             };
             Space();
             AskExercise(studentList);
@@ -734,9 +736,11 @@ namespace CSharp_CheatSheet
                             break;
                         case 3:
                             // ThenBy
+                            LINQThenByFunction(studentList);
                             break;
                         case 4:
                             // ThenByDescending
+                            LINQThenByDescendingFunction(studentList);
                             break;
                         default:
                             Console.WriteLine("--- Warning: not acceptable value ! ---\n");
@@ -897,6 +901,21 @@ namespace CSharp_CheatSheet
             foreach (var std in orderByStudentIDDescendingResult)
                 Console.WriteLine(std.StudentName + " - ID : " + std.StudentID);
         }
+
+        public static void LINQThenByFunction(IList<Student> studentList){
+            var thenByResult = studentList.OrderBy(s => s.StudentName).ThenBy(s => s.Age).ThenBy(s => s.StudentID);
+            Console.WriteLine("ThenBy:");
+            foreach (var std in thenByResult)
+                Console.WriteLine("Name: {0}, Age:{1}, ID:{2}", std.StudentName, std.Age, std.StudentID);
+        }
+
+        public static void LINQThenByDescendingFunction(IList<Student> studentList){
+            var thenByDescResult = studentList.OrderBy(s => s.StudentName).ThenByDescending(s => s.Age).ThenByDescending(s => s.StudentID);
+            Console.WriteLine("ThenBy Descending:");
+            foreach (var std in thenByDescResult)
+                Console.WriteLine("Name: {0}, Age:{1}, ID:{2}", std.StudentName, std.Age, std.StudentID);
+        }
+
 
 
     }
