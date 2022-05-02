@@ -25,8 +25,11 @@ namespace CSharp_CheatSheet
                 new Student() { StudentID = 8, StudentName = "Bob",  Age = 19 } ,
                 new Student() { StudentID = 9, StudentName = "Michel" , Age = 32} ,
                 new Student() { StudentID = 10, StudentName = "Leo" , Age = 7 },
-                new Student() { StudentID = 11, StudentName = "Pierre" , Age = 17 },
-                new Student() { StudentID = 10, StudentName = "Patrick" , Age = 18 } 
+                new Student() { StudentID = 10, StudentName = "Pierre" , Age = 17 },
+                new Student() { StudentID = 10, StudentName = "Patrick" , Age = 18 },
+                new Student() { StudentID = 11, StudentName = "Kevin" , Age = 22 }, // For Group by ID
+                new Student() { StudentID = 11, StudentName = "Bill",  Age = 24 }, // For Group by Name
+                new Student() { StudentID = 12, StudentName = "Paul", Age = 25}, // For Group by Name
             };
             Space();
             AskExercise(studentList);
@@ -695,7 +698,7 @@ namespace CSharp_CheatSheet
 
         public static void LINQOperators(IList<Student> studentList){
             Space();
-            Console.WriteLine("Which LINQ Operator ? \n1) Filtering Operator \n2) Sorting Operator");
+            Console.WriteLine("Which LINQ Operator ? \n1) Filtering Operator \n2) Sorting Operator\n3) Grouping Operators");
             var InputOperator = Console.ReadLine();
             int valueInputOperator = int.Parse(InputOperator);
             switch (valueInputOperator)
@@ -750,19 +753,18 @@ namespace CSharp_CheatSheet
                     break;
                 case 3: // Grouping Operators (GroupBy ToLookup)
                     Space();
-                    Console.WriteLine("Which LINQ Grouping Operator ? \n1) GroupBy\n");
+                    Console.WriteLine("Which LINQ Grouping Operator ? \n1) GroupBy");
                     var InputGroupingOperator = Console.ReadLine();
                     int valueInputGroupingOperator = int.Parse(InputGroupingOperator);
                     switch (valueInputGroupingOperator)
                     {
                         case 1:
                             // GroupBy
+                            LINQGroupByFunction(studentList);
                             break;
                         case 2:
-                            break;
-                        case 3:
-                            break;
-                        case 4:
+                            // ToLookUp
+                            LINQToLookUpFunction(studentList);
                             break;
                         default:
                             Console.WriteLine("--- Warning: not acceptable value ! ---\n");
@@ -936,7 +938,41 @@ namespace CSharp_CheatSheet
                 Console.WriteLine("Name: {0}, Age:{1}, ID:{2}", std.StudentName, std.Age, std.StudentID);
         }
 
+        public static void LINQGroupByFunction(IList<Student> studentList){
+            var groupedAgeResult = from s in studentList group s by s.Age;
+            var groupedNameResult = from s in studentList group s by s.StudentName;
+            var groupedIDResult = from s in studentList group s by s.StudentID;
 
+            //iterate each group  
+            Space();
+            Console.WriteLine("----- Group by Age -----");
+            foreach (var ageGroup in groupedAgeResult)
+            {
+                Console.WriteLine("-- Age Group: {0}", ageGroup.Key); // Each group has a key 
+                foreach(Student s in ageGroup) // Each group has inner collection
+                    Console.WriteLine("Student Name: {0}", s.StudentName);
+            }
+            Space();
+            Console.WriteLine("----- Group by Name -----");
+            foreach (var ageGroup in groupedNameResult)
+            {
+                Console.WriteLine("-- Name Group: {0}", ageGroup.Key);
+                foreach(Student s in ageGroup)
+                    Console.WriteLine("Student Name: {0}", s.StudentName);
+            }
+            Space();
+            Console.WriteLine("----- Group by ID -----");
+            foreach (var ageGroup in groupedIDResult)
+            {
+                Console.WriteLine("-- ID Group: {0}", ageGroup.Key); 
+                foreach(Student s in ageGroup)
+                    Console.WriteLine("Student Name: {0}", s.StudentName);
+            }
+        }
+
+        public static void LINQToLookUpFunction(IList<Student> studentList){
+
+        }
 
     }
 }
