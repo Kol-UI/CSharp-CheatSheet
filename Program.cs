@@ -6,7 +6,7 @@ using System.Threading;
 
 namespace CSharp_CheatSheet
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -31,6 +31,8 @@ namespace CSharp_CheatSheet
                 new Student() { StudentID = 11, StudentName = "Bill",  Age = 24 }, // For Group by Name
                 new Student() { StudentID = 12, StudentName = "Paul", Age = 25}, // For Group by Name
             };
+
+            Function.TestFunction(studentList);
             Space();
             AskExercise(studentList);
 
@@ -606,12 +608,6 @@ namespace CSharp_CheatSheet
             foreach(Student std in teenAgerStudentForMethod){			
                 Console.WriteLine(std.StudentName);
             }
-        }
-
-        public class Student{
-            public int StudentID { get; set; }
-            public string StudentName { get; set; }
-            public int Age { get; set; }
         }
 
         
