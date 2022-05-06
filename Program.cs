@@ -12,6 +12,8 @@ namespace CSharp_CheatSheet
         {
             Console.WriteLine("Hello World!"); // dotnet run
             // Exercise 17
+            CardsFaroShuffle.CardsFaroShuffleMain();
+
 
             // Student collection
             IList<Student> studentList = new List<Student>() { 
@@ -410,9 +412,6 @@ namespace CSharp_CheatSheet
             Console.WriteLine("Result:" + $"{word[word.Length-1]}" + $"{word.Substring(1,word.Length-2)}" + $"{word[0]}");
         }
 
-        public static void LINQToLookUpFunction(IList<Student> studentList){
-
-        }
 
     }
 }

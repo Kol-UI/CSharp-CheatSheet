@@ -8,7 +8,7 @@ namespace CSharp_CheatSheet
     {
         public static void LINQOperators(IList<Student> studentList){
             Program.Space();
-            Console.WriteLine("Which LINQ Operator ? \n1) Filtering Operator \n2) Sorting Operator\n3) Grouping Operators");
+            Console.WriteLine("Which LINQ Operator ? \n1) Filtering Operator \n2) Sorting Operator\n3) Grouping Operators\n4) Joining Operators");
             var InputOperator = Console.ReadLine();
             int valueInputOperator = int.Parse(InputOperator);
             switch (valueInputOperator)
@@ -32,6 +32,8 @@ namespace CSharp_CheatSheet
                             break;
                     }
                     break;
+
+
                 case 2: // Sorting Operators (OrderBy ThenBy)
                     Program.Space();
                     Console.WriteLine("Which LINQ Sorting Operator ? \n1) OrderBy\n2) OrderByDescending\n3) ThenBy\n4) ThenByDescending");
@@ -61,6 +63,8 @@ namespace CSharp_CheatSheet
                             break;
                     }
                     break;
+
+
                 case 3: // Grouping Operators (GroupBy ToLookup)
                     Program.Space();
                     Console.WriteLine("Which LINQ Grouping Operator ? \n1) GroupBy (Query Syntax)\n2) GroupBy (Method Syntax)");
@@ -78,7 +82,7 @@ namespace CSharp_CheatSheet
                             break;
                         case 3:
                             // ToLookUp
-                            Program.LINQToLookUpFunction(studentList);
+                            ToLookUpOperator.LINQToLookUpFunction(studentList);
                             break;
                         default:
                             Console.WriteLine("--- Warning: not acceptable value ! ---\n");
@@ -86,8 +90,31 @@ namespace CSharp_CheatSheet
                             break;
                     }
                     break;
-                case 4:
+
+
+                case 4: // Joining Operators
+                    Program.Space();
+                    Console.WriteLine("Which LINQ Joining Operator ? \n1)Join");
+                    var InputJoiningOperator = Console.ReadLine();
+                    int valueInputJoiningOperator = int.Parse(InputJoiningOperator);
+                    switch (valueInputJoiningOperator)
+                    {
+                        case 1: // Join
+                            JoinOperator.JoinOperatorFunction();
+                            JoinOperator.JoinMoreComplexe();
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        default:
+                            Console.WriteLine("--- Warning: not acceptable value ! ---\n");
+                            LINQOperators(studentList);
+                            break;
+                    }
                     break;
+
+
                 case 5:
                     break;
                 case 6:
