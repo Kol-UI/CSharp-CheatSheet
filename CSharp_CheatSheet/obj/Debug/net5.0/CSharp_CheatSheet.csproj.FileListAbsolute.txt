@@ -1,0 +1,15 @@
+/Users/hamelin/Documents/CSharp_CheatSheet/bin/Debug/net5.0/CSharp_CheatSheet.deps.json
+/Users/hamelin/Documents/CSharp_CheatSheet/bin/Debug/net5.0/CSharp_CheatSheet.runtimeconfig.json
+/Users/hamelin/Documents/CSharp_CheatSheet/bin/Debug/net5.0/CSharp_CheatSheet.runtimeconfig.dev.json
+/Users/hamelin/Documents/CSharp_CheatSheet/bin/Debug/net5.0/CSharp_CheatSheet.dll
+/Users/hamelin/Documents/CSharp_CheatSheet/bin/Debug/net5.0/ref/CSharp_CheatSheet.dll
+/Users/hamelin/Documents/CSharp_CheatSheet/bin/Debug/net5.0/CSharp_CheatSheet.pdb
+/Users/hamelin/Documents/CSharp_CheatSheet/obj/Debug/net5.0/CSharp_CheatSheet.csproj.AssemblyReference.cache
+/Users/hamelin/Documents/CSharp_CheatSheet/obj/Debug/net5.0/CSharp_CheatSheet.GeneratedMSBuildEditorConfig.editorconfig
+/Users/hamelin/Documents/CSharp_CheatSheet/obj/Debug/net5.0/CSharp_CheatSheet.AssemblyInfoInputs.cache
+/Users/hamelin/Documents/CSharp_CheatSheet/obj/Debug/net5.0/CSharp_CheatSheet.AssemblyInfo.cs
+/Users/hamelin/Documents/CSharp_CheatSheet/obj/Debug/net5.0/CSharp_CheatSheet.csproj.CoreCompileInputs.cache
+/Users/hamelin/Documents/CSharp_CheatSheet/obj/Debug/net5.0/CSharp_CheatSheet.dll
+/Users/hamelin/Documents/CSharp_CheatSheet/obj/Debug/net5.0/ref/CSharp_CheatSheet.dll
+/Users/hamelin/Documents/CSharp_CheatSheet/obj/Debug/net5.0/CSharp_CheatSheet.pdb
+/Users/hamelin/Documents/CSharp_CheatSheet/obj/Debug/net5.0/CSharp_CheatSheet.genruntimeconfig.cache
