@@ -32,6 +32,10 @@ namespace CSharp_CheatSheet
                 new Student() { StudentID = 11, StudentName = "Kevin" , Age = 22 }, // For Group by ID
                 new Student() { StudentID = 11, StudentName = "Bill",  Age = 24 }, // For Group by Name
                 new Student() { StudentID = 12, StudentName = "Paul", Age = 25}, // For Group by Name
+                new Student() { StudentID = 1, StudentName = "Arthur", Age = 18, StandardID = 1 } , // Standard ID
+                new Student() { StudentID = 2, StudentName = "Paul",  Age = 21, StandardID = 1 } ,
+                new Student() { StudentID = 3, StudentName = "Roger",  Age = 18, StandardID = 2 } ,
+                new Student() { StudentID = 4, StudentName = "Max" , Age = 20, StandardID = 2 } ,
             };
 
             // Template

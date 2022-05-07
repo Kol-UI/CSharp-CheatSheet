@@ -94,7 +94,7 @@ namespace CSharp_CheatSheet
 
                 case 4: // Joining Operators
                     Program.Space();
-                    Console.WriteLine("Which LINQ Joining Operator ? \n1)Join");
+                    Console.WriteLine("Which LINQ Joining Operator ? \n1) Join\n2) Group Join");
                     var InputJoiningOperator = Console.ReadLine();
                     int valueInputJoiningOperator = int.Parse(InputJoiningOperator);
                     switch (valueInputJoiningOperator)
@@ -104,6 +104,7 @@ namespace CSharp_CheatSheet
                             JoinOperator.JoinMoreComplexe();
                             break;
                         case 2:
+                            GroupJoinOperator.GroupJoinOperatorFunction(studentList);
                             break;
                         case 3:
                             break;
