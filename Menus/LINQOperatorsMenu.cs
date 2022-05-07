@@ -67,7 +67,7 @@ namespace CSharp_CheatSheet
 
                 case 3: // Grouping Operators (GroupBy ToLookup)
                     Program.Space();
-                    Console.WriteLine("Which LINQ Grouping Operator ? \n1) GroupBy (Query Syntax)\n2) GroupBy (Method Syntax)");
+                    Console.WriteLine("Which LINQ Grouping Operator ? \n1) GroupBy (Query Syntax)\n2) GroupBy (Method Syntax)\n ToLookUp (Method Syntax Only)");
                     var InputGroupingOperator = Console.ReadLine();
                     int valueInputGroupingOperator = int.Parse(InputGroupingOperator);
                     switch (valueInputGroupingOperator)
