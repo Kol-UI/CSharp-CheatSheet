@@ -31,6 +31,32 @@ namespace CSharp_CheatSheet
             }
             
         }
+
+        public static void GroupJoinQuerySyntaxeFunction(IList<Student> studentList){
+            
+            IList<Standard> standardList = new List<Standard>() { 
+                    new Standard(){ StandardID = 1, StandardName="Standard 1"},
+                    new Standard(){ StandardID = 2, StandardName="Standard 2"},
+                    new Standard(){ StandardID = 3, StandardName="Standard 3"}
+                };
+                
+            var groupJoin = from std in standardList 
+                            join s in studentList 
+                            on std.StandardID equals s.StandardID
+                            into studentGroup
+                            select new { 
+                                Students = studentGroup , 
+                                StandardName = std.StandardName 
+                            };
+
+            foreach (var item in groupJoin)
+            { 
+                Console.WriteLine(item.StandardName );
+                
+                foreach(var stud in item.Students)
+                    Console.WriteLine(stud.StudentName);
+            }
+        }
             
     }
 

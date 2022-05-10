@@ -94,7 +94,7 @@ namespace CSharp_CheatSheet
 
                 case 4: // Joining Operators
                     Program.Space();
-                    Console.WriteLine("Which LINQ Joining Operator ? \n1) Join\n2) Group Join");
+                    Console.WriteLine("Which LINQ Joining Operator ? \n1) Join\n2) Group Join (Method)\n3) Group Join (Query)");
                     var InputJoiningOperator = Console.ReadLine();
                     int valueInputJoiningOperator = int.Parse(InputJoiningOperator);
                     switch (valueInputJoiningOperator)
@@ -107,6 +107,7 @@ namespace CSharp_CheatSheet
                             GroupJoinOperator.GroupJoinOperatorFunction(studentList);
                             break;
                         case 3:
+                            GroupJoinOperator.GroupJoinQuerySyntaxeFunction(studentList);
                             break;
                         default:
                             Console.WriteLine("--- Warning: not acceptable value ! ---\n");
