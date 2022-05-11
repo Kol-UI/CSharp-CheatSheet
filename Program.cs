@@ -36,6 +36,7 @@ namespace CSharp_CheatSheet
                 new Student() { StudentID = 2, StudentName = "Paul",  Age = 21, StandardID = 1 } ,
                 new Student() { StudentID = 3, StudentName = "Roger",  Age = 18, StandardID = 2 } ,
                 new Student() { StudentID = 4, StudentName = "Max" , Age = 20, StandardID = 2 } ,
+                new Student() { StudentID = 4, StudentName = "Clara" , Age = 19, StandardID = 3 } ,
             };
 
             // Template

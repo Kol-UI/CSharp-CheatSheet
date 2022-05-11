@@ -8,7 +8,7 @@ namespace CSharp_CheatSheet
     {
         public static void LINQOperators(IList<Student> studentList){
             Program.Space();
-            Console.WriteLine("Which LINQ Operator ? \n1) Filtering Operator \n2) Sorting Operator\n3) Grouping Operators\n4) Joining Operators");
+            Console.WriteLine("Which LINQ Operator ? \n1) Filtering Operator \n2) Sorting Operator\n3) Grouping Operators\n4) Joining Operators\n5) Projection Operators");
             var InputOperator = Console.ReadLine();
             int valueInputOperator = int.Parse(InputOperator);
             switch (valueInputOperator)
@@ -21,7 +21,7 @@ namespace CSharp_CheatSheet
                     switch (valueInputFilteringOperator)
                     {
                         case 1:
-                            WhereOperator.LINQWhereFunction(studentList);
+                            WhereOperator.LINQWhereFunction();
                             break;
                         case 2:
                             OfTypeOperator.LINQOfTypeFunction();
@@ -94,7 +94,7 @@ namespace CSharp_CheatSheet
 
                 case 4: // Joining Operators
                     Program.Space();
-                    Console.WriteLine("Which LINQ Joining Operator ? \n1) Join\n2) Group Join (Method)\n3) Group Join (Query)");
+                    Console.WriteLine("Which LINQ Joining Operator ? \n1) Join\n2) Group Join (Method)\n3) Group Join (Query)\n4) Group Join Complexe (Method)\n5) Group Join Complexe (Query)\n6) Group Join User Defined");
                     var InputJoiningOperator = Console.ReadLine();
                     int valueInputJoiningOperator = int.Parse(InputJoiningOperator);
                     switch (valueInputJoiningOperator)
@@ -103,11 +103,20 @@ namespace CSharp_CheatSheet
                             JoinOperator.JoinOperatorFunction();
                             JoinOperator.JoinMoreComplexe();
                             break;
-                        case 2:
+                        case 2: // Group Join
                             GroupJoinOperator.GroupJoinOperatorFunction(studentList);
                             break;
                         case 3:
                             GroupJoinOperator.GroupJoinQuerySyntaxeFunction(studentList);
+                            break;
+                        case 4:
+                            GroupJoinOperator.GroupJoinMoreComplexeFunction();
+                            break;
+                        case 5:
+                            GroupJoinOperator.GroupJoinMoreComplexeFunctionQuery();
+                            break;
+                        case 6:
+                            GroupJoinOperator.GroupJoinMoreComplexeFunctionUserDefined();
                             break;
                         default:
                             Console.WriteLine("--- Warning: not acceptable value ! ---\n");
@@ -117,8 +126,39 @@ namespace CSharp_CheatSheet
                     break;
 
 
-                case 5:
+                case 5: // Projection Operators
+                    Program.Space();
+                    Console.WriteLine("Which LINQ Projection Operator ? \n1) Select Operator\n2) Select Operator (Query Syntaxe)\n3) Select Operator (Method Syntaxe)\n4) Select Many Operator\n5) Select vs Select Many\n6) Zip Operator");
+                    var InputProjectionOperator = Console.ReadLine();
+                    int valueInputProjectionOperator = int.Parse(InputProjectionOperator);
+                    switch (valueInputProjectionOperator)
+                    {
+                        case 1: // Select
+                            SelectOperator.SelectFunction();
+                            break;
+                        case 2:
+                            SelectOperator.SelectQuerySyntaxe();
+                            break;
+                        case 3:
+                            SelectOperator.SelectMethodSyntaxe();
+                            break;
+                        case 4:
+                            SelectManyOperator.SelectManyFunction();
+                            break;
+                        case 5:
+                            SelectManyOperator.SelectVsSelectMany();
+                            break;
+                        case 6:
+                            ZipOperator.LINQZipFunction();
+                            break;
+                        default:
+                            Console.WriteLine("--- Warning: not acceptable value ! ---\n");
+                            LINQOperators(studentList);
+                            break;
+                    }
                     break;
+
+                
                 case 6:
                     break;
                 case 7:
