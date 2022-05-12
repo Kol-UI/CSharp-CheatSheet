@@ -36,7 +36,7 @@ Program:
             1 GroupBy (Query Syntax)
             2 GroupBy (Method Syntax)
             3 ToLookUp (Method Syntax Only)
-        4 Joining Operators
+        4 Joining Operators\n
             1 Join
             2 GroupJoin (Method)
             3 GroupJoin (Query)
