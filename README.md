@@ -53,3 +53,11 @@ Program:
         6. Quantifier Operators
             1. All
             2. Any
+            3. Contains
+        7. Aggregation Operators
+            1. Aggregate
+            2. LongCount
+            3. Average
+            4. Count
+            5. Max
+            6. Min

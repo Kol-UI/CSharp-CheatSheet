@@ -8,7 +8,7 @@ namespace CSharp_CheatSheet
     {
         public static void LINQOperators(IList<Student> studentList){
             Program.Space();
-            Console.WriteLine("Which LINQ Operator ? \n1) Filtering Operator \n2) Sorting Operator\n3) Grouping Operators\n4) Joining Operators\n5) Projection Operators\n6) Quantifier Operators");
+            Console.WriteLine("Which LINQ Operator ? \n1) Filtering Operator \n2) Sorting Operator\n3) Grouping Operators\n4) Joining Operators\n5) Projection Operators\n6) Quantifier Operators\n7) Aggregation Operators");
             var InputOperator = Console.ReadLine();
             int valueInputOperator = int.Parse(InputOperator);
             switch (valueInputOperator)
@@ -161,7 +161,7 @@ namespace CSharp_CheatSheet
                 
                 case 6: // Quantifier Operators
                     Program.Space();
-                    Console.WriteLine("Which LINQ Quantifier Operator ? \n1) All\n2) Any\n3) \n4) \n5) \n6) ");
+                    Console.WriteLine("Which LINQ Quantifier Operator ? \n1) All\n2) Any\n3) Contains");
                     var InputQuantifierOperator = Console.ReadLine();
                     int valueInputQuantifierOperator = int.Parse(InputQuantifierOperator);
                     switch (valueInputQuantifierOperator)
@@ -173,13 +173,8 @@ namespace CSharp_CheatSheet
                         case 2: // Any
                             AnyOperator.LINQAnyFunction();
                             break;
-                        case 3:
-                            break;
-                        case 4:
-                            break;
-                        case 5:
-                            break;
-                        case 6:
+                        case 3: // Contains
+                            ContainsOperator.LINQContainsFunction();
                             break;
                         default:
                             Console.WriteLine("--- Warning: not acceptable value ! ---\n");
@@ -190,8 +185,48 @@ namespace CSharp_CheatSheet
 
 
 
-                case 7:
+                case 7: // Aggregation Operators
+                    Program.Space();
+                    Console.WriteLine("Which LINQ Quantifier Operator ? \n1) Aggregate\n2) LongCount\n3) Average\n4) Count\n5) Max\n6) Min");
+                    var InputAggregationOperator = Console.ReadLine();
+                    int valueInputAggregationOperator = int.Parse(InputAggregationOperator);
+                    switch (valueInputAggregationOperator)
+                    {
+                        case 1: // Aggregate
+                            Console.WriteLine("Aggregate: Performs a custom aggregation operation on the values in the collection.");
+                            AggregateOperator.LINQAggregateFunction();
+                            break;
+                        case 2: // LongCount
+                            LongCountOperator.LINQLongCountOperator();
+                            LongCountOperator.LINQLongCountOperatorStudents();
+                            LongCountOperator.LINQLongCountOperator2();
+                            break;
+                        case 3: // Average
+                            AverageOperator.LINQAverageFunction();
+                            break;
+                        case 4: // Count
+                            CountOperator.LINQCountFunction();
+                            break;
+                        case 5: // Max
+                            MaxOperator.LINQMaxFunction();
+                            break;
+                        case 6: // Min
+                            MinOperator.LINQMinFunction();
+                            break;
+                        default:
+                            Console.WriteLine("--- Warning: not acceptable value ! ---\n");
+                            LINQOperators(studentList);
+                            break;
+                    }
                     break;
+
+
+
+
+
+
+
+
                 case 8:
                     break;
                 case 9:
