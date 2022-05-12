@@ -53,23 +53,3 @@ Program:
         6. Quantifier Operators
             1. All
             2. Any
-        
-
-10. Linq Functions
-    <ol>
-    <li>Basic Linq</li>
-    <li>Find Positive</li>
-    <li>Find Number after specifics calculations</li>
-    <li>Frequency</li>
-    <li>Linq Syntaxe</li>
-    <li>Basic Linq
-        <ol>
-        <li>String Collection</li>
-        <li>Sequence Collection</li>
-        <li>Anonymous Method</li>
-        <li>Lambda Expressions</li>
-        </ol>
-    </li>
-    <li>Operators List</li>
-    <li>Fourth item</li>
-    </ol>
