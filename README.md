@@ -1,7 +1,7 @@
 # CSharp-CheatSheet
 
 Program:
-1. Main Menu
+1) Main Menu
     1. User Input
     2. Basic Maths
     3. Swap Variables
@@ -13,7 +13,7 @@ Program:
     9. Word Modifications
     10. Linq Functions
 
-10. Linq Functions
+10) Linq Functions
     1. Basic Linq
     2. Find Positive
     3. Find Number after specifics calculations
