@@ -6,6 +6,9 @@ namespace CSharp_CheatSheet
 {
     public class Function
     {
+        public static void MainFunction(){
+
+        }
         
     }
 

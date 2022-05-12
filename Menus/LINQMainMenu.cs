@@ -10,7 +10,7 @@ namespace CSharp_CheatSheet
         public static void LinqFunctions(IList<Student> studentList)
         {
             Program.Space();
-            Console.WriteLine("Which LINQ Function ? \n1) Basic LINQ\n2) Find Positive\n3) Find Number after specifics calculations\n4) Frequency\n5) Query Syntaxe\n6) Operators List");
+            Console.WriteLine("Which LINQ Function ? \n1) Basic LINQ\n2) Find Positive\n3) Find Number after specifics calculations\n4) Frequency\n5) Linq Syntaxe\n6) Operators List");
             var WordModifInput = Console.ReadLine();
             int valueWordModifInput = int.Parse(WordModifInput);
             switch (valueWordModifInput)

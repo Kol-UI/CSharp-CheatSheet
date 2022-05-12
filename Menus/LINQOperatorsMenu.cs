@@ -8,7 +8,7 @@ namespace CSharp_CheatSheet
     {
         public static void LINQOperators(IList<Student> studentList){
             Program.Space();
-            Console.WriteLine("Which LINQ Operator ? \n1) Filtering Operator \n2) Sorting Operator\n3) Grouping Operators\n4) Joining Operators\n5) Projection Operators");
+            Console.WriteLine("Which LINQ Operator ? \n1) Filtering Operator \n2) Sorting Operator\n3) Grouping Operators\n4) Joining Operators\n5) Projection Operators\n6) Quantifier Operators");
             var InputOperator = Console.ReadLine();
             int valueInputOperator = int.Parse(InputOperator);
             switch (valueInputOperator)
@@ -67,7 +67,7 @@ namespace CSharp_CheatSheet
 
                 case 3: // Grouping Operators (GroupBy ToLookup)
                     Program.Space();
-                    Console.WriteLine("Which LINQ Grouping Operator ? \n1) GroupBy (Query Syntax)\n2) GroupBy (Method Syntax)\n ToLookUp (Method Syntax Only)");
+                    Console.WriteLine("Which LINQ Grouping Operator ? \n1) GroupBy (Query Syntax)\n2) GroupBy (Method Syntax)\n3) ToLookUp (Method Syntax Only)");
                     var InputGroupingOperator = Console.ReadLine();
                     int valueInputGroupingOperator = int.Parse(InputGroupingOperator);
                     switch (valueInputGroupingOperator)
@@ -159,8 +159,37 @@ namespace CSharp_CheatSheet
                     break;
 
                 
-                case 6:
+                case 6: // Quantifier Operators
+                    Program.Space();
+                    Console.WriteLine("Which LINQ Quantifier Operator ? \n1) All\n2) Any\n3) \n4) \n5) \n6) ");
+                    var InputQuantifierOperator = Console.ReadLine();
+                    int valueInputQuantifierOperator = int.Parse(InputQuantifierOperator);
+                    switch (valueInputQuantifierOperator)
+                    {
+                        case 1: // All
+                            Console.WriteLine("----- All Operator -----\nChecks if all the elements in a sequence satisfies the specified condition");
+                            AllOperator.LINQAllFunction();
+                            break;
+                        case 2: // Any
+                            AnyOperator.LINQAnyFunction();
+                            break;
+                        case 3:
+                            break;
+                        case 4:
+                            break;
+                        case 5:
+                            break;
+                        case 6:
+                            break;
+                        default:
+                            Console.WriteLine("--- Warning: not acceptable value ! ---\n");
+                            LINQOperators(studentList);
+                            break;
+                    }
                     break;
+
+
+
                 case 7:
                     break;
                 case 8:
