@@ -8,7 +8,7 @@ namespace CSharp_CheatSheet
     {
         public static void LINQOperators(IList<Student> studentList){
             Program.Space();
-            Console.WriteLine("Which LINQ Operator ? \n1) Filtering Operator \n2) Sorting Operator\n3) Grouping Operators\n4) Joining Operators\n5) Projection Operators\n6) Quantifier Operators\n7) Aggregation Operators");
+            Console.WriteLine("Which LINQ Operator ? \n1) Filtering Operator \n2) Sorting Operator\n3) Grouping Operators\n4) Joining Operators\n5) Projection Operators\n6) Quantifier Operators\n7) Aggregation Operators\n8) Element Operators");
             var InputOperator = Console.ReadLine();
             int valueInputOperator = int.Parse(InputOperator);
             switch (valueInputOperator)
@@ -184,10 +184,9 @@ namespace CSharp_CheatSheet
                     break;
 
 
-
                 case 7: // Aggregation Operators
                     Program.Space();
-                    Console.WriteLine("Which LINQ Quantifier Operator ? \n1) Aggregate\n2) LongCount\n3) Average\n4) Count\n5) Max\n6) Min");
+                    Console.WriteLine("Which LINQ Quantifier Operator ? \n1) Aggregate\n2) LongCount\n3) Average\n4) Count\n5) Max\n6) Min\n7) Sum");
                     var InputAggregationOperator = Console.ReadLine();
                     int valueInputAggregationOperator = int.Parse(InputAggregationOperator);
                     switch (valueInputAggregationOperator)
@@ -213,6 +212,42 @@ namespace CSharp_CheatSheet
                         case 6: // Min
                             MinOperator.LINQMinFunction();
                             break;
+                        case 7: // Sum
+                            SumOperator.LINQSumFunction();
+                            break;
+                        default:
+                            Console.WriteLine("--- Warning: not acceptable value ! ---\n");
+                            LINQOperators(studentList);
+                            break;
+                    }
+                    break;
+
+
+                case 8:// Element Operators
+                    Program.Space();
+                    Console.WriteLine("Which LINQ Element Operator ? \n1) ElementAt\n2) ElementAtOrDefault");
+                    var InputElementOperator = Console.ReadLine();
+                    int valueInputElementOperator = int.Parse(InputElementOperator);
+                    switch (valueInputElementOperator)
+                    {
+                        case 1: // ElementAt
+                            Console.WriteLine("ElementAt: Returns the element at a specified index in a collection.");
+                            ElementAtOperator.LINQElementAtFunction();
+                            break;
+                        case 2: // ElementAtOrDefault
+                            Console.WriteLine("ElementAtOrDefault: Returns the element at a specified index in a collection or a default value if the index is out of range.");
+                            ElementAtOrDefaultOperator.LINQElementAtOrDefaultFunction();
+                            break;
+                        case 3: // 
+                            break;
+                        case 4: // 
+                            break;
+                        case 5: // 
+                            break;
+                        case 6: // 
+                            break;
+                        case 7: // 
+                            break;
                         default:
                             Console.WriteLine("--- Warning: not acceptable value ! ---\n");
                             LINQOperators(studentList);
@@ -223,12 +258,7 @@ namespace CSharp_CheatSheet
 
 
 
-
-
-
-
-                case 8:
-                    break;
+                    
                 case 9:
                     break;
                 case 10:
