@@ -65,3 +65,5 @@ Program:
         8. Element Operators
             1. ElementAt
             2. ElementAtOrDefault
+            3. First
+            4. FirstOrDefault
