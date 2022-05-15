@@ -67,3 +67,4 @@ Program:
             2. ElementAtOrDefault
             3. First
             4. FirstOrDefault
+            5. Last

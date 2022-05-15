@@ -225,7 +225,7 @@ namespace CSharp_CheatSheet
 
                 case 8:// Element Operators
                     Program.Space();
-                    Console.WriteLine("Which LINQ Element Operator ? \n1) ElementAt\n2) ElementAtOrDefault\n3) First\n4) FirstOrDefault");
+                    Console.WriteLine("Which LINQ Element Operator ? \n1) ElementAt\n2) ElementAtOrDefault\n3) First\n4) FirstOrDefault\n5) Last");
                     var InputElementOperator = Console.ReadLine();
                     int valueInputElementOperator = int.Parse(InputElementOperator);
                     switch (valueInputElementOperator)
@@ -246,7 +246,8 @@ namespace CSharp_CheatSheet
                             Console.WriteLine("FirstOrDefault: Returns the first element of a collection, or the first element that satisfies a condition. Returns a default value if index is out of range.");
                             FirstOrDefaultOperator.LINQFirstOrDefaultFunction();
                             break;
-                        case 5: // 
+                        case 5: // Last
+                            LastOperator.LINQLastOperatorFunction();
                             break;
                         case 6: // 
                             break;
