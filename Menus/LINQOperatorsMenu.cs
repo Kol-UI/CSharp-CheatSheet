@@ -304,7 +304,7 @@ namespace CSharp_CheatSheet
 
                 case 11: // Generation Operators
                     Program.Space();
-                    Console.WriteLine("Which LINQ Generation Operator ? \n1) DefaultIfEmpty\n2) Empty\n3) Range");
+                    Console.WriteLine("Which LINQ Generation Operator ? \n1) DefaultIfEmpty\n2) Empty\n3) Range\n4) Repeat");
                     var InputGenerationOperator = Console.ReadLine();
                     int valueInputGenerationOperator = int.Parse(InputGenerationOperator);
                     switch (valueInputGenerationOperator)
@@ -317,6 +317,9 @@ namespace CSharp_CheatSheet
                             break;
                         case 3: // Range
                             RangeOperator.LINQRangeFunction();
+                            break;
+                        case 4: // Repeat
+                            RepeatOperator.LINQRepeatFunction();
                             break;
                         default:
                             Console.WriteLine("--- Warning: not acceptable value ! ---\n");
