@@ -12,7 +12,7 @@ namespace CSharp_CheatSheet
         {
             Console.WriteLine("Hello World!"); // dotnet run
             // Exercise 17
-            CardsFaroShuffle.CardsFaroShuffleMain();
+            
 
 
             // Student collection

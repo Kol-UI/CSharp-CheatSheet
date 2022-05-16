@@ -8,8 +8,7 @@ namespace CSharp_CheatSheet
     {
         public bool Equals(Student x, Student y)
         {
-            if (x.StudentID == y.StudentID && 
-                    x.StudentName.ToLower() == y.StudentName.ToLower())
+            if (x.StudentID == y.StudentID && x.StudentName.ToLower() == y.StudentName.ToLower())
                 return true;
             
             return false;

@@ -55,6 +55,9 @@ namespace CSharp_CheatSheet
                         new Student() { StudentID = 31, StudentName = "Terry" , Age = 29 },
                         new Student() { StudentID = 32, StudentName = "Marion" , Age = 19 },
                         new Student() { StudentID = 33, StudentName = "Romane" , Age = 17 },
+                        new Student() { StudentID = 34, StudentName = "Arthur" , Age = 29 },
+                        new Student() { StudentID = 35, StudentName = "Manon" , Age = 26 },
+                        new Student() { StudentID = 36, StudentName = "Paulette" , Age = 78 },
                     };
             }
         }

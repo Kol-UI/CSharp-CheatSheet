@@ -71,3 +71,7 @@ Program:
             6. LastOrDefault
             7. Single
             8. SingleOrDefault
+        9. Equality Operators
+            1. SequenceEqual
+    7. Subjects Examples
+        1. Faro Shuffle

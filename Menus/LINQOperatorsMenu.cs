@@ -8,7 +8,7 @@ namespace CSharp_CheatSheet
     {
         public static void LINQOperators(IList<Student> studentList){
             Program.Space();
-            Console.WriteLine("Which LINQ Operator ? \n1) Filtering Operator \n2) Sorting Operator\n3) Grouping Operators\n4) Joining Operators\n5) Projection Operators\n6) Quantifier Operators\n7) Aggregation Operators\n8) Element Operators");
+            Console.WriteLine("Which LINQ Operator ? \n1) Filtering Operator\t\t2) Sorting Operator\t\t3) Grouping Operators\t\t4) Joining Operators\n5) Projection Operators\t\t6) Quantifier Operators\t\t7) Aggregation Operators\t8) Element Operators\n9) Equality Operators");
             var InputOperator = Console.ReadLine();
             int valueInputOperator = int.Parse(InputOperator);
             switch (valueInputOperator)
@@ -269,8 +269,27 @@ namespace CSharp_CheatSheet
 
 
                     
-                case 9:
+                case 9: // Equality Operators
+                    Program.Space();
+                    Console.WriteLine("Which LINQ Equality Operator ? \n1) SequenceEqual");
+                    var InputEqualityOperator = Console.ReadLine();
+                    int valueInputEqualityOperator = int.Parse(InputEqualityOperator);
+                    switch (valueInputEqualityOperator)
+                    {
+                        case 1: // SequenceEqual
+                            SequenceEqualOperator.LINQSequenceEqualFunction();
+                            break;
+                        default:
+                            Console.WriteLine("--- Warning: not acceptable value ! ---\n");
+                            LINQOperators(studentList);
+                            break;
+                    }
                     break;
+                
+                
+                
+                
+                
                 case 10:
                     break;
                 default:
