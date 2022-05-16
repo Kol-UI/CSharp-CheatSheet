@@ -304,13 +304,19 @@ namespace CSharp_CheatSheet
 
                 case 11: // Generation Operators
                     Program.Space();
-                    Console.WriteLine("Which LINQ Generation Operator ? \n1) DefaultIfEmpty");
+                    Console.WriteLine("Which LINQ Generation Operator ? \n1) DefaultIfEmpty\n2) Empty\n3) Range");
                     var InputGenerationOperator = Console.ReadLine();
                     int valueInputGenerationOperator = int.Parse(InputGenerationOperator);
                     switch (valueInputGenerationOperator)
                     {
                         case 1: // DefaultIfEmpty
                             DefaultIfEmptyOperator.LINQDefaultIfEmptyFunction();
+                            break;
+                        case 2: // Empty
+                            EmptyOperator.LINQEmptyFunction();
+                            break;
+                        case 3: // Range
+                            RangeOperator.LINQRangeFunction();
                             break;
                         default:
                             Console.WriteLine("--- Warning: not acceptable value ! ---\n");

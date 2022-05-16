@@ -77,5 +77,7 @@ Program:
             1. Concat
         11. Generation Operators
             1. DefaultIfEmpty
+            2. Empty
+            3. Range
     7. Subjects Examples
         1. Faro Shuffle
