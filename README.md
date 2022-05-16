@@ -68,3 +68,6 @@ Program:
             3. First
             4. FirstOrDefault
             5. Last
+            6. LastOrDefault
+            7. Single
+            8. SingleOrDefault

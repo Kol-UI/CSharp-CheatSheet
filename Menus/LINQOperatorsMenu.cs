@@ -225,7 +225,7 @@ namespace CSharp_CheatSheet
 
                 case 8:// Element Operators
                     Program.Space();
-                    Console.WriteLine("Which LINQ Element Operator ? \n1) ElementAt\n2) ElementAtOrDefault\n3) First\n4) FirstOrDefault\n5) Last");
+                    Console.WriteLine("Which LINQ Element Operator ? \n1) ElementAt\n2) ElementAtOrDefault\n3) First\n4) FirstOrDefault\n5) Last\n6) LastOrDefault\n7) Single\n8) SingleOrDefault");
                     var InputElementOperator = Console.ReadLine();
                     int valueInputElementOperator = int.Parse(InputElementOperator);
                     switch (valueInputElementOperator)
@@ -249,9 +249,14 @@ namespace CSharp_CheatSheet
                         case 5: // Last
                             LastOperator.LINQLastOperatorFunction();
                             break;
-                        case 6: // 
+                        case 6: // LastOrDefault
+                            LastOrDefaultOperator.LINQLastOrDefaultFunction();
                             break;
-                        case 7: // 
+                        case 7: // Single
+                            SingleOperator.LINQSingleFunction();
+                            break;
+                        case 8: // SingleOrDefault
+                            SingleOrDefaultOperator.LINQSingleOrDefaultFunction();
                             break;
                         default:
                             Console.WriteLine("--- Warning: not acceptable value ! ---\n");
