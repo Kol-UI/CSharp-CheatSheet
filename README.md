@@ -73,5 +73,9 @@ Program:
             8. SingleOrDefault
         9. Equality Operators
             1. SequenceEqual
+        10. Concatenation Operators
+            1. Concat
+        11. Generation Operators
+            1. DefaultIfEmpty
     7. Subjects Examples
         1. Faro Shuffle

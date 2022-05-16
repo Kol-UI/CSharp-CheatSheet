@@ -8,7 +8,7 @@ namespace CSharp_CheatSheet
     {
         public static void LINQOperators(IList<Student> studentList){
             Program.Space();
-            Console.WriteLine("Which LINQ Operator ? \n1) Filtering Operator\t\t2) Sorting Operator\t\t3) Grouping Operators\t\t4) Joining Operators\n5) Projection Operators\t\t6) Quantifier Operators\t\t7) Aggregation Operators\t8) Element Operators\n9) Equality Operators");
+            Console.WriteLine("Which LINQ Operator ? \n1) Filtering Operator\t\t2) Sorting Operator\t\t3) Grouping Operators\t\t4) Joining Operators\n5) Projection Operators\t\t6) Quantifier Operators\t\t7) Aggregation Operators\t8) Element Operators\n9) Equality Operators\t\t10) Concatenation Operators\t11) Generation Operators");
             var InputOperator = Console.ReadLine();
             int valueInputOperator = int.Parse(InputOperator);
             switch (valueInputOperator)
@@ -266,9 +266,6 @@ namespace CSharp_CheatSheet
                     break;
 
 
-
-
-                    
                 case 9: // Equality Operators
                     Program.Space();
                     Console.WriteLine("Which LINQ Equality Operator ? \n1) SequenceEqual");
@@ -287,10 +284,44 @@ namespace CSharp_CheatSheet
                     break;
                 
                 
-                
-                
-                
-                case 10:
+                case 10: // Concatenation Operators
+                    Program.Space();
+                    Console.WriteLine("Which LINQ Concatenation Operator ? \n1) Concat");
+                    var InputConcatenationOperator = Console.ReadLine();
+                    int valueInputConcatenationOperator = int.Parse(InputConcatenationOperator);
+                    switch (valueInputConcatenationOperator)
+                    {
+                        case 1: // Concat
+                            ConcatOperator.LINQConcatFunction();
+                            break;
+                        default:
+                            Console.WriteLine("--- Warning: not acceptable value ! ---\n");
+                            LINQOperators(studentList);
+                            break;
+                    }
+                    break;
+
+
+                case 11: // Generation Operators
+                    Program.Space();
+                    Console.WriteLine("Which LINQ Generation Operator ? \n1) DefaultIfEmpty");
+                    var InputGenerationOperator = Console.ReadLine();
+                    int valueInputGenerationOperator = int.Parse(InputGenerationOperator);
+                    switch (valueInputGenerationOperator)
+                    {
+                        case 1: // DefaultIfEmpty
+                            DefaultIfEmptyOperator.LINQDefaultIfEmptyFunction();
+                            break;
+                        default:
+                            Console.WriteLine("--- Warning: not acceptable value ! ---\n");
+                            LINQOperators(studentList);
+                            break;
+                    }
+                    break;
+
+
+
+                case 12:
                     break;
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");
