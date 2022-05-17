@@ -8,7 +8,7 @@ namespace CSharp_CheatSheet
     {
         public static void LINQOperators(IList<Student> studentList){
             Program.Space();
-            Console.WriteLine("Which LINQ Operator ? \n1) Filtering Operator\t\t2) Sorting Operator\t\t3) Grouping Operators\t\t4) Joining Operators\n5) Projection Operators\t\t6) Quantifier Operators\t\t7) Aggregation Operators\t8) Element Operators\n9) Equality Operators\t\t10) Concatenation Operators\t11) Generation Operators");
+            Console.WriteLine("Which LINQ Operator ? \n1) Filtering Operator\t\t2) Sorting Operator\t\t3) Grouping Operators\t\t4) Joining Operators\n5) Projection Operators\t\t6) Quantifier Operators\t\t7) Aggregation Operators\t8) Element Operators\n9) Equality Operators\t\t10) Concatenation Operators\t11) Generation Operators\t12) Set Operators\n13) Partitioning Operators");
             var InputOperator = Console.ReadLine();
             int valueInputOperator = int.Parse(InputOperator);
             switch (valueInputOperator)
@@ -329,8 +329,67 @@ namespace CSharp_CheatSheet
                     break;
 
 
+                case 12: // Set Operators
+                    Program.Space();
+                    Console.WriteLine("Which LINQ Set Operator ? \n1) Distinct\n2) Except\n3) Intersect\n4) Union");
+                    var InputSetOperator = Console.ReadLine();
+                    int valueInputSetOperator = int.Parse(InputSetOperator);
+                    switch (valueInputSetOperator)
+                    {
+                        case 1: // Distinct
+                            Console.WriteLine("-- Distinct: Returns distinct values from a collection --");
+                            DistinctOperator.LINQDistinctFunction();
+                            break;
+                        case 2: // Except
+                            Console.WriteLine("-- Except: Returns the difference between two sequences, which means the elements of one collection that do not appear in the second collection --");
+                            ExceptOperator.LINQExceptFunction();
+                            break;
+                        case 3: // Intersect
+                            Console.WriteLine("-- Intersect: Returns the intersection of two sequences, which means elements that appear in both the collections --");
+                            IntersectOperator.LINQIntersectFunction();
+                            break;
+                        case 4: // Union
+                            Console.WriteLine("-- Union: Returns unique elements from two sequences, which means unique elements that appear in either of the two sequences --");
+                            UnionOperator.LINQUnionFunction();
+                            break;
+                        default:
+                            Console.WriteLine("--- Warning: not acceptable value ! ---\n");
+                            LINQOperators(studentList);
+                            break;
+                    }
+                    break;
 
-                case 12:
+
+                case 13: // Partitioning Operators
+                    Program.Space();
+                    Console.WriteLine("Which LINQ Partitioning Operator ? \n1) Skip\n2) SkipWhile\n3) Take\n4) TakeWhile");
+                    var InputPartitioningOperator = Console.ReadLine();
+                    int valueInputPartitioningOperator = int.Parse(InputPartitioningOperator);
+                    switch (valueInputPartitioningOperator)
+                    {
+                        case 1: // Skip
+                            Console.WriteLine("-- Skip: Skips elements up to a specified position starting from the first element in a sequence --");
+                            SkipOperator.LINQSkipFunction();
+                            break;
+                        case 2: // SkipWhile
+                            Console.WriteLine("-- SkipWhile: Skips elements based on a condition until an element does not satisfy the condition. If the first element itself doesn't satisfy the condition, it then skips 0 elements and returns all the elements in the sequence --");
+                            break;
+                        case 3: // Take
+                            Console.WriteLine("-- Take: Takes elements up to a specified position starting from the first element in a sequence --");
+                            break;
+                        case 4: // TakeWhile
+                            Console.WriteLine("-- TakeWhile: Returns elements from the first element until an element does not satisfy the condition. If the first element itself doesn't satisfy the condition then returns an empty collection --");
+                            break;
+                        default:
+                            Console.WriteLine("--- Warning: not acceptable value ! ---\n");
+                            LINQOperators(studentList);
+                            break;
+                    }
+                    break;
+
+
+
+                case 14:
                     break;
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");

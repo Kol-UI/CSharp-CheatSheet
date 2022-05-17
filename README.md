@@ -79,5 +79,14 @@ Program:
             1. DefaultIfEmpty
             2. Empty
             3. Range
+            4. Repeat
+        12. Set Operators
+            1. Distinct
+            2. Except
+            3. Intersect
+            4. Union
+        13. Partitioning Operators
+            1. Skip
+            2. SkipWhile
     7. Subjects Examples
         1. Faro Shuffle
