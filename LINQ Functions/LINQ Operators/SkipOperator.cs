@@ -40,6 +40,18 @@ namespace CSharp_CheatSheet
             foreach(var val in takeZero)
                 Console.WriteLine(val);
             
+            Program.Space();
+            SkipStudents();
+        }
+
+        private static void SkipStudents(){
+            var studentsClasse = Student.GetAllStudents().ToList().Skip(10);
+
+            Console.WriteLine("\t 10 first students skipped :");
+            foreach (var stds in studentsClasse)
+            {
+                Console.WriteLine($" ID : {stds.StudentID} \tName : {stds.StudentName}");
+            }
         }
         
     }

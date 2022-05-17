@@ -35,6 +35,7 @@ namespace CSharp_CheatSheet
             UnionAndRemoveDuplicate(dataSource1, dataSource2);
             UnionRemoveDuplicateAndCase(dataSource1, dataSource2);
             UnionStudents(StudentCollection1, StudentCollection2);
+            AllPets();
         }
         
 
@@ -110,6 +111,24 @@ namespace CSharp_CheatSheet
             }
         }
 
+        private static void AllPets(){
+            var dogs = Pet.GetAllDogs();
+            var cats = Pet.GetAllCats();
+            var birds = Pet.GetAllBirds();
+
+            PetComparer petComparer1 = new PetComparer();
+            var allPetsTogether = dogs.Union(cats, petComparer1).Union(birds, petComparer1).ToList();
+            var petUnion = from s in allPetsTogether
+                   orderby s.Age
+                   select s;
+
+            Console.WriteLine("\tAll pets united :");
+            foreach (var pets in petUnion)
+            {
+                Console.WriteLine($" Age : {pets.Age} Name : {pets.Name}");
+            }
+
+        }
 
     }
 

@@ -373,6 +373,7 @@ namespace CSharp_CheatSheet
                             break;
                         case 2: // SkipWhile
                             Console.WriteLine("-- SkipWhile: Skips elements based on a condition until an element does not satisfy the condition. If the first element itself doesn't satisfy the condition, it then skips 0 elements and returns all the elements in the sequence --");
+                            SkipWhileOperator.LINQSkipWhileFunction();
                             break;
                         case 3: // Take
                             Console.WriteLine("-- Take: Takes elements up to a specified position starting from the first element in a sequence --");

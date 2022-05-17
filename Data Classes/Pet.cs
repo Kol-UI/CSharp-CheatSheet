@@ -33,6 +33,20 @@ namespace CSharp_CheatSheet
                 new Pet { Name="Pac", Age = 4 }
             };
         }
+        
+    }
+
+    public class PetComparer: IEqualityComparer<Pet>
+    {
+        
+        public bool Equals(Pet x, Pet y)
+        {
+            return x.Age == y.Age && x.Name.ToLower() == y.Name.ToLower();
+        }
+        public int GetHashCode(Pet obj)
+        {
+            return obj.Age.GetHashCode() ^ obj.Name.GetHashCode();
+        }
 
     }
 }
