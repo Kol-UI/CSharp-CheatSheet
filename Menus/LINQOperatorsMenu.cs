@@ -377,6 +377,7 @@ namespace CSharp_CheatSheet
                             break;
                         case 3: // Take
                             Console.WriteLine("-- Take: Takes elements up to a specified position starting from the first element in a sequence --");
+                            TakeOperator.LINQTakeFunction();
                             break;
                         case 4: // TakeWhile
                             Console.WriteLine("-- TakeWhile: Returns elements from the first element until an element does not satisfy the condition. If the first element itself doesn't satisfy the condition then returns an empty collection --");
