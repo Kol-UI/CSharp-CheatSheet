@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class EmptyOperator
     {
-        public static void LINQEmptyFunction(){
+        public static void LINQEmptyMethod(){
 
             var emptyCollection1 = Enumerable.Empty<string>();
             var emptyCollection2 = Enumerable.Empty<Student>();

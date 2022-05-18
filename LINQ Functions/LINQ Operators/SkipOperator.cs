@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class SkipOperator
     {
-        public static void LINQSkipFunction(){
+        public static void LINQSkipMethod(){
             IList<string> strList = new List<string>(){ "One", "Two", "Three", "Four", "Five" };
             var numbersValues = new [] { 5, 4, 3, 2, 1 };
             

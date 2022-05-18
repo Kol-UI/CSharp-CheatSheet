@@ -21,7 +21,7 @@ namespace CSharp_CheatSheet
                     switch (valueInputFilteringOperator)
                     {
                         case 1:
-                            WhereOperator.LINQWhereFunction();
+                            WhereOperator.LINQWhereMethod();
                             break;
                         case 2:
                             OfTypeOperator.LINQOfTypeFunction();
@@ -51,11 +51,11 @@ namespace CSharp_CheatSheet
                             break;
                         case 3:
                             // ThenBy
-                            ThenByOperator.LINQThenByFunction(studentList);
+                            ThenByOperator.LINQThenByMethod(studentList);
                             break;
                         case 4:
                             // ThenByDescending
-                            ThenByOperator.LINQThenByDescendingFunction(studentList);
+                            ThenByOperator.LINQThenByDescendingMethod(studentList);
                             break;
                         default:
                             Console.WriteLine("--- Warning: not acceptable value ! ---\n");
@@ -74,15 +74,15 @@ namespace CSharp_CheatSheet
                     {
                         case 1:
                             // GroupBy Query
-                            GroupByOperator.LINQGroupByFunctionQuery(studentList);
+                            GroupByOperator.LINQGroupByMethodQuery(studentList);
                             break;
                         case 2:
                             // GroupBy Method
-                            GroupByOperator.LINQGroupByFunctionMethod(studentList);
+                            GroupByOperator.LINQGroupByMethodMethod(studentList);
                             break;
                         case 3:
                             // ToLookUp
-                            ToLookUpOperator.LINQToLookUpFunction(studentList);
+                            ToLookUpOperator.LINQToLookUpMethod(studentList);
                             break;
                         default:
                             Console.WriteLine("--- Warning: not acceptable value ! ---\n");
@@ -104,19 +104,19 @@ namespace CSharp_CheatSheet
                             JoinOperator.JoinMoreComplexe();
                             break;
                         case 2: // Group Join
-                            GroupJoinOperator.GroupJoinOperatorFunction(studentList);
+                            GroupJoinOperator.GroupJoinOperatorMethod(studentList);
                             break;
                         case 3:
-                            GroupJoinOperator.GroupJoinQuerySyntaxeFunction(studentList);
+                            GroupJoinOperator.GroupJoinQuerySyntaxeMethod(studentList);
                             break;
                         case 4:
-                            GroupJoinOperator.GroupJoinMoreComplexeFunction();
+                            GroupJoinOperator.GroupJoinMoreComplexeMethod();
                             break;
                         case 5:
-                            GroupJoinOperator.GroupJoinMoreComplexeFunctionQuery();
+                            GroupJoinOperator.GroupJoinMoreComplexeMethodQuery();
                             break;
                         case 6:
-                            GroupJoinOperator.GroupJoinMoreComplexeFunctionUserDefined();
+                            GroupJoinOperator.GroupJoinMoreComplexeMethodUserDefined();
                             break;
                         default:
                             Console.WriteLine("--- Warning: not acceptable value ! ---\n");
@@ -149,7 +149,7 @@ namespace CSharp_CheatSheet
                             SelectManyOperator.SelectVsSelectMany();
                             break;
                         case 6:
-                            ZipOperator.LINQZipFunction();
+                            ZipOperator.LINQZipMethod();
                             break;
                         default:
                             Console.WriteLine("--- Warning: not acceptable value ! ---\n");
@@ -168,13 +168,13 @@ namespace CSharp_CheatSheet
                     {
                         case 1: // All
                             Console.WriteLine("----- All Operator -----\nChecks if all the elements in a sequence satisfies the specified condition");
-                            AllOperator.LINQAllFunction();
+                            AllOperator.LINQAllMethod();
                             break;
                         case 2: // Any
-                            AnyOperator.LINQAnyFunction();
+                            AnyOperator.LINQAnyMethod();
                             break;
                         case 3: // Contains
-                            ContainsOperator.LINQContainsFunction();
+                            ContainsOperator.LINQContainsMethod();
                             break;
                         default:
                             Console.WriteLine("--- Warning: not acceptable value ! ---\n");
@@ -193,7 +193,7 @@ namespace CSharp_CheatSheet
                     {
                         case 1: // Aggregate
                             Console.WriteLine("Aggregate: Performs a custom aggregation operation on the values in the collection.");
-                            AggregateOperator.LINQAggregateFunction();
+                            AggregateOperator.LINQAggregateMethod();
                             break;
                         case 2: // LongCount
                             LongCountOperator.LINQLongCountOperator();
@@ -201,10 +201,10 @@ namespace CSharp_CheatSheet
                             LongCountOperator.LINQLongCountOperator2();
                             break;
                         case 3: // Average
-                            AverageOperator.LINQAverageFunction();
+                            AverageOperator.LINQAverageMethod();
                             break;
                         case 4: // Count
-                            CountOperator.LINQCountFunction();
+                            CountOperator.LINQCountMethod();
                             break;
                         case 5: // Max
                             MaxOperator.LINQMaxFunction();
@@ -213,7 +213,7 @@ namespace CSharp_CheatSheet
                             MinOperator.LINQMinFunction();
                             break;
                         case 7: // Sum
-                            SumOperator.LINQSumFunction();
+                            SumOperator.LINQSumMethod();
                             break;
                         default:
                             Console.WriteLine("--- Warning: not acceptable value ! ---\n");
@@ -232,19 +232,19 @@ namespace CSharp_CheatSheet
                     {
                         case 1: // ElementAt
                             Console.WriteLine("ElementAt: Returns the element at a specified index in a collection.");
-                            ElementAtOperator.LINQElementAtFunction();
+                            ElementAtOperator.LINQElementAtMethod();
                             break;
                         case 2: // ElementAtOrDefault
                             Console.WriteLine("ElementAtOrDefault: Returns the element at a specified index in a collection or a default value if the index is out of range.");
-                            ElementAtOrDefaultOperator.LINQElementAtOrDefaultFunction();
+                            ElementAtOrDefaultOperator.LINQElementAtOrDefaultMethod();
                             break;
                         case 3: // First
                             Console.WriteLine("First: Returns the first element of a collection, or the first element that satisfies a condition.");
-                            FirstOperator.LINQFirstFunction();
+                            FirstOperator.LINQFirstMethod();
                             break;
                         case 4: // FirstOrDefault
                             Console.WriteLine("FirstOrDefault: Returns the first element of a collection, or the first element that satisfies a condition. Returns a default value if index is out of range.");
-                            FirstOrDefaultOperator.LINQFirstOrDefaultFunction();
+                            FirstOrDefaultOperator.LINQFirstOrDefaultMethod();
                             break;
                         case 5: // Last
                             LastOperator.LINQLastOperatorFunction();
@@ -253,10 +253,10 @@ namespace CSharp_CheatSheet
                             LastOrDefaultOperator.LINQLastOrDefaultFunction();
                             break;
                         case 7: // Single
-                            SingleOperator.LINQSingleFunction();
+                            SingleOperator.LINQSingleMethod();
                             break;
                         case 8: // SingleOrDefault
-                            SingleOrDefaultOperator.LINQSingleOrDefaultFunction();
+                            SingleOrDefaultOperator.LINQSingleOrDefaultMethod();
                             break;
                         default:
                             Console.WriteLine("--- Warning: not acceptable value ! ---\n");
@@ -292,7 +292,7 @@ namespace CSharp_CheatSheet
                     switch (valueInputConcatenationOperator)
                     {
                         case 1: // Concat
-                            ConcatOperator.LINQConcatFunction();
+                            ConcatOperator.LINQConcatMethod();
                             break;
                         default:
                             Console.WriteLine("--- Warning: not acceptable value ! ---\n");
@@ -310,10 +310,10 @@ namespace CSharp_CheatSheet
                     switch (valueInputGenerationOperator)
                     {
                         case 1: // DefaultIfEmpty
-                            DefaultIfEmptyOperator.LINQDefaultIfEmptyFunction();
+                            DefaultIfEmptyOperator.LINQDefaultIfEmptyMethod();
                             break;
                         case 2: // Empty
-                            EmptyOperator.LINQEmptyFunction();
+                            EmptyOperator.LINQEmptyMethod();
                             break;
                         case 3: // Range
                             RangeOperator.LINQRangeFunction();
@@ -338,11 +338,11 @@ namespace CSharp_CheatSheet
                     {
                         case 1: // Distinct
                             Console.WriteLine("-- Distinct: Returns distinct values from a collection --");
-                            DistinctOperator.LINQDistinctFunction();
+                            DistinctOperator.LINQDistinctMethod();
                             break;
                         case 2: // Except
                             Console.WriteLine("-- Except: Returns the difference between two sequences, which means the elements of one collection that do not appear in the second collection --");
-                            ExceptOperator.LINQExceptFunction();
+                            ExceptOperator.LINQExceptMethod();
                             break;
                         case 3: // Intersect
                             Console.WriteLine("-- Intersect: Returns the intersection of two sequences, which means elements that appear in both the collections --");
@@ -350,7 +350,7 @@ namespace CSharp_CheatSheet
                             break;
                         case 4: // Union
                             Console.WriteLine("-- Union: Returns unique elements from two sequences, which means unique elements that appear in either of the two sequences --");
-                            UnionOperator.LINQUnionFunction();
+                            UnionOperator.LINQUnionMethod();
                             break;
                         default:
                             Console.WriteLine("--- Warning: not acceptable value ! ---\n");
@@ -369,18 +369,19 @@ namespace CSharp_CheatSheet
                     {
                         case 1: // Skip
                             Console.WriteLine("-- Skip: Skips elements up to a specified position starting from the first element in a sequence --");
-                            SkipOperator.LINQSkipFunction();
+                            SkipOperator.LINQSkipMethod();
                             break;
                         case 2: // SkipWhile
                             Console.WriteLine("-- SkipWhile: Skips elements based on a condition until an element does not satisfy the condition. If the first element itself doesn't satisfy the condition, it then skips 0 elements and returns all the elements in the sequence --");
-                            SkipWhileOperator.LINQSkipWhileFunction();
+                            SkipWhileOperator.LINQSkipWhileMethod();
                             break;
                         case 3: // Take
                             Console.WriteLine("-- Take: Takes elements up to a specified position starting from the first element in a sequence --");
-                            TakeOperator.LINQTakeFunction();
+                            TakeOperator.LINQTakeMethod();
                             break;
                         case 4: // TakeWhile
                             Console.WriteLine("-- TakeWhile: Returns elements from the first element until an element does not satisfy the condition. If the first element itself doesn't satisfy the condition then returns an empty collection --");
+                            TakeWhileOperator.LINQTakeWhileMethod();
                             break;
                         default:
                             Console.WriteLine("--- Warning: not acceptable value ! ---\n");

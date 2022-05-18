@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class ContainsOperator
     {
-        public static void LINQContainsFunction(){
+        public static void LINQContainsMethod(){
             var StudentClasse = Student.GetAllStudents();
             Student std = new Student(){ StudentID =3, StudentName = "Bill"};
             bool result = StudentClasse.Contains(std, new StudentComparer());

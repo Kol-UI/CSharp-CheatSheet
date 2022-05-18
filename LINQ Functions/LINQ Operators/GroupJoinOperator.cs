@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class GroupJoinOperator
     {
-        public static void GroupJoinOperatorFunction(IList<Student> studentList)
+        public static void GroupJoinOperatorMethod(IList<Student> studentList)
         {
             
             
@@ -32,7 +32,7 @@ namespace CSharp_CheatSheet
             
         }
 
-        public static void GroupJoinQuerySyntaxeFunction(IList<Student> studentList){
+        public static void GroupJoinQuerySyntaxeMethod(IList<Student> studentList){
             
             IList<Standard> standardList = new List<Standard>() { 
                     new Standard(){ StandardID = 1, StandardName="-- Standard 1 --"},
@@ -58,7 +58,7 @@ namespace CSharp_CheatSheet
             }
         }
             
-        public static void GroupJoinMoreComplexeFunction(){
+        public static void GroupJoinMoreComplexeMethod(){
             var GroupJoinMS = Department.GetAllDepartments().
                 GroupJoin(
                     Employee.GetAllEmployees(),
@@ -80,7 +80,7 @@ namespace CSharp_CheatSheet
             Console.ReadLine();
         }
 
-        public static void GroupJoinMoreComplexeFunctionQuery(){
+        public static void GroupJoinMoreComplexeMethodQuery(){
             var GroupJoinQS = from dept in Department.GetAllDepartments()
                             join emp in Employee.GetAllEmployees()
                             on dept.ID equals emp.DepartmentId
@@ -100,7 +100,7 @@ namespace CSharp_CheatSheet
             Console.ReadLine();
         }
 
-        public static void GroupJoinMoreComplexeFunctionUserDefined(){
+        public static void GroupJoinMoreComplexeMethodUserDefined(){
             // Using Method Syntax
             var GroupJoinMS = Department.GetAllDepartments().
                 GroupJoin(

@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class ExceptOperator
     {
-        public static void LINQExceptFunction(){
+        public static void LINQExceptMethod(){
             string[] delhiResidents = { "Ramesh", "Kapil", "Vikas", "Amit" };
             string[] kolkataResidents = { "Kapil", "Manmohan", "Deepak", "Amit" };
             

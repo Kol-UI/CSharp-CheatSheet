@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class CountOperator
     {
-        public static void LINQCountFunction(){
+        public static void LINQCountMethod(){
             var StudentClasse = Student.GetAllStudents();
             var totalStudents = StudentClasse.Count();
 

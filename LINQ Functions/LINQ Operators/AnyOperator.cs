@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class AnyOperator
     {
-        public static void LINQAnyFunction(){
+        public static void LINQAnyMethod(){
             var Classe = Student.GetAllStudents();
             Console.WriteLine("--- Is there any student aged between 12 & 20 ? ---");
             bool isAnyStudentTeenAger = Classe.Any(s => s.Age > 12 && s.Age < 20);

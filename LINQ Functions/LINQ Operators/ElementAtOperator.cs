@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class ElementAtOperator
     {
-        public static void LINQElementAtFunction(){
+        public static void LINQElementAtMethod(){
             string[] names =
                 { "Hartono, Tommy", "Adams, Terry", "Andersen, Henriette Thaulow",
                     "Hedlund, Magnus", "Ito, Shu" };

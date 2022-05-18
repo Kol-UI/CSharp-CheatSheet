@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class SumOperator
     {
-        public static void LINQSumFunction(){
+        public static void LINQSumMethod(){
             IList<int> intList = new List<int>() { 10, 21, 30, 45, 50, 87 };
             var StudentClasse = Student.GetAllStudents();
             var sumOfAge = StudentClasse.Sum(s => s.Age);

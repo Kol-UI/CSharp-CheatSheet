@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class WhereOperator
     {
-        public static void LINQWhereFunction(){
+        public static void LINQWhereMethod(){
             Console.WriteLine("-- Where --\n-- Returns values from the collection based on a predicate function --");
             var studentsClasse = Student.GetAllStudents();
             // LINQ Query Syntax to find out teenager students

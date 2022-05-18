@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class DefaultIfEmptyOperator
     {
-        public static void LINQDefaultIfEmptyFunction(){
+        public static void LINQDefaultIfEmptyMethod(){
             IList<string> emptyList = new List<string>();
             IList<int> emptyListInt = new List<int>();
             IList<Student> emptyStudentList = new List<Student>();

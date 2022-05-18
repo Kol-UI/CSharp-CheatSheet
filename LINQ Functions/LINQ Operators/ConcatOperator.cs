@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class ConcatOperator
     {
-        public static void LINQConcatFunction(){
+        public static void LINQConcatMethod(){
             IList<string> collection1 = new List<string>() { "One", "Two", "Three" };
             IList<string> collection2 = new List<string>() { "Five", "Six" };
             IList<string> collection3 = new List<string>() { "Four" };

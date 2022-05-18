@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class DistinctOperator
     {
-        public static void LINQDistinctFunction(){
+        public static void LINQDistinctMethod(){
             IList<string> strList = new List<string>(){ "One", "Two", "Three", "Two", "Three" };
             IList<int> intList = new List<int>(){ 1, 2, 3, 2, 4, 4, 3, 5 };
 

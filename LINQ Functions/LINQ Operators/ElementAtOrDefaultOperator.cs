@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class ElementAtOrDefaultOperator
     {
-        public static void LINQElementAtOrDefaultFunction(){
+        public static void LINQElementAtOrDefaultMethod(){
             string[] names = { "Hartono, Tommy", "Adams, Terry", "Andersen, Henriette Thaulow", "Hedlund, Magnus", "Ito, Shu" };
             int index = 20;
             string name = names.ElementAtOrDefault(index);

@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class TakeOperator
     {
-        public static void LINQTakeFunction(){
+        public static void LINQTakeMethod(){
             var studentClasse = Student.GetAllStudents();
             int numberOfStudents = studentClasse.Count();
             Console.WriteLine("A number between 1 and {0} will be choosen randomly.", numberOfStudents);

@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class FirstOperator
     {
-        public static void LINQFirstFunction(){
+        public static void LINQFirstMethod(){
             IList<int> intList = new List<int>() { 7, 10, 21, 30, 45, 50, 87 };
             IList<string> strList = new List<string>() { null, "Two", "Three", "Four", "Five" };
             IList<string> emptyList = new List<string>();

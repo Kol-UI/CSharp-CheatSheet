@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class ZipOperator
     {
-        public static void LINQZipFunction(){
+        public static void LINQZipMethod(){
             IEnumerable<int> numbers = new[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
             IEnumerable<char> letters = new[]{'A', 'B', 'C', 'D', 'E', 'F'};
 

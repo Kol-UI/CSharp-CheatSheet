@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class SingleOrDefaultOperator
     {
-        public static void LINQSingleOrDefaultFunction(){
+        public static void LINQSingleOrDefaultMethod(){
             Console.WriteLine("The same as Single, except that it returns a default value of a specified generic type, instead of throwing an exception if no element found for the specified condition. However, it will thrown InvalidOperationException if it found more than one element for the specified condition in the collection.");
             string[] fruits1 = { "orange" };
             string fruit1 = fruits1.SingleOrDefault();

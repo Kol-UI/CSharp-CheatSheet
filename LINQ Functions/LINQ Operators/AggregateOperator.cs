@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class AggregateOperator
     {
-        public static void LINQAggregateFunction(){
+        public static void LINQAggregateMethod(){
             var StudentClasse = Student.GetAllStudents();
 
             // Simple Aggregate

@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class UnionOperator
     {
-        public static void LINQUnionFunction(){
+        public static void LINQUnionMethod(){
             var Products1 = Product.GetAllProducts();
             var Products2 = Product.GetAllSecondaryProducts();
             IEnumerable<Product> union = Products1.Union(Products2);

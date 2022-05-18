@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class GroupByOperator
     {
-        public static void LINQGroupByFunctionQuery(IList<Student> studentList){
+        public static void LINQGroupByMethodQuery(IList<Student> studentList){
             var groupedAgeResult = from s in studentList group s by s.Age;
             var groupedNameResult = from s in studentList group s by s.StudentName;
             var groupedIDResult = from s in studentList group s by s.StudentID;
@@ -38,7 +38,7 @@ namespace CSharp_CheatSheet
             }
         }
 
-        public static void LINQGroupByFunctionMethod(IList<Student> studentList){
+        public static void LINQGroupByMethodMethod(IList<Student> studentList){
             var groupedResultAge = studentList.GroupBy(s => s.Age);
             var groupedResultID = studentList.GroupBy(s => s.StudentID);
             var groupedResultName = studentList.GroupBy(s => s.StudentName);

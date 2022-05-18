@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class ToLookUpOperator
     {
-        public static void LINQToLookUpFunction(IList<Student> studentList){
+        public static void LINQToLookUpMethod(IList<Student> studentList){
             var lookupResult = studentList.ToLookup(s => s.Age);
 
             foreach (var group in lookupResult)

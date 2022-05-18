@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class AllOperator
     {
-        public static void LINQAllFunction(){
+        public static void LINQAllMethod(){
             var Classe = Student.GetAllStudents();
             // Checks whether all the students are teenagers    
             bool areAllStudentsTeenAger = Classe.All(s => s.Age > 12 && s.Age < 20);

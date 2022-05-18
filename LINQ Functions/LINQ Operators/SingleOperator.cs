@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class SingleOperator
     {
-        public static void LINQSingleFunction(){
+        public static void LINQSingleMethod(){
             Console.WriteLine("Returns the only element from a collection, or the only element that satisfies a condition. If Single() found no elements or more than one elements in the collection then throws InvalidOperationException.");
             string[] fruits1 = { "orange" };
             string[] fruits2 = { "orange", "apple" };

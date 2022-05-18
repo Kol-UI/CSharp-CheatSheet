@@ -6,7 +6,7 @@ namespace CSharp_CheatSheet
 {
     public class SkipWhileOperator
     {
-        public static void LINQSkipWhileFunction(){
+        public static void LINQSkipWhileMethod(){
             var allStudents = Student.GetAllStudents().OrderBy(s => s.Age).ThenBy(s => s.StudentName);
             var adults = allStudents.ToList().Where(x => x.Age > 17);
             var adultsSkipWhile = allStudents.ToList().SkipWhile(x => x.Age <= 17);
