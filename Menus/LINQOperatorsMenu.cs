@@ -8,7 +8,7 @@ namespace CSharp_CheatSheet
     {
         public static void LINQOperators(IList<Student> studentList){
             Program.Space();
-            Console.WriteLine("Which LINQ Operator ? \n1) Filtering Operator\t\t2) Sorting Operator\t\t3) Grouping Operators\t\t4) Joining Operators\n5) Projection Operators\t\t6) Quantifier Operators\t\t7) Aggregation Operators\t8) Element Operators\n9) Equality Operators\t\t10) Concatenation Operators\t11) Generation Operators\t12) Set Operators\n13) Partitioning Operators");
+            Console.WriteLine("Which LINQ Operator ? \n1) Filtering Operator\t\t2) Sorting Operator\t\t3) Grouping Operators\t\t4) Joining Operators\n5) Projection Operators\t\t6) Quantifier Operators\t\t7) Aggregation Operators\t8) Element Operators\n9) Equality Operators\t\t10) Concatenation Operators\t11) Generation Operators\t12) Set Operators\n13) Partitioning Operators\t14) Conversion Operators");
             var InputOperator = Console.ReadLine();
             int valueInputOperator = int.Parse(InputOperator);
             switch (valueInputOperator)
@@ -392,7 +392,40 @@ namespace CSharp_CheatSheet
 
 
 
-                case 14:
+                case 14: // Conversion Operators
+                    Program.Space();
+                    Console.WriteLine("Which LINQ Conversion Operator ? \n1) AsEnumerable\n2) AsQueryable\n3) Cast\n4) ToArray\n5) ToDictionary\n6) ToList");
+                    var InputConversionOperator = Console.ReadLine();
+                    int valueInputConversionOperator = int.Parse(InputConversionOperator);
+                    switch (valueInputConversionOperator)
+                    {
+                        case 1: // AsEnumerable
+                            AsEnumerableOperator.LINQAsEnumerableMethod();
+                            break;
+                        case 2: // AsQueryable
+                            AsQueryableOperator.LINQAsQueryableMethod();
+                            break;
+                        case 3: // Cast
+                            CastOperator.LINQCastMethod();
+                            break;
+                        case 4: // ToArray
+                            ToArrayOperator.LINQToArrayMethod();
+                            break;
+                        case 5: // ToDictionary
+                            ToDictionaryOperator.LINQToDictionaryMethod();
+                            break;
+                        case 6: // ToList
+                            ToListOperator.LINQToListMethod();
+                            break;
+                        default:
+                            Console.WriteLine("--- Warning: not acceptable value ! ---\n");
+                            LINQOperators(studentList);
+                            break;
+                    }
+                    break;
+                
+
+                case 15:
                     break;
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");

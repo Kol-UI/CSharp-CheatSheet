@@ -88,5 +88,12 @@ Program:
         13. Partitioning Operators
             1. Skip
             2. SkipWhile
+        14. Conversion Operators
+            1. AsEnumerable
+            2. AsQueryable
+            3. Cast
+            4. ToArray
+            5. ToDictionary
+            6. ToList
     7. Subjects Examples
         1. Faro Shuffle
