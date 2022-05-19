@@ -4,17 +4,26 @@ Program:
 ## Main Menu
     1. C# Basics
     2. -
-    3. Swap Variables
+    3. -
     4. -
     5. -
     6. Containers
     7. Compare Number
     8. Convert Celsius
-    9. Word Modifications
+    9. -
     10. Linq Functions
 
 ## 1. C# Basics
     1. User Input
+        1. Original Input
+        2. Add Input To String
+        3. Swap Variables
+        4. Word Modif
+            1. Remove Letter
+            2. Change First And Last
+        5. Display Triangle
+        6. Login Algo
+        7. Check Vowel Digit & Symbol
     2. Basic Maths
         1. Sum
         2. Divide
@@ -22,6 +31,17 @@ Program:
         4. Input Multiplication
         5. More Input Maths
         6. Multiplication Table
+        7. Check Positive/Negative
+        8. Conditional Sum
+        9. Simple Calculator
+        10. Perimeter and Area of Circle
+        11. Calculate Speed
+        12. Sphere Area
+        13. Sphere Volume
+        14. Decimal to Binary
+    3. Conditional Statements
+        1. Temperature Statement
+        2. Check Triangle Validity and Type
 
 ## 10. Linq Functions
     1. Basic Linq

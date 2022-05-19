@@ -4,25 +4,22 @@ using System.Linq;
 
 namespace CSharp_CheatSheet
 {
-    public class BasicsMainMenu
+    public class BasicsConditionalMenu
     {
-        // Main Basics Menu
-        public static void BasicsMain()
-        {
+        public static void MenuInputConditional(){
             Program.Space();
-            Console.WriteLine("Which Basics ? \n1) User Input\t2) Basic Maths\t3) Conditional Statements");
-            var BasicsInput = Console.ReadLine();
-            int valueBasicsInput = int.Parse(BasicsInput);
-            switch (valueBasicsInput)
+            Console.WriteLine("Which Input ?\n1) Temperature Statement\n2) Triangle Validity & Type");
+            var CondInput = Console.ReadLine();
+            int valueCondInput = int.Parse(CondInput);
+            switch (valueCondInput)
             {
-                case 1:
-                    BasicsInputMenu.MenuInput();
+                case 1: // Temperature Statement
+                    ConditionalFunctions.TemperatureStatement();
                     break;
-                case 2:
-                    BasicsMathsMenu.BasicsMaths();
+                case 2: // Triangle Validity & Type
+                    ConditionalFunctions.TriangleType();
                     break;
                 case 3:
-                    BasicsConditionalMenu.MenuInputConditional();
                     break;
                 case 4:
                     break;
@@ -30,7 +27,7 @@ namespace CSharp_CheatSheet
                     break;
                 case 6:
                     break;
-                case 7: 
+                case 7:
                     break;
                 case 8: 
                     break;
@@ -40,11 +37,10 @@ namespace CSharp_CheatSheet
                     break;
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");
-                    BasicsMain();
                     break;
             }
-            Program.Space();
         }
+        
     }
 
 }

@@ -4,33 +4,36 @@ using System.Linq;
 
 namespace CSharp_CheatSheet
 {
-    public class BasicsMainMenu
+    public class BasicsInputMenu
     {
-        // Main Basics Menu
-        public static void BasicsMain()
-        {
+        public static void MenuInput(){
             Program.Space();
-            Console.WriteLine("Which Basics ? \n1) User Input\t2) Basic Maths\t3) Conditional Statements");
+            Console.WriteLine("Which Input ?\n1) Original Input   2) AddInputToString    3) Swap Variable     4) Word Modif   5) Display a Triangle     6) Login Algo");
+            Console.WriteLine("7) Check Vowel Digit & Symbol");
             var BasicsInput = Console.ReadLine();
             int valueBasicsInput = int.Parse(BasicsInput);
             switch (valueBasicsInput)
             {
                 case 1:
-                    BasicsInputMenu.MenuInput();
+                    InputFunctions.InputExercise();
                     break;
                 case 2:
-                    BasicsMathsMenu.BasicsMaths();
+                    InputFunctions.AddInputToString();
                     break;
                 case 3:
-                    BasicsConditionalMenu.MenuInputConditional();
+                    InputFunctions.SwapVariable();
                     break;
                 case 4:
+                    InputFunctions.WordModif();
                     break;
                 case 5:
+                    InputFunctions.DisplayTriangle();
                     break;
                 case 6:
+                    InputFunctions.LoginAlgo();
                     break;
-                case 7: 
+                case 7:
+                    InputFunctions.CheckVowelDigitSymbol();
                     break;
                 case 8: 
                     break;
@@ -40,11 +43,10 @@ namespace CSharp_CheatSheet
                     break;
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");
-                    BasicsMain();
                     break;
             }
-            Program.Space();
         }
+        
     }
 
 }

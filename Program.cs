@@ -11,13 +11,13 @@ namespace CSharp_CheatSheet
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!"); // dotnet run
-            // Exercise 17
+            // Exercise 16 Conditional Statement
             
 
             // Template
             // Function.TestFunction(studentList); 
             Space();
-            AskExercise();
+            AskChapter();
 
         }
 
@@ -26,106 +26,57 @@ namespace CSharp_CheatSheet
             System.Console.WriteLine();
         }
 
-        public static void AskExercise()
+        public static void AskChapter()
         {
             Space();
-            Console.WriteLine("Which Exercise ? \n1) C# Basics\n2) -\n3) Swap Variables\n4) -\n5) -\n6) Containers\n7) Compare Number\n8) Convert Celsius\n9) Word Modifications\n10) LINQ Functions");
+            Console.WriteLine("Which Chapter ? \n1) C# Basics\n2) -\n3) -\n4) -\n5) -\n6) Containers\n7) Compare Number\n8) Convert Celsius\n9) -\n10) LINQ Functions");
             var exerciseInput = Console.ReadLine();
             int valueInput = int.Parse(exerciseInput);
             switch (valueInput)
             {
                 case 1: // C# Basics
                     BasicsMainMenu.BasicsMain();
-                    AskExercise();
+                    AskChapter();
                     break;
                 case 2:
-                    AskExercise();
+                    AskChapter();
                     break;
                 case 3:
-                    SwapVariable();
-                    SecondSwap();
-                    AskExercise();
+                    AskChapter();
                     break;
                 case 4:
-                    AskExercise();
+                    AskChapter();
                     break;
                 case 5:
-                    AskExercise();
+                    AskChapter();
                     break;
                 case 6:
                     ContainerFunction();
-                    AskExercise();
+                    AskChapter();
                     break;
                 case 7:
                     CompareNumber();
-                    AskExercise();
+                    AskChapter();
                     break;
                 case 8:
                     ConvertKelvinToFahrenheit();
-                    AskExercise();
+                    AskChapter();
                     break;
                 case 9:
-                    WordModif();
-                    AskExercise();
+                    AskChapter();
                     break;
                 case 10:
                     LINQMainMenu.LinqFunctions();
-                    AskExercise();
+                    AskChapter();
                     break;
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");
-                    AskExercise();
+                    AskChapter();
                     break;
             }
         }
 
-        
-
-        
-
-        public static void SwapVariable()
-        {
-            int number1, number2, temp;
-            Console.Write("\nInput the First Number : ");
-            number1 = int.Parse(Console.ReadLine());
-            Console.Write("\nInput the Second Number : ");
-            number2 = int.Parse(Console.ReadLine());
-            temp = number1;
-            number1 = number2;
-            number2 = temp;
-            Console.Write("\nAfter Swapping : ");
-            Console.Write("\nFirst Number : " +number1);
-            Console.Write("\nSecond Number : " +number2);
-            // Console.Read();
-            Space();
-        }
-
-        public static void SecondSwap()
-        {
-            Space();
-            Console.WriteLine("First Number");
-            int A = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Second Number");
-            int B = Convert.ToInt32(Console.ReadLine());
-            int SWAP1 = A;
-            int SWAP2 = B;
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("THE FIRST NUMBER IS " + A);
-            Console.WriteLine("THE SECOND NUMBER IS " + B);
-            Console.WriteLine("---------------------------\n");
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("AFTER SWAPPING: \n");
-            Console.WriteLine("FIRST NUMBER IS " + SWAP2);
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("SECOND NUMBER IS " + SWAP1);
-            ColorReset();
-            Space();
-        }
-
-        public static void ColorReset()
-        {
-            Console.ResetColor();
-        }
+    
 
         
         public static void ContainerFunction()
@@ -245,45 +196,7 @@ namespace CSharp_CheatSheet
             Space();
         }
 
-        public static void WordModif()
-        {
-            Space();
-            Console.WriteLine("Which Function ? \n1) Remove a letter\n2) Change first and last letter");
-            var WordModifInput = Console.ReadLine();
-            int valueWordModifInput = int.Parse(WordModifInput);
-            switch (valueWordModifInput)
-            {
-                case 1:
-                    RemoveLetter();
-                    break;
-                case 2:
-                    ChangeFirstAndLast();
-                    break;
-                default:
-                    Console.WriteLine("--- Warning: not acceptable value ! ---\n");
-                    WordModif();
-                    break;
-            }
-            Space();
-        }
-
-        public static void RemoveLetter()
-        {
-            Console.WriteLine("Enter a word: ");
-            string word = Console.ReadLine();
-            Console.WriteLine("Enter the letter of the word you want removed");
-            string letter = Console.ReadLine();
-            int charPos = word.IndexOf($"{letter}");
-            Console.WriteLine("Result: " + word.Remove(charPos, 1));
-        }
-
-        public static void ChangeFirstAndLast()
-        {
-            Console.WriteLine("Enter a word: ");
-            string word = Console.ReadLine();
-            Console.WriteLine("Result:" + $"{word[word.Length-1]}" + $"{word.Substring(1,word.Length-2)}" + $"{word[0]}");
-        }
-
+        
 
     }
 }
