@@ -6,9 +6,9 @@ namespace CSharp_CheatSheet
 {
     public class GroupJoinOperator
     {
-        public static void GroupJoinOperatorMethod(IList<Student> studentList)
+        public static void GroupJoinOperatorMethod()
         {
-            
+            var studentList = Student.GetAllStudents();
             
             IList<Standard> standardList = new List<Standard>() { 
                     new Standard(){ StandardID = 1, StandardName="Standard 1"},
@@ -32,7 +32,8 @@ namespace CSharp_CheatSheet
             
         }
 
-        public static void GroupJoinQuerySyntaxeMethod(IList<Student> studentList){
+        public static void GroupJoinQuerySyntaxeMethod(){
+            var studentList = Student.GetAllStudents();
             
             IList<Standard> standardList = new List<Standard>() { 
                     new Standard(){ StandardID = 1, StandardName="-- Standard 1 --"},

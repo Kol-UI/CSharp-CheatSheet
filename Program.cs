@@ -14,35 +14,10 @@ namespace CSharp_CheatSheet
             // Exercise 17
             
 
-
-            // Student collection
-            IList<Student> studentList = new List<Student>() { 
-                new Student() { StudentID = 1, StudentName = "John", Age = 13} ,
-                new Student() { StudentID = 2, StudentName = "Marc",  Age = 21 } ,
-                new Student() { StudentID = 3, StudentName = "Bill",  Age = 18 } ,
-                new Student() { StudentID = 4, StudentName = "Ram" , Age = 20} ,
-                new Student() { StudentID = 5, StudentName = "Ron" , Age = 15 } ,
-                new Student() { StudentID = 6, StudentName = "Paul", Age = 17} ,
-                new Student() { StudentID = 7, StudentName = "Tom",  Age = 22 } ,
-                new Student() { StudentID = 8, StudentName = "Bob",  Age = 19 } ,
-                new Student() { StudentID = 9, StudentName = "Michel" , Age = 32} ,
-                new Student() { StudentID = 10, StudentName = "Leo" , Age = 7 },
-                new Student() { StudentID = 10, StudentName = "Pierre" , Age = 17 },
-                new Student() { StudentID = 10, StudentName = "Patrick" , Age = 18 },
-                new Student() { StudentID = 11, StudentName = "Kevin" , Age = 22 }, // For Group by ID
-                new Student() { StudentID = 11, StudentName = "Bill",  Age = 24 }, // For Group by Name
-                new Student() { StudentID = 12, StudentName = "Paul", Age = 25}, // For Group by Name
-                new Student() { StudentID = 1, StudentName = "Arthur", Age = 18, StandardID = 1 } , // Standard ID
-                new Student() { StudentID = 2, StudentName = "Paul",  Age = 21, StandardID = 1 } ,
-                new Student() { StudentID = 3, StudentName = "Roger",  Age = 18, StandardID = 2 } ,
-                new Student() { StudentID = 4, StudentName = "Max" , Age = 20, StandardID = 2 } ,
-                new Student() { StudentID = 4, StudentName = "Clara" , Age = 19, StandardID = 3 } ,
-            };
-
             // Template
             // Function.TestFunction(studentList); 
             Space();
-            AskExercise(studentList);
+            AskExercise();
 
         }
 
@@ -51,111 +26,62 @@ namespace CSharp_CheatSheet
             System.Console.WriteLine();
         }
 
-        public static void AskExercise(IList<Student> studentList)
+        public static void AskExercise()
         {
             Space();
-            Console.WriteLine("Which Exercise ? \n1) User Input\n2) Basic Maths\n3) Swap Variables\n4) Input Maths\n5) Multiplication Table\n6) Containers\n7) Compare Number\n8) Convert Celsius\n9) Word Modifications\n10) LINQ Functions");
+            Console.WriteLine("Which Exercise ? \n1) C# Basics\n2) -\n3) Swap Variables\n4) -\n5) -\n6) Containers\n7) Compare Number\n8) Convert Celsius\n9) Word Modifications\n10) LINQ Functions");
             var exerciseInput = Console.ReadLine();
             int valueInput = int.Parse(exerciseInput);
             switch (valueInput)
             {
-                case 1:
-                    InputExercise();
-                    AskExercise(studentList);
+                case 1: // C# Basics
+                    BasicsMainMenu.BasicsMain();
+                    AskExercise();
                     break;
                 case 2:
-                    BasicMaths();
-                    AskExercise(studentList);
+                    AskExercise();
                     break;
                 case 3:
                     SwapVariable();
                     SecondSwap();
-                    AskExercise(studentList);
+                    AskExercise();
                     break;
                 case 4:
-                    InputMultiplication();
-                    AskExercise(studentList);
+                    AskExercise();
                     break;
                 case 5:
-                    MultiplicationTable();
-                    AskExercise(studentList);
+                    AskExercise();
                     break;
                 case 6:
                     ContainerFunction();
-                    AskExercise(studentList);
+                    AskExercise();
                     break;
                 case 7:
                     CompareNumber();
-                    AskExercise(studentList);
+                    AskExercise();
                     break;
                 case 8:
                     ConvertKelvinToFahrenheit();
-                    AskExercise(studentList);
+                    AskExercise();
                     break;
                 case 9:
                     WordModif();
-                    AskExercise(studentList);
+                    AskExercise();
                     break;
                 case 10:
-                    LINQMainMenu.LinqFunctions(studentList);
-                    AskExercise(studentList);
+                    LINQMainMenu.LinqFunctions();
+                    AskExercise();
                     break;
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");
-                    AskExercise(studentList);
+                    AskExercise();
                     break;
             }
         }
 
-        public static void BasicMaths()
-        {
-            Sum();
-            Divide();
-            MoreMaths();
-        }
+        
 
-        public static void Sum()
-        {
-            System.Console.WriteLine("Sum:");
-            System.Console.WriteLine(15+17);
-            Space();
-        }
-
-        public static void Divide()
-        {
-            System.Console.WriteLine("Divide:");
-            System.Console.WriteLine(36/6);
-            Space();
-        }
-
-        public static void MoreMaths()
-        {
-            int num1 = -1 + 4 * 6;
-            int num2 = (35 + 5) % 7;
-            double num3 = 14 + -4 * 6 / 11;
-            double num4 = 2 + 15 / 6 * 1 - 7 % 2;
-            Console.WriteLine($"{num1}\n{num2}\n{num3}\n{num4}");
-
-            int[] num = new int[3];
-            Console.WriteLine("Enter 3 numbers: ");
-            for (int i = 0; i < num.Length; i++)
-            {
-                num[i] = Convert.ToInt32(Console.ReadLine());
-            }
-            Console.WriteLine("Result of specified numbers {0}, {1} and {2}, (x+y).z is {3} and x.y +y.z is {4}", num[0], num[1], num[2], (num[0] + num[1]) * num[2], num[0] * num[1] + num[1]*num[2]);
-            Space();
-        }
-
-        public static void InputExercise()
-        {
-            Console.WriteLine("What is your name?");
-            var name = Console.ReadLine();
-            var currentDate = DateTime.Now;
-            Console.WriteLine($"{Environment.NewLine}Hello, {name}, on {currentDate:d} at {currentDate:t}!");
-            Console.Write($"{Environment.NewLine}Press any key to exit...");
-            Console.ReadKey(true);
-            Space();
-        }
+        
 
         public static void SwapVariable()
         {
@@ -201,66 +127,7 @@ namespace CSharp_CheatSheet
             Console.ResetColor();
         }
 
-        public static void InputMultiplication()
-        {
-            // Way 1
-            int num1, num2, num3;
-            Console.Write("Input the first number to multiply: ");
-            num1 = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Input the second number to multiply: ");
-            num2 = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Input the third number to multiply: ");
-            num3 = Convert.ToInt32(Console.ReadLine());
-            int result = num1 * num2 * num3;
-            Console.WriteLine("Output: {0} x {1} x {2} = {3}", num1, num2, num3, result);
-            Space();
-
-            // Way 2
-            int[] numArray = new int[3];
-            int result2 = 1;
-            for (int i = 0; i < 3; i++)
-            {
-                Console.WriteLine($"Please enter {i+1} number: ");
-                numArray[i] = Convert.ToInt32(Console.ReadLine());
-            }
-            foreach (var item in numArray)
-            {
-                result2 *= item;
-            }
-            Console.WriteLine(result);
-            Space();
-            MoreInputMaths();
-        }
-
-        public static void MoreInputMaths()
-        {
-            Console.Write("Enter a number: ");
-            int num1= Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter another number: ");
-            int num2= Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("{0} + {1} = {2}", num1, num2, num1+num2);
-            Console.WriteLine("The result of adding is: " + (num1 + num2));
-            Console.WriteLine("{0} - {1} = {2}", num1, num2, num1-num2);
-            Console.WriteLine("The result of subtracting is: " + (num1 - num2));
-            Console.WriteLine("{0} x {1} = {2}", num1, num2, num1*num2);
-            Console.WriteLine("The result of multiplying is: " + num1 * num2 );
-            Console.WriteLine("{0} / {1} = {2}", num1, num2, num1/num2);
-            Console.WriteLine("The result of dividing is: " + num1 / num2 );
-            Console.WriteLine("{0} mod {1} = {2}", num1, num2, num1%num2);
-            Console.WriteLine("The result of mod is: " + num1 % num2 );
-        }
-
-        public static void MultiplicationTable()
-        {
-            Space();
-            Console.WriteLine("Input number to multiply:");
-            int number =int.Parse(Console.ReadLine());
-            for(int i = 1; i <= 10; i++)
-            {
-                Console.WriteLine("{0} * {1} = {2}", number, i, number * i);
-            }
-        }
-
+        
         public static void ContainerFunction()
         {
             // !

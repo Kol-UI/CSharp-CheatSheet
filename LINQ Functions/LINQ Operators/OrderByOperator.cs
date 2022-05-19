@@ -6,7 +6,8 @@ namespace CSharp_CheatSheet
 {
     public class OrderByOperator
     {
-        public static void LINQOrderByFunction(IList<Student> studentList){
+        public static void LINQOrderByFunction(){
+            var studentList = Student.GetAllStudents();
             Program.Space();
             Console.WriteLine("-- OrderBy --\n-- Sorts the elements in the collection based on specified fields in ascending or decending order --");
             var orderByResult = from s in studentList
@@ -37,7 +38,8 @@ namespace CSharp_CheatSheet
                 Console.WriteLine(std.StudentName + " - ID : " + std.StudentID);
 
         }
-        public static void LINQOrderByDescendingFunction(IList<Student> studentList){
+        public static void LINQOrderByDescendingFunction(){
+            var studentList = Student.GetAllStudents();
             var orderByDescendingResult = from s in studentList // Sorts the studentList collection in descending order
                     orderby s.StudentName descending
                     select s;

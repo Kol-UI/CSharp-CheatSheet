@@ -2,16 +2,26 @@
 
 Program:
 ## Main Menu
-    1. User Input
-    2. Basic Maths
+    1. C# Basics
+    2. -
     3. Swap Variables
-    4. Input Maths
-    5. Multiplication Table
+    4. -
+    5. -
     6. Containers
     7. Compare Number
     8. Convert Celsius
     9. Word Modifications
     10. Linq Functions
+
+## 1. C# Basics
+    1. User Input
+    2. Basic Maths
+        1. Sum
+        2. Divide
+        3. More Maths
+        4. Input Multiplication
+        5. More Input Maths
+        6. Multiplication Table
 
 ## 10. Linq Functions
     1. Basic Linq
