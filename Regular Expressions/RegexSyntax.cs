@@ -13,9 +13,9 @@ namespace CSharp_CheatSheet
             QuantifierPlus();
             Console.WriteLine("? Quantifier: Used to match the preceding character zero or one time.");
             QuantifierQuestionMark();
-            Console.WriteLine("^ Special Character: Word after this element matches at the beginning of the string or line.");
+            Console.WriteLine("^ Anchor: Word after this element matches at the beginning of the string or line.");
             SpecialCharacterCircumflex();
-            Console.WriteLine("$ Special Character: Word before this element matches at the end of the line or string.");
+            Console.WriteLine("$ Anchor: Word before this element matches at the end of the line or string.");
             SpecialCharacterDollar();
             Console.WriteLine(". Special Character: Matches any character only once expect.");
             SpecialCharacterDot();

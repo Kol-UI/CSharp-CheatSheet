@@ -48,9 +48,18 @@ Program:
     2. Email Verification
     3. Regex Syntax
         1. Quantifiers
-        2. Special Characters
-        3. Character Classes
-        4. Group Expressions
+        2. Anchor
+        3. Special Characters
+        4. Character Classes
+        5. Group Expressions
+    4. Patern
+    5. Groups
+    6. Replacing
+        1. International Phone Number
+        2. Replacing Spacing
+        3. Replacing for Visualization
+        4. Replacing Words
+        5. Replacing Duplicates
 
 ## 10. Linq Functions
     1. Basic Linq
