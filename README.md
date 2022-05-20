@@ -6,7 +6,7 @@ Program:
     2. -
     3. -
     4. -
-    5. -
+    5. Regular Expressions
     6. Containers
     7. Compare Number
     8. Convert Celsius
@@ -43,12 +43,21 @@ Program:
         1. Temperature Statement
         2. Check Triangle Validity and Type
 
+## 5. Regular Expressions
+    1. Mobile Number Validity
+    2. Email Verification
+    3. Regex Syntax
+        1. Quantifiers
+        2. Special Characters
+        3. Character Classes
+        4. Group Expressions
+
 ## 10. Linq Functions
     1. Basic Linq
     2. Find Positive
     3. Find Number after specifics calculations
     4. Frequency
-    5. Linq Syntaxe
+    5. Linq Syntax
         1. String Collection
         2. Sequence Collection
         3. Anonymous Method

@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace CSharp_CheatSheet
+{
+    public class RegularMainMenu
+    {
+        public static void RegularMainMethod(){
+            Program.Space();
+            Console.WriteLine("Which Regular Exp Chapter ?\n1) Mobile Number Validity\n2) Email Verification\n3) Regex Syntax");
+            var regInput = Console.ReadLine();
+            int valueInput = int.Parse(regInput);
+            switch (valueInput)
+            {
+                case 1: // Mobile Number Validity
+                    MobileNumberValidity.MobileNumberMethod();
+                    break;
+                case 2: // Email Verification
+                    EmailVerification.EmailVerificationMethod();
+                    break;
+                case 3: // Regex Syntax
+                    RegexSyntax.RegexSyntaxMethod();
+                    break;
+                case 4:
+                    break;
+                case 5: 
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    break;
+                case 8:
+                    break;
+                case 9:
+                    break;
+                case 10:
+                    break;
+                default:
+                    Console.WriteLine("--- Warning: not acceptable value ! ---\n");
+                    break;
+            }
+        }
+        
+    }
+
+}

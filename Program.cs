@@ -29,7 +29,7 @@ namespace CSharp_CheatSheet
         public static void AskChapter()
         {
             Space();
-            Console.WriteLine("Which Chapter ? \n1) C# Basics\n2) -\n3) -\n4) -\n5) -\n6) Containers\n7) Compare Number\n8) Convert Celsius\n9) -\n10) LINQ Functions");
+            Console.WriteLine("Which Chapter ? \n1) C# Basics\n2) -\n3) -\n4) -\n5) Regular Expressions\n6) Containers\n7) Compare Number\n8) Convert Celsius\n9) -\n10) LINQ Functions");
             var exerciseInput = Console.ReadLine();
             int valueInput = int.Parse(exerciseInput);
             switch (valueInput)
@@ -47,7 +47,8 @@ namespace CSharp_CheatSheet
                 case 4:
                     AskChapter();
                     break;
-                case 5:
+                case 5: // Regular Expressions
+                    RegularMainMenu.RegularMainMethod();
                     AskChapter();
                     break;
                 case 6:
