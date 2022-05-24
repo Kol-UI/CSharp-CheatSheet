@@ -5,9 +5,7 @@ using System.Text.RegularExpressions;
 static class RegexUtil
 {
     static Regex _regex = new Regex(@"/content/([a-z0-9\-]+)\.cs$");
-    /// <summary>
-    /// This returns the key that is matched within the input.
-    /// </summary>
+    // This returns the key that is matched within the input.
     static public string MatchKey(string input)
     {
         Match match = _regex.Match(input.ToLower());
