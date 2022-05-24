@@ -60,6 +60,19 @@ Program:
         3. Replacing for Visualization
         4. Replacing Words
         5. Replacing Duplicates
+    7. Capture
+    8. Parsing
+        1. Parse
+        2. TryParse
+        3. TryParse no if
+        4. New Out Syntax
+        5. Converting
+        6. TryParse a DateTime
+        7. Benchmarks Invalid Strings
+        8. Benchmarks IntParse Fast
+    9. Matching
+        1. Default Regex Matching
+        2. Greedy Matching
 
 ## 10. Linq Functions
     1. Basic Linq

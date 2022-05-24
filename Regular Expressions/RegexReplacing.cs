@@ -23,19 +23,11 @@ namespace CSharp_CheatSheet
                     break;
                 case 4: // Replacing Words
                     RegexExample1();
+                    Program.Space();
+                    RegexExample2();
                     break;
                 case 5: // Duplicate
-
-                    break;
-                case 6: 
-                    break;
-                case 7:
-                    break;
-                case 8:
-                    break;
-                case 9:
-                    break;
-                case 10:
+                    ReplacingDuplicates();
                     break;
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");
@@ -53,6 +45,12 @@ namespace CSharp_CheatSheet
             Console.WriteLine("-- Regex : 'Mr\\.? |Mrs\\.? |Miss |Ms\\.?' --");
             foreach (string name in names)
                 Console.WriteLine(Regex.Replace(name, pattern, String.Empty));
+        }
+
+        public static void RegexExample2(){
+            Regex regex = new Regex(@"\d+");
+            string result = regex.Replace("cat 123 456", "bird");
+            Console.WriteLine("RESULT: {0}", result);
         }
 
         public static void ReplacingPhoneNumber(){

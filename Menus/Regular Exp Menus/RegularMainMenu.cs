@@ -8,7 +8,7 @@ namespace CSharp_CheatSheet
     {
         public static void RegularMainMethod(){
             Program.Space();
-            Console.WriteLine("Which Regular Exp Chapter ?\n1) Mobile Number Validity\n2) Email Verification\n3) Regex Syntax\n4) Patern\n5) Groups\n6) Replacing");
+            Console.WriteLine("Which Regular Exp Chapter ?\n1) Mobile Number Validity\n2) Email Verification\n3) Regex Syntax\n4) Patern\n5) Groups\n6) Replacing\n7) Capture\n8) Parse & TryParse\n9) Matching");
             var regInput = Console.ReadLine();
             int valueInput = int.Parse(regInput);
             switch (valueInput)
@@ -31,11 +31,14 @@ namespace CSharp_CheatSheet
                 case 6: // Replacing
                     RegexReplacing.RegexReplacingMethod();
                     break;
-                case 7:
+                case 7: // Capture
+                    RegexCapture.MainRegexCapture();
                     break;
-                case 8:
+                case 8: // Parse & TryParse
+                    RegexParse.ParseMain();
                     break;
-                case 9:
+                case 9: // Matching
+                    RegexMatching.RegexMatchingMethod();
                     break;
                 case 10:
                     break;
