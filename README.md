@@ -72,19 +72,25 @@ Program:
         8. Benchmarks IntParse Fast
     9. Matching
         1. Default Regex Matching
-        2. Greedy Matching
-        3. Static Regex Margin
-        4. Match Method
+        2. Simple Use
+        3. Greedy Matching
+        4. Static Regex Margin
+        5. Match Method
             1. Words Containing Specific Letter
             2. Match Starting
-        5. Match Numbers
-        6. IsMatch Method
+        6. Match Numbers
+        7. IsMatch Method
     10. Regex Options
         1. Ignore Case
         2. Ignore WhiteSpace
         3. Multiple Matches Ignore Case Option
         4. Multi Line Option
         5. Singleline
+        6. Implicit Captures
+        7. Explicit Captures
+        8. Compiled
+        9. RightToLeft
+        10. ECMAScript
 
 ## 10. Linq Functions
     1. Basic Linq

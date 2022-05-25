@@ -8,7 +8,7 @@ namespace CSharp_CheatSheet
     {
         public static void RegularMainMethod(){
             Program.Space();
-            Console.WriteLine("Which Regular Exp Chapter ?\n1) Mobile Number Validity\n2) Email Verification\n3) Regex Syntax\n4) Patern\n5) Groups\n6) Replacing\n7) Capture\n8) Parse & TryParse\n9) Matching\n10) Regex Options");
+            Console.WriteLine("Which Regular Exp Chapter ?\n1) Mobile Number Validity\n2) Email Verification\n3) Regex Syntax\n4) Patern\n5) Groups\n6) Replacing\n7) Capture\n8) Parse & TryParse\n9) Matching\n10) Regex Options\n11) More Examples");
             var regInput = Console.ReadLine();
             int valueInput = int.Parse(regInput);
             switch (valueInput)
@@ -43,6 +43,7 @@ namespace CSharp_CheatSheet
                 case 10: // Regex Options
                     RegexOptionsList.MainOptionsList();
                     break;
+                case 11: // More Examples
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");
                     break;

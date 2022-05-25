@@ -7,7 +7,7 @@ namespace CSharp_CheatSheet
     {
         public static void RegexMatchingMethod(){
             Program.Space();
-            Console.WriteLine("Which Matching ?\n1) Default Regex Matching\n2) Greedy Matching\n3) Static Regex Matching\n4) Match Method\n5) Match Numbers\n6) IsMatch Method");
+            Console.WriteLine("Which Matching ?\n1) Default Regex Matching\n2) Simple Use\n3) Greedy Matching\n4) Static Regex Matching\n5) Match Method\n6) Match Numbers\n7) IsMatch Method");
             var regMatchingInput = Console.ReadLine();
             int valueMatchingInput = int.Parse(regMatchingInput);
             switch (valueMatchingInput)
@@ -15,21 +15,24 @@ namespace CSharp_CheatSheet
                 case 1: // Default Regex Matching
                     DefaultRegexMatching();
                     break;
-                case 2: // Greedy Matching
+                case 2: // Simple Use
+                    SimpleUseofMatch();
+                    break;
+                case 3: // Greedy Matching
                     GreedyMatchingAlgo();
                     break;
-                case 3: // Static Regex Matching
+                case 4: // Static Regex Matching
                     StaticRegexMatching();
                     break;
-                case 4: // Match Method
+                case 5: // Match Method
                     MatchMethod();
                     MatchFirstWordContaining();
                     MatchStartingWith();
                     break;
-                case 5: // Match Numbers
+                case 6: // Match Numbers
                     MatchNumbers();
                     break;
-                case 6: // IsMatch Method
+                case 7: // IsMatch Method
                     IsMatchMethod();
                     IsMatchPartNumbers();
                     break;
@@ -46,6 +49,22 @@ namespace CSharp_CheatSheet
             if (result2.Success)
             {
                 Console.WriteLine("GREEDY:     {0}", result2.Value);
+            }
+        }
+
+        private static void SimpleUseofMatch()
+        {
+            string letters = "lpbtecqiajeqfbdsjksdwofkxrhlwnfgpxdpsnvgneedletgroqsuaeinqfjcdvtewddnnibzneedlezloyxtaetnxia";
+            Regex needleRegex = new Regex(@"needle");
+            Match needleMatch = needleRegex.Match(letters);
+            if(needleMatch.Success)
+            {
+                Console.WriteLine($"Simple Use:");
+                while (needleMatch.Success)
+                {
+                    Console.WriteLine($"Word '{needleMatch.Value}' found at position {needleMatch.Index}.");
+                    needleMatch = needleMatch.NextMatch();
+                }
             }
         }
 
