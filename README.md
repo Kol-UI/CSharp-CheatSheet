@@ -42,6 +42,8 @@ Program:
     3. Conditional Statements
         1. Temperature Statement
         2. Check Triangle Validity and Type
+        3. Vowel or Consonant
+        4. Profit & Loss
 
 ## 5. Regular Expressions
     1. Mobile Number Validity
