@@ -47,7 +47,8 @@ Program:
     4. Remove Diacritics
     5. For Loop
         1. Multiplication Table
-        
+        2. Many Multiplication Tables
+
 
 ## 5. Regular Expressions
     1. Mobile Number Validity
