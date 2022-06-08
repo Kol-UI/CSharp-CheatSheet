@@ -44,6 +44,10 @@ Program:
         2. Check Triangle Validity and Type
         3. Vowel or Consonant
         4. Profit & Loss
+    4. Remove Diacritics
+    5. For Loop
+        1. Multiplication Table
+        
 
 ## 5. Regular Expressions
     1. Mobile Number Validity

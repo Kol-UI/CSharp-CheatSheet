@@ -35,12 +35,6 @@ namespace CSharp_CheatSheet
                 case 7:
                     InputFunctions.CheckVowelDigitSymbol();
                     break;
-                case 8: 
-                    break;
-                case 9: 
-                    break;    
-                case 10: 
-                    break;
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");
                     break;

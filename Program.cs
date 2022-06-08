@@ -11,11 +11,12 @@ namespace CSharp_CheatSheet
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!"); // dotnet run
-            // Exercise 16 Conditional Statement
+            // Exercise For Loop
             
-
+            
             // Template
-            // Function.TestFunction(studentList); 
+            // Function.TestFunction(studentList);
+
             Space();
             AskChapter();
 

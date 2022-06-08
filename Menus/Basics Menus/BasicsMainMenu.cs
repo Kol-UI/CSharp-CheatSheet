@@ -10,7 +10,7 @@ namespace CSharp_CheatSheet
         public static void BasicsMain()
         {
             Program.Space();
-            Console.WriteLine("Which Basics ? \n1) User Input\t2) Basic Maths\t3) Conditional Statements");
+            Console.WriteLine("Which Basics ? \n1) User Input\t2) Basic Maths\t3) Conditional Statements  4) Remove Diacritics  5) For Loop");
             var BasicsInput = Console.ReadLine();
             int valueBasicsInput = int.Parse(BasicsInput);
             switch (valueBasicsInput)
@@ -25,8 +25,10 @@ namespace CSharp_CheatSheet
                     BasicsConditionalMenu.MenuInputConditional();
                     break;
                 case 4:
+                    RemoveDiacritics.DiacriticsMain();
                     break;
                 case 5:
+                    BasicsForLoopMenu.MenuForInput();
                     break;
                 case 6:
                     break;
