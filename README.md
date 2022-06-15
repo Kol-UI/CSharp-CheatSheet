@@ -48,6 +48,12 @@ Program:
     5. For Loop
         1. Multiplication Table
         2. Many Multiplication Tables
+        3. Patterns
+            1. Asterisk Triangle Patterns
+            2. Numbers Triangle Patterns
+            3. Repeated Number Triangle Patterns
+            4. Increasing Number Triangle Patterns
+            5. Increasing Number Pyramid Patterns
 
 
 ## 5. Regular Expressions
