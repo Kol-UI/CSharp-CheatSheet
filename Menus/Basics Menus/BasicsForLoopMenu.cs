@@ -7,7 +7,7 @@ namespace CSharp_CheatSheet
     {
         public static void MenuForInput(){
             Program.Space();
-            Console.WriteLine("Which For Loop ?\n1) Multiplication Table    2) Many Mutiplication Tables    3) Patterns");
+            Console.WriteLine("Which For Loop ?\n1) Multiplication Table    2) Many Mutiplication Tables    3) Patterns   4) Factoral");
             var BasicsForInput = Console.ReadLine();
             int valueBasicsForInput = int.Parse(BasicsForInput);
             switch (valueBasicsForInput)
@@ -20,7 +20,8 @@ namespace CSharp_CheatSheet
                     break;
                 case 3:
                     Program.Space();
-                    Console.WriteLine("Which Pattern Loop ?\n1) Asterisk Triangle Pattern\t2) Numbers Triangle Pattern\t3) Repeated Number Triangle Patterns\n4) Increasing Number Triangle Patterns\t5) Increasing Number Pyramid Patterns");
+                    Console.WriteLine("Which Pattern Loop ?\n1) Asterisk Triangle Pattern\t2) Numbers Triangle Pattern\t3) Repeated Number Triangle Patterns\n4) Increasing Number Triangle Patterns\t5) Increasing Number Pyramid Patterns\t6) Asterisk Rows Pyramid Patterns");
+                    Console.WriteLine("7) Repeated Number Pyramid Patterns");
                     var BasicsForPatternInput = Console.ReadLine();
                     int valueBasicsForPatternInput = int.Parse(BasicsForPatternInput);
                     switch (valueBasicsForPatternInput)
@@ -41,15 +42,19 @@ namespace CSharp_CheatSheet
                                 ForLoopFunctions.IncreasingNumberPyramidPatterns();
                                 break;
                             case 6:
+                                ForLoopFunctions.AsteriskRowsPyramidPatterns();
                                 break;
                             case 7:
+                                ForLoopFunctions.RepeatedNumberPyramidPatterns();
                                 break;
                             default:
                                 Console.WriteLine("--- Warning: not acceptable value ! ---\n");
                                 break;
                         }
                     break;
+
                 case 4:
+                    ForLoopFunctions.CalculateFactorial();
                     break;
                 case 5:
                     break;

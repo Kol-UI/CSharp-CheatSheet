@@ -54,6 +54,9 @@ Program:
             3. Repeated Number Triangle Patterns
             4. Increasing Number Triangle Patterns
             5. Increasing Number Pyramid Patterns
+            6. Asterisk Rows Pyramid Patterns
+            7. Repeated Number Pyramid Patterns
+        4. Factorial
 
 
 ## 5. Regular Expressions

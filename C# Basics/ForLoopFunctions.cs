@@ -81,6 +81,7 @@ namespace CSharp_CheatSheet
 
         public static void IncreasingNumberTrianglePatterns(){
             int i, j, rows, k = 1;
+            Console.WriteLine("--- Increasing Numbers in Triangle ---");
             Console.Write("Input number of rows : ");
             rows = Convert.ToInt32(Console.ReadLine());    
             for(i = 1; i <= rows; i++)
@@ -93,7 +94,7 @@ namespace CSharp_CheatSheet
 
         public static void IncreasingNumberPyramidPatterns(){
             int i, j, spc, rows, k, t = 1;
-
+            Console.WriteLine("--- Increasing Numbers in Pyramid ---");
             Console.Write("input number of rows : ");
             rows = Convert.ToInt32(Console.ReadLine());    
             spc = rows + 3;
@@ -108,6 +109,59 @@ namespace CSharp_CheatSheet
                 Console.Write("\n");
                 spc--;
             }
+        }
+
+        public static void AsteriskRowsPyramidPatterns(){
+            int i, j, k, rows, spc;
+            Console.WriteLine("--- Asterisk in Pyramid with space ---");
+            Console.Write("Input number of rows : ");
+            rows = Convert.ToInt32(Console.ReadLine());    
+            spc = rows + 3;
+            for(i = 1; i <= rows; i++)
+            {
+                for(k = spc; k >= 1; k--)
+                {
+                    Console.Write(" ");
+                }
+                for(j = 1;j <= i; j++)
+                {
+                    Console.Write("* ");
+                }
+                Console.Write("\n");
+                spc--;
+            }
+        }
+
+        public static void RepeatedNumberPyramidPatterns(){
+            Console.WriteLine("--- Pyramid of Repeated Numbers ---");
+            int i,j,spc,rows,k;
+            Console.Write("Input number of rows : ");
+            rows= Convert.ToInt32(Console.ReadLine());    
+            spc=rows+3;
+            for(i = 1; i <= rows; i++)
+            {
+                for(k = spc; k >= 1; k--)
+                {   
+                    Console.Write(" ");
+                }        
+                for(j = 1; j <= i; j++)
+                Console.Write("{0} ",i);
+                Console.Write("\n");
+                spc--;
+            }
+        }
+
+        public static void CalculateFactorial(){
+            int i, f = 1, num;
+            
+            Console.WriteLine("--- Calculate the factorial of a given number ---");  
+            Console.Write("Input the number : ");
+            num = Convert.ToInt32(Console.ReadLine()); 
+            for(i = 1; i <= num; i++)
+            {
+                f = f * i;
+            }
+            Console.Write("The Factorial of {0} is: {1}\n", num, f);
         }
  
     }
