@@ -21,7 +21,7 @@ namespace CSharp_CheatSheet
                 case 3:
                     Program.Space();
                     Console.WriteLine("Which Pattern Loop ?\n1) Asterisk Triangle Pattern\t2) Numbers Triangle Pattern\t3) Repeated Number Triangle Patterns\n4) Increasing Number Triangle Patterns\t5) Increasing Number Pyramid Patterns\t6) Asterisk Rows Pyramid Patterns");
-                    Console.WriteLine("7) Repeated Number Pyramid Patterns");
+                    Console.WriteLine("7) Repeated Number Pyramid Patterns\t8) Diamond Partterns\t9) Alphabet Patterns");
                     var BasicsForPatternInput = Console.ReadLine();
                     int valueBasicsForPatternInput = int.Parse(BasicsForPatternInput);
                     switch (valueBasicsForPatternInput)
@@ -46,6 +46,12 @@ namespace CSharp_CheatSheet
                                 break;
                             case 7:
                                 ForLoopFunctions.RepeatedNumberPyramidPatterns();
+                                break;
+                            case 8:
+                                ForLoopFunctions.DiamonPatterns();
+                                break;
+                            case 9:
+                                PatternsAlphabetFunctions.AlphabetPatternsSelect();
                                 break;
                             default:
                                 Console.WriteLine("--- Warning: not acceptable value ! ---\n");

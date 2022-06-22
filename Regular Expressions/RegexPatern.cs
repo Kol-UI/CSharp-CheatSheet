@@ -3,9 +3,9 @@ using System.Text.RegularExpressions;
 
 namespace CSharp_CheatSheet
 {
-    public class RegexPatern
+    public class RegexPattern
     {
-        public static void RegexPaternMethod(){
+        public static void RegexPatternMethod(){
             Program.Space();
             // This pattern will match any string containing a 'ab' substring
             var regularExpression = new Regex("ab");

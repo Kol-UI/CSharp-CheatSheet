@@ -6,7 +6,8 @@ namespace CSharp_CheatSheet
 {
     public class BasicsConditionalMenu
     {
-        public static void MenuInputConditional(){
+        public static void MenuInputConditional()
+        {
             Program.Space();
             Console.WriteLine("Which Input ?\n1) Temperature Statement\n2) Triangle Validity & Type\n3) Vowel or Consonant\n4) Profit & Loss");
             var CondInput = Console.ReadLine();

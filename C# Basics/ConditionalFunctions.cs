@@ -8,11 +8,11 @@ namespace CSharp_CheatSheet
     {
         public static void TemperatureStatement(){
             int tmp;
-            Console.WriteLine("Accept temperature and display message.\nEnter a temperature: ");
+            Console.WriteLine("--- Accept temperature and display message ---\nEnter a temperature: ");
             tmp = Convert.ToInt32(Console.ReadLine());
 
             switch (tmp){
-                case (< 0):
+                case < 0:
                     Console.WriteLine("Freezing");
                     break;
                 case >= 0 and < 10:
@@ -27,7 +27,7 @@ namespace CSharp_CheatSheet
                 case >= 20 and < 30:
                     Console.WriteLine("It's Hot");
                     break;
-                case (>= 30):
+                case >= 30:
                     Console.WriteLine("It's Very Hot");
                     break;
             }
@@ -45,12 +45,15 @@ namespace CSharp_CheatSheet
             angC = Convert.ToInt32(Console.ReadLine());
 
             sum = angA + angB + angC;
-            if(sum == 180){
+            if (sum == 180)
+            {
                 Console.WriteLine("Triangle valid.");
-                if (angA == angB && angB == angC){
+                if (angA == angB && angB == angC)
+                {
                     Console.WriteLine("It's an Equilateral Triangle.");
                 }
-                else{
+                else
+                {
                     if (angA == angB || angA == angC ||angB == angC){
                         Console.WriteLine("It's an Isocele Triangle.");
                     }
@@ -59,7 +62,8 @@ namespace CSharp_CheatSheet
                     }
                 }
             }
-            else{
+            else
+            {
                 Console.WriteLine("Triangle not valid (total shoud be 180).");
             }
         }

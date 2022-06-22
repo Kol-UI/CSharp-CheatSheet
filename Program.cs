@@ -11,7 +11,7 @@ namespace CSharp_CheatSheet
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!"); // dotnet run
-            // Exercise 14 For Loop
+            // Exercise 3 Array
             
             
             // Template
@@ -24,7 +24,7 @@ namespace CSharp_CheatSheet
 
         public static void Space()
         {
-            System.Console.WriteLine();
+            Console.WriteLine();
         }
 
         public static void AskChapter()

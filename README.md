@@ -3,8 +3,8 @@
 Program:
 ## Main Menu
     1. C# Basics
-    2. -
-    3. -
+    2. - (Math)
+    3. - (Methods)
     4. -
     5. Regular Expressions
     6. Containers
@@ -56,8 +56,28 @@ Program:
             5. Increasing Number Pyramid Patterns
             6. Asterisk Rows Pyramid Patterns
             7. Repeated Number Pyramid Patterns
+            8. Diamond Patterns
+            9. Alphabet Patterns
+                1. Specific Letters
+                2. All Letters
+                3. Letters from Word
         4. Factorial
+    6. Array
+        1. Frenquency in Array
+        2. Create an Array
+        3. Reverse an Array
+        4. Fast Reverse
+        5. Sum of elements in Array
+        6. Sum of elements in Array with .Sum
+        7. Copy from one Array to another
+        8. Count Number of Dublicate
 
+## 2. Math
+
+## 3. Methods
+    1. Concept of Method
+    2. List Methods
+    3. Array Methods
 
 ## 5. Regular Expressions
     1. Mobile Number Validity
@@ -68,7 +88,7 @@ Program:
         3. Special Characters
         4. Character Classes
         5. Group Expressions
-    4. Patern
+    4. Pattern
     5. Groups
     6. Replacing
         1. International Phone Number
