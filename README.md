@@ -71,6 +71,13 @@ Program:
         6. Sum of elements in Array with .Sum
         7. Copy from one Array to another
         8. Count Number of Dublicate
+        9. Print Unique Elements
+        10. Merge Two Arrays in Order
+        11. Get Min & Max of an Array
+        12. Sorting an Array
+        13. Insert New Value in Array
+        14. Array to Matrix
+            1.
 
 ## 2. Math
 

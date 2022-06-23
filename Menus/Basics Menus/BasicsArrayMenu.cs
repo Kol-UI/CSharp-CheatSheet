@@ -8,7 +8,8 @@ namespace CSharp_CheatSheet
         {
             Program.Space();
             Console.WriteLine("Which Array ?\n1) Frequency in Array  2) Create an Array  3) Reverse an Array  4) Fast Reverse  5) Sum of Elements in Array  6) Sum Of Elements In Array (.Sum)");
-            Console.WriteLine("7) Copy from one Array to another  8) Count Number of Dublicate");
+            Console.WriteLine("7) Copy from one Array to another  8) Count Number of Dublicate  9) Print Unique Element  10) Merge Arrays In Order");
+            Console.WriteLine("11) Get Min & Max of an Array  12) Sorting an Array  13) Insert New Value in Array  14) Array to Matrix");
             var ArrayInput = Console.ReadLine();
             int valueArrayInput = int.Parse(ArrayInput);
             switch (valueArrayInput)
@@ -36,6 +37,24 @@ namespace CSharp_CheatSheet
                     break;
                 case 8:
                     ArrayFunctions.CountTotalNumberOfDublicateElements();
+                    break;
+                case 9:
+                    ArrayFunctions.PrintUniqueElement();
+                    break;
+                case 10:
+                    ArrayFunctions.MergeArraysInOrder();
+                    break;
+                case 11:
+                    ArrayFunctions.GetMinMaxArray();
+                    break;
+                case 12:
+                    ArrayFunctions.SortingArray();
+                    break;
+                case 13:
+                    ArrayFunctions.InsertNewValueInArray();
+                    break;
+                case 14:
+                    ArrayFunctions.ArrayToMatrix();
                     break;
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");
