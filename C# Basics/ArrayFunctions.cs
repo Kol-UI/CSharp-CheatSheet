@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using CSharp_CheatSheet.CBasics;
 
 namespace CSharp_CheatSheet
 {
@@ -405,32 +406,25 @@ namespace CSharp_CheatSheet
 
         public static void ArrayToMatrix()
         {
-            int i, j;
-            int[,] Array2D = new int[3, 3];
-
-            Console.WriteLine("--- 2D Array to Matrix ---");
-
-            Console.WriteLine("Input elements in the matrix (int):");
-            for (i = 0; i < 3; i++)
-            {
-                for (j = 0; j < 3; j++)
-                {
-                    Console.Write("Element - [{0},{1}] : ", i, j);
-                    Array2D[i, j] = Convert.ToInt32(Console.ReadLine());
-                }
-            }
-
-            Console.WriteLine("The Matrix is :");
-            for (i = 0; i < 3; i++)
-            {
-                Console.Write("\n");
-                for (j = 0; j < 3; j++)
-                {
-                    Console.Write("{0}\t", Array2D[i, j]);
-                }
-            }
             Program.Space();
+            Console.WriteLine("Which Array to Matrices ?\n1) 2D Matrix\t2) Addition two Matrices");
+            var MatricesInput = Console.ReadLine();
+            int valueMatricesInput = int.Parse(MatricesInput);
+            switch (valueMatricesInput)
+            {
+                case 1:
+                    MatricesFunctions.Matrices2D();
+                    break;
+                case 2:
+                    MatricesFunctions.AdditionTwoMatrices();
+                    break;
+                default:
+                    Console.WriteLine("--- Warning: not acceptable value ! ---\n");
+                    break;
+            }
         }
+
+
 
 
 

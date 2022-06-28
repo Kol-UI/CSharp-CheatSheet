@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using CSharp_CheatSheet.Menus.BasicsMenus;
 
 namespace CSharp_CheatSheet
 {
@@ -10,7 +11,7 @@ namespace CSharp_CheatSheet
         public static void BasicsMain()
         {
             Program.Space();
-            Console.WriteLine("Which Basics ? \n1) User Input\t2) Basic Maths\t3) Conditional Statements  4) Remove Diacritics  5) For Loop  6) Array");
+            Console.WriteLine("Which Basics ? \n1) User Input\t2) Basic Maths\t3) Conditional Statements  4) Remove Diacritics  5) For Loop  6) Array  7) Search & Sort");
             var BasicsInput = Console.ReadLine();
             int valueBasicsInput = int.Parse(BasicsInput);
             switch (valueBasicsInput)
@@ -33,7 +34,8 @@ namespace CSharp_CheatSheet
                 case 6:
                     BasicsArrayMenu.MenuInputArray();
                     break;
-                case 7: 
+                case 7:
+                    BasicsSearchSortMenu.SearchSortMenu();
                     break;
                 case 8: 
                     break;
