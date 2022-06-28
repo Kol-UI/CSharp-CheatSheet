@@ -77,7 +77,11 @@ Program:
         12. Sorting an Array
         13. Insert New Value in Array
         14. Array to Matrix
-            1.
+            1. 2D Array to Matrix
+            2. Addition of two Matrices
+    7. Search & Sort
+        1. Shell Sort
+        2. Bogo Sort
 
 ## 2. Math
 
