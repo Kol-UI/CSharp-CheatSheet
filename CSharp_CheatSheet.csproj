@@ -6,4 +6,12 @@
     <RootNamespace>CSharp_CheatSheet</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="DateTime\" />
+    <None Remove="Menus\DateTime Menus\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DateTime Functions\" />
+    <Folder Include="Menus\DateTime Menus\" />
+  </ItemGroup>
 </Project>

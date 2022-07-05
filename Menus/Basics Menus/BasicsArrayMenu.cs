@@ -5,7 +5,7 @@ namespace CSharp_CheatSheet
     public class BasicsArrayMenu
     {
        public static void MenuInputArray()
-        {
+       {
             Program.Space();
             Console.WriteLine("Which Array ?\n1) Frequency in Array  2) Create an Array  3) Reverse an Array  4) Fast Reverse  5) Sum of Elements in Array  6) Sum Of Elements In Array (.Sum)");
             Console.WriteLine("7) Copy from one Array to another  8) Count Number of Dublicate  9) Print Unique Element  10) Merge Arrays In Order");

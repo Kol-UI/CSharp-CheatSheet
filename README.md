@@ -3,9 +3,9 @@
 Program:
 ## Main Menu
     1. C# Basics
-    2. - (Math)
-    3. - (Methods)
-    4. -
+    2. - DateTime
+    3. - (Math)
+    4. - (Methods)
     5. Regular Expressions
     6. Containers
     7. Compare Number
@@ -82,10 +82,33 @@ Program:
     7. Search & Sort
         1. Shell Sort
         2. Bogo Sort
+        3. Bubble Sort
+        4. Counting Sort
+        5. Heap Sort
+        6. Insertion Sort
+        7. Merge Sort
+        8. Permutation Sort
+        9. Quick Sort
+        10. Radix Sort
+        11. Selection Sort
 
-## 2. Math
+## 2. DateTime
+    1. Initialization Examples
+        1. Invoke Constructor
+        2. Invoke Implicit DateTime
+        3. Assigning a Computed Value
+        4. Parsing a String DateTime
+    2. Formatting DateTime as Strings
+        1. Default Format Date
+        2. Specific Culture Date
+        3. Get All Specific Culture
+        4. DateTime Custom Format String
+        5. Specify Format String & Specific Culture
+        6. Format DateTime Using ISO8601 Standard Web Services
 
-## 3. Methods
+## 3. Math
+
+## 4. Methods
     1. Concept of Method
     2. List Methods
     3. Array Methods

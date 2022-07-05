@@ -50,12 +50,14 @@ namespace CSharp_CheatSheet
             int[] ReversedArray = { 1, 2, 3, 4, 5 };
             Console.WriteLine("--- The program will reverse an Array ---");
 
-            Console.WriteLine("\nOriginal Array:");
+            Program.Space();
+            Console.WriteLine("Original Array:");
             for (int j = 0; j < ReversedArray.Length; j++)
             {
                 Console.Write(ReversedArray[j] + " ");
             }
-            Console.WriteLine("\nReversed:");
+            Program.Space();
+            Console.WriteLine("Reversed:");
             for (int k = ReversedArray.Length - 1; k >= 0; k--)
             {
                 Console.Write(ReversedArray[k] + " ");

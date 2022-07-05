@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
 using System.Threading;
+using CSharp_CheatSheet.Menus.DateTimeMenus;
 
 namespace CSharp_CheatSheet
 {
@@ -11,7 +12,7 @@ namespace CSharp_CheatSheet
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!"); // dotnet run
-            // Exercise 19 Array
+            // DateTime Parsing (Part 3)
             
             
             // Template
@@ -30,7 +31,7 @@ namespace CSharp_CheatSheet
         public static void AskChapter()
         {
             Space();
-            Console.WriteLine("Which Chapter ? \n1) C# Basics\n2) -\n3) -\n4) -\n5) Regular Expressions\n6) Containers\n7) Compare Number\n8) Convert Celsius\n9) -\n10) LINQ Functions");
+            Console.WriteLine("Which Chapter ? \n1) C# Basics\n2) DateTime\n3) -\n4) -\n5) Regular Expressions\n6) Containers\n7) Compare Number\n8) Convert Celsius\n9) -\n10) LINQ Functions");
             var exerciseInput = Console.ReadLine();
             int valueInput = int.Parse(exerciseInput);
             switch (valueInput)
@@ -39,7 +40,8 @@ namespace CSharp_CheatSheet
                     BasicsMainMenu.BasicsMain();
                     AskChapter();
                     break;
-                case 2:
+                case 2: // DateTime
+                    DateTimeMainMenu.MainMethod();
                     AskChapter();
                     break;
                 case 3:
@@ -148,7 +150,7 @@ namespace CSharp_CheatSheet
                         list4.Remove(list8[Index]);
                         break;
                     default:
-                        Console.WriteLine("Autre");
+                        Console.WriteLine("Other");
                         break;
                 }
                 NumberStart += 1;

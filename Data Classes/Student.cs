@@ -66,6 +66,16 @@ namespace CSharp_CheatSheet
                         new Student() { StudentID = 42, StudentName = "Louis" , Age = 12 },
                         new Student() { StudentID = 43, StudentName = "Wendi" , Age = 24 },
                         new Student() { StudentID = 44, StudentName = "Marion" , Age = 24 },
+                        new Student() { StudentID = 45, StudentName = "Maria" , Age = 28 },
+                        new Student() { StudentID = 46, StudentName = "Tony" , Age = 36 },
+                        new Student() { StudentID = 47, StudentName = "Hoare" , Age = 28 },
+                        new Student() { StudentID = 48, StudentName = "Lomuto" , Age = 23 },
+                        new Student() { StudentID = 49, StudentName = "Herman" , Age = 18 },
+                        new Student() { StudentID = 50, StudentName = "Hollerith" , Age = 27 },
+                        new Student() { StudentID = 51, StudentName = "Harold" , Age = 25 },
+                        new Student() { StudentID = 52, StudentName = "Seward" , Age = 24 },
+                        new Student() { StudentID = 53, StudentName = "Richard" , Age = 37 },
+                        new Student() { StudentID = 54, StudentName = "Larry" , Age = 44 },
 
                     };
             }
