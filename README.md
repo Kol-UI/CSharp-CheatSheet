@@ -105,6 +105,20 @@ Program:
         4. DateTime Custom Format String
         5. Specify Format String & Specific Culture
         6. Format DateTime Using ISO8601 Standard Web Services
+    3. Parsing String as DateTime
+        1. Parse Converting String to Date & Time
+        2. TryParse Converting String to Date & Time
+        3. ParseExact Converting String to Unknown Format
+        4. TryParseExact Converting String to Unknown Format
+        5. Convert ISO8601 to Date & Time
+    4. DateTime Resolution
+    5. Culture & Calendars
+        1. CultureInfo
+            1. Set Culture
+            2. Various Cultures
+            3. CultureInfo Sorting
+
+        2. List Cultures
 
 ## 3. Math
 
