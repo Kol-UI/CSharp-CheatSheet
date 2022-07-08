@@ -28,6 +28,11 @@ namespace CSharp_CheatSheet
             Console.WriteLine();
         }
 
+        public static void Time()
+        {
+            Thread.Sleep(1000);
+        }
+
         public static void AskChapter()
         {
             Space();

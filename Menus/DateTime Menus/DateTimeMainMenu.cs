@@ -57,7 +57,7 @@ namespace CSharp_CheatSheet.Menus.DateTimeMenus
         private static void CultureAndCalendars()
         {
             Program.Space();
-            Console.WriteLine("Which Culture & Calendars Topic ?\n1) Culture Info\n2) List Cultures");
+            Console.WriteLine("Which Culture & Calendars Topic ?\n1) Culture Info\n2) List Cultures\n3) Calendars\n4) Represent Dates");
             var DateCCInput = Console.ReadLine();
             int valueCCInput = int.Parse(DateCCInput);
             switch (valueCCInput)
@@ -67,6 +67,12 @@ namespace CSharp_CheatSheet.Menus.DateTimeMenus
                     break;
                 case 2:
                     ListCultures();
+                    break;
+                case 3:
+                    DateTimeCalendars.DateTimeCalendarsMain();
+                    break;
+                case 4:
+                    DateTimeCalendars.RepresentDates();
                     break;
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");
