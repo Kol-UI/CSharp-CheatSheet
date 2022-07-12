@@ -140,6 +140,42 @@ Program:
             9. Thai Buddhist Calendar
             10. UmAlQura Calendar
             11. Japanese Calendar
+    6. DateTime TimeZone
+        1. DateTimeKind Local
+        2. DateTimeKind UTC
+        3. DateTimeKind Unspecified
+        4. ToLocalTime
+        5. ToUniversalTime
+        6. ConvertToUTC
+        7. TimeZone List
+    7. DateTime Properties
+        1. DateTime.Date
+        2. DateTime.DayOfYear
+        3. DateTime.TimeOfDay
+        4. DateTime.Hour
+        5. DateTime.Minute
+        6. DateTime.Second
+        7. DateTime.Millisecond
+        8. DateTime.DayOfWeek
+        9. DateTime.Kind
+        10. Add DateTime
+        11. Subtract DateTime
+    8. Unix Time
+    9. Time Interval
+        1. TimeSpan
+        2. Elapsed Time
+    10. Format Time
+        1. Specifier "d" for Short Date Pattern
+        2. Specifier "D" for Long Date Pattern
+        3. Specifier "F" for Full Date and Time Pattern
+        4. Specifier "M" for Month and Day Pattern
+        5. Specifier "o" for Round-Trip Date and Time Pattern
+        6. Specifier "R" for RFC1123 Date and Time Pattern
+        7. Specifier "t" for Short Time Pattern
+        8. Specifier "T" for Long Time Pattern
+        9. Specifier "Y" for Year and Month Pattern
+        10. Customized Date and Time Format Patterns
+    11. Leap Year
 
 ## 3. Math
 

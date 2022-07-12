@@ -10,7 +10,8 @@ namespace CSharp_CheatSheet.Menus.DateTimeMenus
         {
             Program.Space();
             Console.WriteLine("Which DateTime ?\n1) Initialization Examples\t2) Formatting DateTime as Strings\t3) Parsing String as DateTime" +
-                "\n4) DateTime Resolution\t5) Culture & Calendars");
+                "\n4) DateTime Resolution\t5) Culture & Calendars\t6) DateTime TimeZone\t7) DateTime Properties" +
+                "\n8) Unix Time\t9) Time Interval   10) Format Time\t11) Leap Year");
             var DateTimeInput = Console.ReadLine();
             int valueDateTimeInput = int.Parse(DateTimeInput);
             switch (valueDateTimeInput)
@@ -29,6 +30,24 @@ namespace CSharp_CheatSheet.Menus.DateTimeMenus
                     break;
                 case 5:
                     CultureAndCalendars();
+                    break;
+                case 6:
+                    DateTimeTimeZone.TimeZoneMain();
+                    break; 
+                case 7:
+                    DateTimeProperties.DateTimePropertiesMain();
+                    break;
+                case 8:
+                    UnixTime();
+                    break; 
+                case 9:
+                    TimeInterval.TimeIntervalMain();
+                    break;
+                case 10:
+                    FormatTime.FormatTimeMain();
+                    break;
+                case 11:
+                    LeapYear();
                     break;
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");
@@ -92,6 +111,28 @@ namespace CSharp_CheatSheet.Menus.DateTimeMenus
                 Console.Write("{0,-5}", ci.TwoLetterISOLanguageName);
                 Console.Write("{0,-45}", ci.DisplayName);
                 Console.WriteLine("{0,-40}", ci.EnglishName);
+            }
+        }
+
+        private static void UnixTime()
+        {
+            Console.WriteLine("--- Unix Time ---");
+            long unixTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+            Console.WriteLine("At this moment {0} seconds have passed since Unix Epoch.", unixTime);
+        }
+
+        private static void LeapYear()
+        {
+            Console.Write("Input a year (yyyy) : ");
+            var yearInput = Console.ReadLine();
+            int year = Convert.ToInt32(yearInput);
+            if (DateTime.IsLeapYear(year))
+            {
+                Console.WriteLine($"{year} is a leap year");
+            }
+            else
+            {
+                Console.WriteLine($"{year} is not a leap year");
             }
         }
     }
