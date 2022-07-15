@@ -2,6 +2,7 @@
 
 Program:
 ## Main Menu
+
     1. C# Basics
     2. - DateTime
     3. - (Math)
@@ -14,6 +15,7 @@ Program:
     10. Linq Functions
 
 ## 1. C# Basics
+
     1. User Input
         1. Original Input
         2. Add Input To String
@@ -91,8 +93,18 @@ Program:
         9. Quick Sort
         10. Radix Sort
         11. Selection Sort
+    8. Random
+        1. Create Random
+        2. Static Random
+        3. Random.Next
+        4. Random Modulo
+        5. Randomize String
+        6. Random Bytes
+        7. Random Shuffle
+            1. Shuffling String Array
 
 ## 2. DateTime
+
     1. Initialization Examples
         1. Invoke Constructor
         2. Invoke Implicit DateTime
@@ -180,11 +192,13 @@ Program:
 ## 3. Math
 
 ## 4. Methods
+
     1. Concept of Method
     2. List Methods
     3. Array Methods
 
 ## 5. Regular Expressions
+
     1. Mobile Number Validity
     2. Email Verification
     3. Regex Syntax
@@ -234,6 +248,7 @@ Program:
         10. ECMAScript
 
 ## 10. Linq Functions
+
     1. Basic Linq
     2. Find Positive
     3. Find Number after specifics calculations
