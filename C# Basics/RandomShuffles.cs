@@ -17,8 +17,20 @@ namespace CSharp_CheatSheet.CBasics
 
             string[] shuffle = RandomizeStrings(arr);
             DisplayWithColors(shuffle);
-
         }
+
+
+        public static void FisherYatesShuffle()
+        {
+            string[] arrayFisherYates = { "Black", "Blue", "Cyan", "DarkBlue", "DarkCyan", "DarkGray", "DarkGreen", "DarkMagenta", "DarkRed", "DarkYellow",
+                "Gray", "Green", "Magenta", "Red", "White", "Yellow" };
+
+            ShuffleForFisherYates(arrayFisherYates);
+            Console.WriteLine("SHUFFLE: {0}", string.Join(",", arrayFisherYates));
+            Console.WriteLine("Results :");
+            DisplayWithColors(arrayFisherYates);
+        }
+
 
         private static string[] RandomizeStrings(string[] arr)
         {
@@ -106,6 +118,21 @@ namespace CSharp_CheatSheet.CBasics
             }
             Program.Space();
         }
+
+
+        static void ShuffleForFisherYates<T>(T[] arrayFisherYates)
+        {
+            int n = arrayFisherYates.Length;
+            for (int i = 0; i < (n - 1); i++)
+            {
+                int r = i + _random.Next(n - i);
+                T t = arrayFisherYates[r];
+                arrayFisherYates[r] = arrayFisherYates[i];
+                arrayFisherYates[i] = t;
+            }
+        }
+
+        
 
     }
 }

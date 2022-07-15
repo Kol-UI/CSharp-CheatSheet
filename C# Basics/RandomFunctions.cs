@@ -55,6 +55,10 @@ namespace CSharp_CheatSheet.CBasics
             RandomShuffles.ShufflingStringArray();
             RandomShuffles.ShufflingStringArray();
             Program.Space();
+
+            Console.WriteLine("--- Fisher Yates Shuffle ---");
+            RandomShuffles.FisherYatesShuffle();
+            Program.Space();
         }
 
         private static int CreateRandom(int random)

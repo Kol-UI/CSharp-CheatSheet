@@ -102,6 +102,7 @@ Program:
         6. Random Bytes
         7. Random Shuffle
             1. Shuffling String Array
+            2. Fisher-Yates Shuffle
 
 ## 2. DateTime
 
