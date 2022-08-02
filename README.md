@@ -103,6 +103,14 @@ Program:
         7. Random Shuffle
             1. Shuffling String Array
             2. Fisher-Yates Shuffle
+    9. Recursion
+        1. Print Natural Numbers
+        2. Print Reversed Natural Numbers
+        3. Sum of First Natural Numbers
+        4. Individual Digits
+        5. Get Number of Digits
+        6. Even and Odd
+        7. Check if Prime Number
 
 ## 2. DateTime
 
