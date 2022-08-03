@@ -111,6 +111,10 @@ Program:
         5. Get Number of Digits
         6. Even and Odd
         7. Check if Prime Number
+        8. Fibonacci Numbers
+            1. No Recursive High Performance
+            2. Recursive Bad Performance
+        9. Boolean Compositions
 
 ## 2. DateTime
 

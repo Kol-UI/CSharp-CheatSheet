@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Text;
+
 namespace CSharp_CheatSheet.CBasics
 {
     public class RecursionFunctions
@@ -7,7 +9,8 @@ namespace CSharp_CheatSheet.CBasics
         {
             Program.Space();
             Console.WriteLine("Which Recursion ? \n1) Print Natural Numbers  2) Print Reversed Natural Numbers  3) Sum of First Natural Numbers " +
-                " 4) Individual Digits  5) Get Number of Digits  6) Even and Odd\n 7) Check if Prime Number");
+                " 4) Individual Digits  5) Get Number of Digits  6) Even and Odd\n 7) Check if Prime Number  8) Fibonacci Numbers " +
+                " 9) Booleans Compositions");
             var RecursionInput = Console.ReadLine();
             int valueRecursionInput = int.Parse(RecursionInput);
             switch (valueRecursionInput)
@@ -32,6 +35,13 @@ namespace CSharp_CheatSheet.CBasics
                     break;
                 case 7:
                     CheckifPrimeNumber();
+                    break;
+                case 8:
+                    FibonacciNumbers();
+                    break;
+                case 9:
+                    Console.WriteLine("--- Booleans Compositions ---");
+                    CompositionBooleans(string.Empty, 3);
                     break;
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");
@@ -195,6 +205,66 @@ namespace CSharp_CheatSheet.CBasics
                     return 0;
                 else
                     return CheckForPrime(n1, i - 1);
+            }
+        }
+
+        private static void FibonacciNumbers()
+        {
+            int n;
+            Console.WriteLine("--- Fibonacci Numbers ---");
+
+            Console.WriteLine("Input any positive number :");
+            n = Convert.ToInt32(Console.ReadLine());
+            Program.Space();
+            
+            Console.WriteLine("--- No Recursive High Performance ---");
+            Fib1(n);
+            Console.WriteLine("Result: {0}", n);
+
+            Program.Space();
+            Console.WriteLine("--- Recursive Bad Performance ---");
+            Fib2(n);
+            Console.WriteLine("Result: {0}", n);
+        }
+
+        private static long Fib1(int n)
+        {
+            if (n < 2)
+                return n;
+            long[] f = new long[n + 1];
+            f[0] = 0;
+            f[1] = 1;
+
+            for (int i = 2; i <= n; i++)
+            {
+                f[i] = f[i - 1] + f[i - 2];
+            }
+            return f[n];
+        }
+
+        private static long Fib2(int n)
+        {
+            if (n == 0 || n == 1)
+                return n;
+            return Fib2(n - 2) + Fib2(n - 1);
+        }
+
+        public static void CompositionBooleans(string result, int counter)
+        {
+            if (counter == 0)
+                return;
+
+            bool[] booleans = new bool[2] { true, false };
+
+            for (int j = 0; j < 2; j++)
+            {
+                StringBuilder stringBuilder = new StringBuilder(result);
+                stringBuilder.Append(string.Format("{0} ", booleans[j].ToString())).ToString();
+
+                if (counter == 1)
+                    Console.WriteLine(stringBuilder.ToString());
+
+                CompositionBooleans(stringBuilder.ToString(), counter - 1);
             }
         }
     }
