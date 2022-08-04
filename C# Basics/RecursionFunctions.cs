@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using CSharp_CheatSheet.DataClasses;
 
 namespace CSharp_CheatSheet.CBasics
 {
@@ -10,7 +11,8 @@ namespace CSharp_CheatSheet.CBasics
             Program.Space();
             Console.WriteLine("Which Recursion ? \n1) Print Natural Numbers  2) Print Reversed Natural Numbers  3) Sum of First Natural Numbers " +
                 " 4) Individual Digits  5) Get Number of Digits  6) Even and Odd\n 7) Check if Prime Number  8) Fibonacci Numbers " +
-                " 9) Booleans Compositions");
+                " 9) Booleans Compositions  10) Palindrome Recursion  11) Find Factorial  12) Permutations in Array\n" +
+                "13) Recursion of Two Numbers  14) Convert Decimal Number to Binary  15) Reverse a String  16) Calcul Power Of Number");
             var RecursionInput = Console.ReadLine();
             int valueRecursionInput = int.Parse(RecursionInput);
             switch (valueRecursionInput)
@@ -42,6 +44,27 @@ namespace CSharp_CheatSheet.CBasics
                 case 9:
                     Console.WriteLine("--- Booleans Compositions ---");
                     CompositionBooleans(string.Empty, 3);
+                    break;
+                case 10:
+                    MainPalindrome();
+                    break;
+                case 11:
+                    FindFactorial();
+                    break;
+                case 12:
+                    PermutInArray();
+                    break;
+                case 13:
+                    RecursionOfTwoNumbers();
+                    break;
+                case 14:
+                    ConvertDecimalNumberToBinary();
+                    break;
+                case 15:
+                    ReverseAString();
+                    break;
+                case 16:
+                    CalculPowerOfNumber();
                     break;
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");
@@ -225,6 +248,11 @@ namespace CSharp_CheatSheet.CBasics
             Console.WriteLine("--- Recursive Bad Performance ---");
             Fib2(n);
             Console.WriteLine("Result: {0}", n);
+
+            Program.Space();
+            Console.WriteLine("--- Find Fibonacci ---");
+            Fib3();
+            Program.Space();
         }
 
         private static long Fib1(int n)
@@ -249,6 +277,30 @@ namespace CSharp_CheatSheet.CBasics
             return Fib2(n - 2) + Fib2(n - 1);
         }
 
+        private static int FindFibonacci(int n)
+        {
+            int p = 0;
+            int q = 1;
+            for (int i = 0; i < n; i++)
+            {
+                int temp = p;
+                p = q;
+                q = temp + q;
+            }
+            return p;
+        }
+
+        private static void Fib3()
+        {
+            Console.WriteLine("Input number of terms for the Fibonacci series : ");
+            int n1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("The Fibonacci series of {0} terms is : ", n1);
+            for (int i = 0; i < n1; i++)
+            {
+                Console.Write("{0} ", FindFibonacci(i));
+            }
+        }
+
         public static void CompositionBooleans(string result, int counter)
         {
             if (counter == 0)
@@ -265,6 +317,184 @@ namespace CSharp_CheatSheet.CBasics
                     Console.WriteLine(stringBuilder.ToString());
 
                 CompositionBooleans(stringBuilder.ToString(), counter - 1);
+            }
+        }
+
+        private static bool IsPalindrome(string text)
+        {
+            if (text.Length <= 1)
+            {
+                return true;
+            }
+            else
+            {
+                if (text[0] != text[text.Length - 1])
+                {
+                    return false;
+                }
+                else
+                {
+                    return IsPalindrome(text.Substring(1, text.Length - 2));
+                }
+            }
+        }
+
+        private static void MainPalindrome()
+        {
+            Console.WriteLine("--- Palindrome Recursion ---");
+            string str1;
+            bool tf;
+
+            Console.WriteLine("Input a string : ");
+            str1 = Console.ReadLine();
+            tf = IsPalindrome(str1);
+            if (tf == true)
+            {
+                Console.WriteLine("The string is a Palindrome.");
+            }
+            else
+            {
+                Console.WriteLine("The string is not a Palindrome.");
+            }
+            Program.Space();
+        }
+
+        private static void FindFactorial()
+        {
+            Console.WriteLine("--- Find the factorial of a given number ---");
+
+            Console.WriteLine("Input any positive number : ");
+            int n1 = Convert.ToInt32(Console.ReadLine());
+            long fact = FactorialCalcu(n1);
+            Console.WriteLine("The factorial of {0} is : {1} ", n1, fact);
+            Program.Space();
+        }
+
+        private static long FactorialCalcu(int n1)
+        {
+            if (n1 == 0)
+            {
+                return 1;
+            }
+            return n1 * FactorialCalcu(n1 - 1);
+        }
+
+        private static void PermutInArray()
+        {
+            int n, i;
+            ClassPermut test = new ClassPermut();
+            int[] arr1 = new int[5];
+
+            Console.WriteLine("--- Generate all possible permutations of an array ---");
+
+            Console.WriteLine("Input the number of elements to store in the array [maximum 5 digits] :");
+            n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Input {0} number of elements in the array :\n", n);
+            for (i = 0; i < n; i++)
+            {
+                Console.Write(" element - {0} : ", i);
+                arr1[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine("The Permutations with a combination of {0} digits are :", n);
+            test.PrnPermut(arr1, 0, n - 1);
+            Program.Space();
+        }
+
+        private static void RecursionOfTwoNumbers()
+        {
+            long num1, num2, hcf, lcm;
+            Console.WriteLine("--- Recursion of Two Numbers ---");
+
+            Console.WriteLine("- Input the first number : ");
+            num1 = Convert.ToInt64(Console.ReadLine());
+            Console.WriteLine("- Input the second number : ");
+            num2 = Convert.ToInt64(Console.ReadLine());
+
+            hcf = Gcd(num1, num2);
+            lcm = (num1 * num2) / hcf;
+
+            Console.WriteLine("--- Greatest Common Divisor of Two Numbers ---");
+            Console.WriteLine("The GCD of {0} and {1} = {2} ", num1, num2, hcf);
+            Console.WriteLine("--- Least Common Multiple of Two Numbers ---");
+            Console.WriteLine("The LCM of {0} and {1} = {2}\n", num1, num2, lcm);
+        }
+
+        private static long Gcd(long n1, long n2)
+        {
+            if (n2 == 0)
+            {
+                return n1;
+            }
+            else
+            {
+                return Gcd(n2, n1 % n2);
+            }
+        }
+
+        private static void ConvertDecimalNumberToBinary()
+        {
+            int num;
+            DecimalToBinaryClass ToConvert = new DecimalToBinaryClass();
+            Console.WriteLine("--- Convert a decimal number to binary ---");
+            Console.WriteLine("Input a decimal number : ");
+            num = int.Parse(Console.ReadLine());
+            Console.WriteLine("The binary equivalent of {0} is : ", num);
+            ToConvert.DecimalToBinary(num);
+            Program.Space();
+        }
+
+        private static void ReverseAString()
+        {
+            string str;
+            Console.WriteLine("--- Get the reverse of a string ---");
+            Console.WriteLine("Input the string : ");
+            str = Console.ReadLine();
+            str = StringReverse(str);
+            Console.WriteLine("The reverse of the string is : ");
+            Console.WriteLine(str);
+            Program.Space();
+        }
+
+        private static string StringReverse(string str)
+        {
+            if (str.Length > 0)
+            {
+                return str[^1] + StringReverse(str.Substring(0, str.Length - 1));
+            }
+            else
+            {
+                return str;
+            }
+        }
+
+        private static void CalculPowerOfNumber()
+        {
+            int bNum, pwr;
+            int result;
+            Console.WriteLine("--- Calculate power of any number (recursion) ---");
+
+            Console.WriteLine("Input the base value : ");
+            bNum = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Input the exponent : ");
+            pwr = Convert.ToInt32(Console.ReadLine());
+
+            result = CalculPower(bNum, pwr);
+
+            Console.WriteLine("The value of {0} to the power of {1} is : {2}", bNum, pwr, result);
+            Program.Space();
+        }
+
+        private static int CalculPower(int x, int y)
+        {
+            if (y == 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return x * CalculPower(x, y - 1);
             }
         }
     }
