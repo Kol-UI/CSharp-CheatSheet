@@ -365,18 +365,37 @@ namespace CSharp_CheatSheet.CBasics
 
             Console.WriteLine("Input any positive number : ");
             int n1 = Convert.ToInt32(Console.ReadLine());
-            long fact = FactorialCalcu(n1);
+            long fact = FactorialCalculInt(n1);
             Console.WriteLine("The factorial of {0} is : {1} ", n1, fact);
             Program.Space();
+
+            Console.WriteLine("--- Find the factorial of a given string ---");
+            string input = Console.ReadLine();
+            int valueString = 0;
+            foreach (char c in input)
+            {
+                valueString += 1;
+            }
+            long result = FactorialCalculString(valueString);
+            Console.WriteLine("The factorial of {0} is : {1} ", input, result);
         }
 
-        private static long FactorialCalcu(int n1)
+        private static long FactorialCalculInt(int n1)
         {
             if (n1 == 0)
             {
                 return 1;
             }
-            return n1 * FactorialCalcu(n1 - 1);
+            return n1 * FactorialCalculInt(n1 - 1);
+        }
+
+        private static long FactorialCalculString(int ValueString)
+        {
+            if (ValueString == 0)
+            {
+                return 1;
+            }
+            return ValueString * FactorialCalculString(ValueString - 1);
         }
 
         private static void PermutInArray()

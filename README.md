@@ -4,7 +4,7 @@ Program:
 ## Main Menu
 
     1. C# Basics
-    2. - DateTime
+    2. DateTime
     3. - (Math)
     4. - (Methods)
     5. Regular Expressions
@@ -114,7 +114,19 @@ Program:
         8. Fibonacci Numbers
             1. No Recursive High Performance
             2. Recursive Bad Performance
+            3. Find Fibonacci Numbers
         9. Boolean Compositions
+        10. Palindrome Recursion
+        11. Find Factorial
+            1. Int Factorial
+            2. String Factorial
+        12. Permutations in Array
+        13. Recursion of Two Numbers
+            1. Greatest Common Divisor
+            2. Least Common Multiple
+        14. Convert Decimal Number to Binary
+        15. Reverse a String
+        16. Calcul Power Of Number
 
 ## 2. DateTime
 
