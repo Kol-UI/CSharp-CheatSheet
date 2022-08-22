@@ -236,6 +236,8 @@ Program:
             6. Clamp
             7. CopySign
             8. DivRem
+            9. Floor
+            10. Fused Multiply-Add
 
 ## 4. Methods
 
