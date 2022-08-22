@@ -5,7 +5,7 @@ Program:
 
     1. C# Basics
     2. DateTime
-    3. - (Math)
+    3. Math
     4. - (Methods)
     5. Regular Expressions
     6. Containers
@@ -215,6 +215,27 @@ Program:
     11. Leap Year
 
 ## 3. Math
+
+    1. Fields
+        1. E
+        2. PI
+        3. Tau
+    2. Methods
+        1. Basic Math Methods
+            1. Abs
+                1. Abs Decimal
+                2. Abs Double
+                3. Abs Int16
+                4. Abs Int32
+                5. Abs Int64
+                6. Abs SByte
+            2. BigMul
+            3. BitDecrement
+            4. BitIncrement
+            5. Ceiling
+            6. Clamp
+            7. CopySign
+            8. DivRem
 
 ## 4. Methods
 
