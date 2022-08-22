@@ -238,6 +238,55 @@ Program:
             8. DivRem
             9. Floor
             10. Fused Multiply-Add
+            11. IEEERemainder
+            12. Max
+                1. Byte
+                2. Short
+                3. Int
+                4. Long
+                5. Float
+                6. Double
+                7. Decimal
+                8. SByte
+                9. UShort
+                10. UInt
+                11. ULong
+            13. MaxMagnitude
+            14. Min
+                1. Byte
+                2. Short
+                3. Int
+                4. Long
+                5. Float
+                6. Double
+                7. Decimal
+                8. SByte
+                9. UShort
+                10. UInt
+                11. ULong
+            15. MinMagnitude
+            16. Round
+                1. Decimal
+                2. Double
+                2. Midpoint Rounding
+                    1. AwayFromZero
+                    2. ToEven
+                    3. ToNegativeInfinity
+                    4. ToPositiveInfinity
+                    5. ToZero
+            17. ScaleB
+            18. Sign
+                1. Byte
+                2. Int16
+                3. Int32
+                4. Int64
+                5. Single
+                6. Double
+                7. Decimal
+                8. SByte
+            19. Truncate
+                1. Double
+                2. Decimal
 
 ## 4. Methods
 

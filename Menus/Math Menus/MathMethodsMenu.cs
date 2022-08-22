@@ -24,7 +24,8 @@ namespace CSharp_CheatSheet.Menus.MathMenus
         private static void MenuMathMethodsBasics()
         {
             Program.Space();
-            Console.WriteLine("Which Basic Math Method ?\n1) Abs  2) BigMul  3) BitDecrement  4) BitIncrement  5) Ceiling  6) Clamp  7) CopySign  8) DivRem  9) Floor 10) FusedMultiplyAdd");
+            Console.WriteLine("Which Basic Math Method ?\n1) Abs  2) BigMul  3) BitDecrement  4) BitIncrement  5) Ceiling  6) Clamp  7) CopySign  8) DivRem  9) Floor  10) FusedMultiplyAdd\n" +
+                "11) IEEERemainder  12) Max  13) MaxMagnitude  14) Min  15) MinMagnitude  16) Round  17) ScaleB  18) Sign  19) Truncate");
             var MathMethodsBasicInput = Console.ReadLine();
             int valueMathMethodsBasicInput = int.Parse(MathMethodsBasicInput);
             switch (valueMathMethodsBasicInput)
@@ -58,6 +59,33 @@ namespace CSharp_CheatSheet.Menus.MathMenus
                     break;
                 case 10:
                     MathFunctions.Methods.MathFusedMultiplyAdd.MethodMathFusedMultiplyAdd();
+                    break;
+                case 11:
+                    MathFunctions.Methods.BasicsMathMethods.MathIEEERemainder.MethodMathIEEERemainder();
+                    break;
+                case 12:
+                    MathFunctions.Methods.BasicsMathMethods.MathMax.MethodMathMax();
+                    break;
+                case 13:
+                    MathFunctions.Methods.BasicsMathMethods.MathMaxMagnitude.MethodMathMaxMagnitude();
+                    break;
+                case 14:
+                    MathFunctions.Methods.BasicsMathMethods.MathMin.MethodMathMin();
+                    break;
+                case 15:
+                    MathFunctions.Methods.BasicsMathMethods.MathMinMagnitude.MethodMathMinMagnitude();
+                    break;
+                case 16:
+                    MathFunctions.Methods.BasicsMathMethods.MathRound.MethodMathRound();
+                    break;
+                case 17:
+                    MathFunctions.Methods.BasicsMathMethods.MathScaleB.MethodMathScaleB();
+                    break;
+                case 18:
+                    MathFunctions.Methods.BasicsMathMethods.MathSign.MethodMathSign();
+                    break;
+                case 19:
+                    MathFunctions.Methods.BasicsMathMethods.MathTruncate.MethodMathTruncate();
                     break;
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");
