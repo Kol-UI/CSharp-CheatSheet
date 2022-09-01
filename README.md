@@ -287,6 +287,38 @@ Program:
             19. Truncate
                 1. Double
                 2. Decimal
+        2. Log & Logarithmic Methods
+            1. Exp
+            2. Log
+                1. Return Log
+                2. Log Specified Base
+                3. Log10
+                4. Log2
+                5. IlogB
+            3. Sqrt
+                1. Square Root of Given Number
+                2. Square Root of Area
+            4. Cbrt
+            5. Pow
+        3. Trigonometric Methods
+            1. Sin
+            2. Cos
+            3. Tan
+            4. Asin
+            5. Acos
+            6. Atan
+            7. Atan2
+            8. Trigonometric Examples
+                1. Trapezoid Example
+        4. Hyperbolic Methods
+            1. Sinh
+            2. Cosh
+            3. SinhCosh
+            4. Tanh
+            5. Asinh
+            6. Acosh
+            7. Atanh
+            
 
 ## 4. Methods
 

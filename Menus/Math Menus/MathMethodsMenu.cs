@@ -7,13 +7,22 @@ namespace CSharp_CheatSheet.Menus.MathMenus
         public static void MenuMathMethods()
         {
             Program.Space();
-            Console.WriteLine("Which Math Methods Category ?\n1) Basics\n2) \n3) ");
+            Console.WriteLine("Which Math Methods Category ?\n1) Basics\n2) Pow & Logarithmic Methods \n3) Trigonometric Methods \n4) Hyperbolic Methods");
             var MathMethodsInput = Console.ReadLine();
             int valueMathMethodsInput = int.Parse(MathMethodsInput);
             switch (valueMathMethodsInput)
             {
                 case 1:
                     MenuMathMethodsBasics();
+                    break;
+                case 2:
+                    MenuMathPowLogarithmicMethods();
+                    break;
+                case 3:
+                    MenuMathTrigoMethods();
+                    break;
+                case 4:
+                    MenuMathHyperbolicMethods();
                     break;
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");
@@ -86,6 +95,110 @@ namespace CSharp_CheatSheet.Menus.MathMenus
                     break;
                 case 19:
                     MathFunctions.Methods.BasicsMathMethods.MathTruncate.MethodMathTruncate();
+                    break;
+                default:
+                    Console.WriteLine("--- Warning: not acceptable value ! ---\n");
+                    break;
+            }
+        }
+
+
+        private static void MenuMathPowLogarithmicMethods()
+        {
+            Program.Space();
+            Console.WriteLine("Which Pow/Logarithmic Math Method ?\n1) Exp \n2) Log \n3) Sqrt \n4) Cbrt \n5) Pow");
+            var MathMethodsPowLogInput = Console.ReadLine();
+            int valueMathMethodsPowLogInput = int.Parse(MathMethodsPowLogInput);
+            switch (valueMathMethodsPowLogInput)
+            {
+                case 1:
+                    MathFunctions.Methods.PowerLogarithmicMethods.Exp.ExpMain();
+                    break;
+                case 2:
+                    MathFunctions.Methods.PowerLogarithmicMethods.Log.LogMain();
+                    break;
+                case 3:
+                    MathFunctions.Methods.PowerLogarithmicMethods.Sqrt.SqrtMain();
+                    break;
+                case 4:
+                    MathFunctions.Methods.PowerLogarithmicMethods.Cbrt.CbrtMain();
+                    break;
+                case 5:
+                    MathFunctions.Methods.PowerLogarithmicMethods.Pow.PowMain();
+                    break;
+                default:
+                    Console.WriteLine("--- Warning: not acceptable value ! ---\n");
+                    break;
+            }
+        }
+
+        private static void MenuMathTrigoMethods()
+        {
+            Program.Space();
+            Console.WriteLine("Which Trigo Math Method ?\n1) Sin \n2) Cos \n3) Tan \n4) Asin \n5) Acos \n6) Atan \n7) Atan2 \n8) Trigonometric Examples");
+            var MathMethodsTrigoInput = Console.ReadLine();
+            int valueMathMethodsTrigoInput = int.Parse(MathMethodsTrigoInput);
+            switch (valueMathMethodsTrigoInput)
+            {
+                case 1:
+                    MathFunctions.Methods.TrigonometricMathMethods.SinMethod.SinMethodMain();
+                    break;
+                case 2:
+                    MathFunctions.Methods.TrigonometricMathMethods.CosMethod.CosMethodMain();
+                    break;
+                case 3:
+                    MathFunctions.Methods.TrigonometricMathMethods.TanMethod.TanMethodMain();
+                    break;
+                case 4:
+                    MathFunctions.Methods.TrigonometricMathMethods.SinMethod.ASinMethodMain();
+                    break;
+                case 5:
+                    MathFunctions.Methods.TrigonometricMathMethods.CosMethod.ACosMethodMain();
+                    break;
+                case 6:
+                    MathFunctions.Methods.TrigonometricMathMethods.TanMethod.ATanMethodMain();
+                    break;
+                case 7:
+                    MathFunctions.Methods.TrigonometricMathMethods.TanMethod.ATan2MethodMain();
+                    break;
+                case 8:
+                    MathFunctions.Methods.TrigonometricMathMethods.TrigonometricExamples.TrigonometricExamplesMain();
+                    break;
+                default:
+                    Console.WriteLine("--- Warning: not acceptable value ! ---\n");
+                    break;
+            }
+        }
+
+
+        private static void MenuMathHyperbolicMethods()
+        {
+            Program.Space();
+            Console.WriteLine("Which Trigo Math Method ?\n1) Sinh \n2) Cosh \n3) SinhCosh \n4) Tanh \n5) Asinh \n6) Acosh \n7) Atanh");
+            var MathMethodsTrigoInput = Console.ReadLine();
+            int valueMathMethodsTrigoInput = int.Parse(MathMethodsTrigoInput);
+            switch (valueMathMethodsTrigoInput)
+            {
+                case 1:
+                    MathFunctions.Methods.HyperbolicMathMethods.Sinh.SinhMain();
+                    break;
+                case 2:
+                    MathFunctions.Methods.HyperbolicMathMethods.Cosh.CoshMain();
+                    break;
+                case 3:
+                    MathFunctions.Methods.HyperbolicMathMethods.Tanh.MainTanh();
+                    break;
+                case 4:
+                    MathFunctions.Methods.HyperbolicMathMethods.Tanh.MainTanh();
+                    break;
+                case 5:
+                    MathFunctions.Methods.HyperbolicMathMethods.Asinh.AsinhMain();
+                    break;
+                case 6:
+                    MathFunctions.Methods.HyperbolicMathMethods.Acosh.AcoshMain();
+                    break;
+                case 7:
+                    MathFunctions.Methods.HyperbolicMathMethods.Atanh.AtanhMain();
                     break;
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");
