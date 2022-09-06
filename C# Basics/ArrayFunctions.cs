@@ -427,9 +427,254 @@ namespace CSharp_CheatSheet
         }
 
 
+        public static void ArrayOverview()
+        {
+            Program.Space();
+            Console.WriteLine("--- Single-Dimensional Array of 5 integers ---");
+            Console.WriteLine("\t int[] array1 = new int[5];");
+            int[] array1 = new int[5];
+            Array.ForEach(array1, Console.WriteLine);
+
+            Program.Space();
+            Console.WriteLine("--- Declare & Set Array Element Values ---");
+            Console.WriteLine("\t int[] array2 = new int[] { 1, 3, 5, 7, 9 };");
+            int[] array2 = new int[] { 1, 3, 5, 7, 9 };
+            Array.ForEach(array2, Console.WriteLine);
+
+            Program.Space();
+            Console.WriteLine("--- Alternative Syntax ---");
+            Console.WriteLine("\t int[] array3 = { 1, 2, 3, 4, 5, 6 };");
+            int[] array3 = { 1, 2, 3, 4, 5, 6 };
+            Array.ForEach(array3, Console.WriteLine);
+
+            Program.Space();
+            Console.WriteLine("--- Declare Two-Dimensional Array ---");
+            Console.WriteLine("\t int[,] multiDimensionalArray1 = new int[2, 3];");
+            int[,] multiDimensionalArray1 = new int[2, 3];
+            Program.Space();
+            Console.WriteLine("--- Print Two-Dimensional Array ---");
+            var rowCount = multiDimensionalArray1.GetLength(0);
+            var colCount = multiDimensionalArray1.GetLength(1);
+            for (int row = 0; row < rowCount; row++)
+            {
+                for (int col = 0; col < colCount; col++)
+                {
+                    Console.Write(String.Format("{0}\t", multiDimensionalArray1[row, col]));
+                }
+
+                Console.WriteLine();
+            }
+
+            Program.Space();
+            Console.WriteLine("--- Set Multi Dimensional Array Element Values ---");
+            Console.WriteLine("\t int[,] multiDimensionalArray2 = { { 1, 2, 3 }, { 4, 5, 6 } };");
+            int[,] multiDimensionalArray2 = { { 1, 2, 3 }, { 4, 5, 6 } };
+            var rowCount2 = multiDimensionalArray2.GetLength(0);
+            var colCount2 = multiDimensionalArray2.GetLength(1);
+            for (int row = 0; row < rowCount2; row++)
+            {
+                for (int col = 0; col < colCount; col++)
+                {
+                    Console.Write(String.Format("{0}\t", multiDimensionalArray2[row, col]));
+                }
+
+                Console.WriteLine();
+            }
+
+            Program.Space();
+            Console.WriteLine("--- Declare Jagged Array ---");
+            Console.WriteLine("\t int[][] jaggedArray1 = new int[6][];");
+            int[][] jaggedArray1 = new int[6][];
+
+            Program.Space();
+            Console.WriteLine("--- Set Values of the First Array in the Jagged Array Structure ---");
+            Console.WriteLine("\t jaggedArray1[0] = new int[4] { 1, 2, 3, 4 };");
+            jaggedArray1[0] = new int[4] { 1, 2, 3, 4 };
+
+            Program.Space();
+            Console.WriteLine("--- Get Number of Dimension of an Array ---");
+            Console.WriteLine("\t int[,] theArray = new int[5, 10];");
+            int[,] theArray = new int[5, 10];
+            Console.WriteLine("The array has {0} dimensions.", theArray.Rank);
+
+            Program.Space();
+            Console.WriteLine("--- Single Dimensional String Array ---");
+            Console.WriteLine("\t string[] weekDays = new string[] { 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' }; ");
+            string[] weekDays = new string[] { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+            Array.ForEach(weekDays, Console.WriteLine);
+
+            Program.Space();
+            Console.WriteLine("--- Retrieving Data From Array ---");
+            Console.WriteLine(weekDays[6]);
+            Console.WriteLine(weekDays[0]);
+
+            Program.Space();
+            Console.WriteLine("--- Multi Array Dimensions Specified ---");
+            int[,] array2Da = new int[4, 2] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } };
+            var rowCount2Da = array2Da.GetLength(0);
+            var colCount2Da = array2Da.GetLength(1);
+            for (int row = 0; row < rowCount2Da; row++)
+            {
+                for (int col = 0; col < colCount2Da; col++)
+                {
+                    Console.Write(String.Format("{0}\t", array2Da[row, col]));
+                }
+
+                Console.WriteLine();
+            }
+
+            Program.Space();
+            Console.WriteLine("--- Multi String Array Dimensions Specified ---");
+            string[,] array2Db = new string[3, 2] { { "one", "two" }, { "three", "four" }, { "five", "six" } };
+            var rowCount2Db = array2Db.GetLength(0);
+            var colCount2Db = array2Db.GetLength(1);
+            for (int row = 0; row < rowCount2Db; row++)
+            {
+                for (int col = 0; col < colCount2Db; col++)
+                {
+                    Console.Write(String.Format("{0}\t", array2Db[row, col]));
+                }
+
+                Console.WriteLine();
+            }
+
+            Program.Space();
+            Console.WriteLine("--- Three Dimensional Array ---");
+            Console.WriteLine("\t int[,,] array3D = new int[,,] { { { 1, 2, 3 }, { 4, 5, 6 } }, { { 7, 8, 9 }, { 10, 11, 12 } } };");
+            int[,,] array3D = new int[,,] { { { 1, 2, 3 }, { 4, 5, 6 } }, { { 7, 8, 9 }, { 10, 11, 12 } } };
+
+            Program.Space();
+            Console.WriteLine("--- Three Dimensional Array Dimension Specified ---");
+            Console.WriteLine("\t int[,,] array3D = new int[,,] { { { 1, 2, 3 }, { 4, 5, 6 } }, { { 7, 8, 9 }, { 10, 11, 12 } } };");
+            int[,,] array3Da = new int[2, 2, 3] { { { 1, 2, 3 }, { 4, 5, 6 } }, { { 7, 8, 9 }, { 10, 11, 12 } } };
+
+            Program.Space();
+            Console.WriteLine("--- Array Without Specifying the Rank ---");
+            Console.WriteLine("\t int[,] array4 = { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } };");
+            int[,] array4 = { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } };
+
+            Program.Space();
+            Console.WriteLine("--- Declare Int Jagged Array ---");
+            Console.WriteLine("\t int[][] jaggedArray = new int[3][];");
+            int[][] jaggedArray = new int[3][];
+
+            Program.Space();
+            Console.WriteLine("--- Initialize Int Jagged Array ---");
+            Console.WriteLine("\t jaggedArray[0] = new int[5];");
+            Console.WriteLine("\t jaggedArray[1] = new int[4];");
+            Console.WriteLine("\t jaggedArray[2] = new int[2];");
+            jaggedArray[0] = new int[5];
+            jaggedArray[1] = new int[4];
+            jaggedArray[2] = new int[2];
+
+            Program.Space();
+            Console.WriteLine("--- Access Individual Jagged Array Elements ---");
+            Console.WriteLine("Assign 77 to the second element ([1]) of the first array ([0])");
+            Console.WriteLine("\t jaggedArray[0][1] = 77;");
+            jaggedArray[0][1] = 77;
+            Console.WriteLine("Assign 88 to the second element ([1]) of the third array ([2])");
+            Console.WriteLine("\t jaggedArray[2][1] = 88;");
+            jaggedArray[2][1] = 88;
+
+            Program.Space();
+            Console.WriteLine("--- Shorthand Jagged Array Form ---");
+            Console.WriteLine("\t int[][,] jaggedArray2 = new int[3][,] { new int[,] { { 1, 3 }, { 5, 7 } }, new int[,] { { 0, 2 }, { 4, 6 }, { 8, 10 } }, new int[,] { { 11, 22 }, { 99, 88 }, { 0, 9 } } }; ");
+            int[][,] jaggedArray2 = new int[3][,]
+            {
+                new int[,] { {1,3}, {5,7} },
+                new int[,] { {0,2}, {4,6}, {8,10} },
+                new int[,] { {11,22}, {99,88}, {0,9} }
+            };
+
+            Program.Space();
+            Console.WriteLine("--- Number of Arrays Contained in Jagged Array ---");
+            Console.WriteLine("\t jaggedArray2.Length = {0}", jaggedArray2.Length);
+
+            Program.Space();
+            Console.WriteLine("--- Single Dimensional Array Foreach Statement ---");
+            int[] numbers = { 4, 5, 6, 1, 2, 3, -2, -1, 0 };
+            foreach (int i in numbers)
+            {
+                Console.Write("{0} ", i);
+            }
+
+            Program.Space();
+            Console.WriteLine("--- Multi Dimensional Array Foreach Statement ---");
+            int[,] numbers2D = new int[3, 2] { { 9, 99 }, { 3, 33 }, { 5, 55 } };
+            foreach (int i in numbers2D)
+            {
+                Console.Write("{0} ", i);
+            }
+        }
+
+        private static void Result(int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine("Array Element: " + arr[i]);
+            }
+
+        }
+
+        private static int temp = 0;
+
+        private static void Transpose(int[,] arr)
+        {
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = i; j < arr.GetLength(1); j++)
+                {
+                    temp = arr[i, j];
+                    arr[i, j] = arr[j, i];
+                    arr[j, i] = temp;
+                }
+            }
+        }
+
+        private static void Displayresult(int[,] arr)
+        {
+
+            Console.WriteLine("Matrix After Transpose: ");
+
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr.GetLength(1); j++)
+                    Console.Write(arr[i, j] + " ");
+                Console.WriteLine();
+            }
+        }
+
+        public static void PassingArrayAsArgument()
+        {
+            Console.WriteLine("--- Passing Arrays as Arguments ---");
+            Program.Space();
+            Console.WriteLine("--- Single Dimension Array as Arguments ---");
+            int[] arrSingle = { 1, 2, 3, 4, 5 };
+            Result(arrSingle);
 
 
+            Program.Space();
+            Console.WriteLine("--- Multiple Dimension Array as Arguments ---");
+            int[,] arr;
+            arr = new int[6, 4]{ { 1, 2, 3, 4},
+                             { 5, 6, 7, 8},
+                             {9, 10, 11, 12},
+                             {13, 14, 9, 10,},
+                             { 0, 7, 3, 5},
+                             {13, 14, 15, 16} };
 
+            Console.WriteLine("Matrix Before Transpose: ");
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr.GetLength(1); j++)
+                    Console.Write(arr[i, j] + " ");
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+            Transpose(arr);
+            Displayresult(arr);
+
+        }
 
 
 

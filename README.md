@@ -81,6 +81,33 @@ Program:
         14. Array to Matrix
             1. 2D Array to Matrix
             2. Addition of two Matrices
+        15. Array Overview
+            1. Single-Dimensional Array
+            2. Declare & Set Array Element Values
+            3. Alternative Syntax
+            4. Declare Two-Dimensional Array
+            5. Print Two-Dimensional Array
+            6. Set Multi Dimensional Array Element Values
+            7. Declare Jagged Array
+            8. Set Values of the First Array in the Jagged Array Structure
+            9. Get Number of Dimension of an Array
+            10. Single Dimensional String Array
+            11. Retrieving Data From Array
+            12. Multi Array Dimensions Specified
+            13. Multi String Array Dimensions Specified
+            14. Three Dimensional Array
+            15. Three Dimensional Array Dimension Specified
+            16. Array Without Specifying the Rank
+            17. Declare Int Jagged Array
+            18. Initialize Int Jagged Array
+            19. Access Individual Jagged Array Elements
+            20. Shorthand Jagged Array Form
+            21. Number of Arrays Contained in Jagged Array
+            22. Single Dimensional Array Foreach Statement
+            23. Multi Dimensional Array Foreach Statement
+        16. Passing Arrays as Arguments
+            1. Single Dimension Array as Arguments
+            2. Multiple Dimension Array as Arguments
     7. Search & Sort
         1. Shell Sort
         2. Bogo Sort
