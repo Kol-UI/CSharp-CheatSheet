@@ -351,6 +351,14 @@ Program:
 
     1. Array Methods
         1. AsReadOnly
+        2. BinarySearch
+            1. BinarySearch Next
+        3. Clear
+            1. One Dimension Clear
+            2. Two Dimensions Clear
+            3. Three Dimensions Clear
+        4. Clone
+        5. ConstrainedCopy
     2. -
 
 ## 5. Regular Expressions
@@ -402,6 +410,14 @@ Program:
         8. Compiled
         9. RightToLeft
         10. ECMAScript
+
+## 6. Exceptions
+    1. ArgumentNull Exception
+    2. IndexOutOfRange Exception
+    3. Rank Exception
+    4. ArrayTypeMismatch Exception
+    5. ArgumentOutOfRange Exception
+
 
 ## 10. Linq Functions
 

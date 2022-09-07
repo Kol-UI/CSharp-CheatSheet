@@ -24,21 +24,37 @@ namespace CSharp_CheatSheet
             Console.WriteLine();
         }
 
+        public static void Time()
+        {
+            Thread.Sleep(1000);
+        }
+
         public static void Title(string StringTitle)
         {
             Space();
             Console.WriteLine("--- {0} ---", StringTitle);
         }
 
-        public static void Time()
+        public static void PrintIntArrayValues(int[] myArr)
         {
-            Thread.Sleep(1000);
+            for (int i = 0; i < myArr.Length; i++)
+            {
+                Console.WriteLine("{0}", myArr[i]);
+            }
+        }
+
+        public static void PrintStringArrayValues(string[] myArr)
+        {
+            for (int i = 0; i < myArr.Length; i++)
+            {
+                Console.WriteLine("{0}", myArr[i]);
+            }
         }
 
         public static void AskChapter()
         {
             Space();
-            Console.WriteLine("Which Chapter ? \n1) C# Basics\n2) DateTime\n3) Math\n4) Methods\n5) Regular Expressions\n6) Containers\n7) Compare Number\n8) Convert Celsius\n9) -\n10) LINQ Functions");
+            Console.WriteLine("Which Chapter ? \n1) C# Basics\n2) DateTime\n3) Math\n4) Methods\n5) Regular Expressions\n6) Exceptions \n7) Containers\n8) Compare Number\n9) Convert Celsius\n10) LINQ Functions");
             var exerciseInput = Console.ReadLine();
             int valueInput = int.Parse(exerciseInput);
             switch (valueInput)
@@ -63,19 +79,20 @@ namespace CSharp_CheatSheet
                     RegularMainMenu.RegularMainMethod();
                     AskChapter();
                     break;
-                case 6:
-                    ContainerFunction();
+                case 6: // Exceptions
+                    Menus.ExceptionsMenus.MainExceptionsMenu.ExceptionsMenu();
                     AskChapter();
                     break;
                 case 7:
-                    CompareNumber();
+                    ContainerFunction();
                     AskChapter();
                     break;
                 case 8:
-                    ConvertKelvinToFahrenheit();
+                    CompareNumber();
                     AskChapter();
                     break;
                 case 9:
+                    ConvertKelvinToFahrenheit();
                     AskChapter();
                     break;
                 case 10: // LINQ

@@ -1,30 +1,30 @@
 ﻿using System;
-namespace CSharp_CheatSheet.Menus.MethodsMenus
+namespace CSharp_CheatSheet.Menus.ExceptionsMenus
 {
-    public class ArrayMethodsMenu
+    public class MainExceptionsMenu
     {
-        public static void MenuArrayMethods()
+        public static void ExceptionsMenu()
         {
             Program.Space();
-            Console.WriteLine("Which Array Method ?\n1) AsReadOnly  2) BinarySearch  3) Clear  4) Clone  5) ConstrainedCopy");
+            Console.WriteLine("Which Exception ?\n1) ArgumentNull  2) IndexOutOfRange  3) Rank  4) ArrayTypeMismatch  5) ArgumentOutOfRange");
             var MathInput = Console.ReadLine();
             int valueMathInput = int.Parse(MathInput);
             switch (valueMathInput)
             {
                 case 1:
-                    Methods.ArrayMethods.AsReadOnly.AsReadOnlyFunction();
+                    Exceptions.ArgumentNull.ArgumentNullExceptionMain();
                     break;
                 case 2:
-                    Methods.ArrayMethods.BinarySearch.BinarySearchMethod();
+                    Exceptions.IndexOutOfRange.IndexOutOfRangeExceptionMain();
                     break;
                 case 3:
-                    Methods.ArrayMethods.Clear.ClearMethod();
+                    Exceptions.Rank.RankExceptionMain();
                     break;
                 case 4:
-                    Methods.ArrayMethods.Clone.CloneMain();
+                    Exceptions.ArrayTypeMismatch.ArrayTypeMismatchMain();
                     break;
                 case 5:
-                    Methods.ArrayMethods.ConstrainedCopy.ConstrainedCopyMain();
+                    Exceptions.ArgumentOutOfRange.ArgumentOutOfRangeMain();
                     break;
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");
