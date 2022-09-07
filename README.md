@@ -6,7 +6,7 @@ Program:
     1. C# Basics
     2. DateTime
     3. Math
-    4. - (Methods)
+    4. Methods
     5. Regular Expressions
     6. Containers
     7. Compare Number
@@ -349,9 +349,9 @@ Program:
 
 ## 4. Methods
 
-    1. Concept of Method
-    2. List Methods
-    3. Array Methods
+    1. Array Methods
+        1. AsReadOnly
+    2. -
 
 ## 5. Regular Expressions
 

@@ -4,6 +4,7 @@ using System.Collections;
 using System.Linq;
 using System.Threading;
 using CSharp_CheatSheet.Menus.DateTimeMenus;
+using CSharp_CheatSheet.Menus;
 
 namespace CSharp_CheatSheet
 {
@@ -12,20 +13,21 @@ namespace CSharp_CheatSheet
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!"); // dotnet run
-            // DateTime Parsing (Part 3)
-            
-            
             // Template
             // Function.TestFunction(studentList);
-
             Space();
             AskChapter();
-
         }
 
         public static void Space()
         {
             Console.WriteLine();
+        }
+
+        public static void Title(string StringTitle)
+        {
+            Space();
+            Console.WriteLine("--- {0} ---", StringTitle);
         }
 
         public static void Time()
@@ -36,7 +38,7 @@ namespace CSharp_CheatSheet
         public static void AskChapter()
         {
             Space();
-            Console.WriteLine("Which Chapter ? \n1) C# Basics\n2) DateTime\n3) -\n4) -\n5) Regular Expressions\n6) Containers\n7) Compare Number\n8) Convert Celsius\n9) -\n10) LINQ Functions");
+            Console.WriteLine("Which Chapter ? \n1) C# Basics\n2) DateTime\n3) Math\n4) Methods\n5) Regular Expressions\n6) Containers\n7) Compare Number\n8) Convert Celsius\n9) -\n10) LINQ Functions");
             var exerciseInput = Console.ReadLine();
             int valueInput = int.Parse(exerciseInput);
             switch (valueInput)
@@ -49,10 +51,12 @@ namespace CSharp_CheatSheet
                     DateTimeMainMenu.MainMethod();
                     AskChapter();
                     break;
-                case 3:
+                case 3: // Math
+                    Menus.MathMenus.MainMathMenu.MathMainMenu();
                     AskChapter();
                     break;
-                case 4:
+                case 4: // Methods
+                    Menus.MethodsMenus.MainMenuMethods.MethodsMainMenu();
                     AskChapter();
                     break;
                 case 5: // Regular Expressions
@@ -74,7 +78,7 @@ namespace CSharp_CheatSheet
                 case 9:
                     AskChapter();
                     break;
-                case 10:
+                case 10: // LINQ
                     LINQMainMenu.LinqFunctions();
                     AskChapter();
                     break;
