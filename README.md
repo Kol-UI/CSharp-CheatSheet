@@ -359,6 +359,43 @@ Program:
             3. Three Dimensions Clear
         4. Clone
         5. ConstrainedCopy
+        6. ConvertAll
+            1. ConvertAll String to Int
+            2. ConvertAll Int to String
+        7. Copy
+        8. CopyTo
+        9. CreateInstance
+            1. CreateInstance Simple Array
+            2. CreateInstance Multi Dimension
+            3. CreateInstance Two Dimension Array of String
+            4. Bound of Multi Dimensional Array
+            5. CreateInstance Multi Dimension Array of Object
+        10. Empty
+        11. Exist
+            1. Planets Example
+            2. Names Example
+                1. Using StatsWith
+                2. Using Lambda
+        12. Fill
+        13. Find
+            1. Names Example
+                1. Find Using Var Comparison
+                2. Find Using StartsWith
+                3. Find Using Lenght
+            2. Points Example
+        14. FindAll
+            1. Names Example
+                1. FindAll Using Var Comparison
+                2. FindAll Using StartsWith
+                3. FindAll Using Lenght
+            2. Random List Example
+            3. Dino Example
+        15. FindIndex
+        16. FindLast
+        17. ForEach
+        18. GetEnumerator
+            1. Int Example
+            2. String Example
     2. -
 
 ## 5. Regular Expressions

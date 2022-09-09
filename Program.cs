@@ -35,20 +35,55 @@ namespace CSharp_CheatSheet
             Console.WriteLine("--- {0} ---", StringTitle);
         }
 
-        public static void PrintIntArrayValues(int[] myArr)
+        public static void PrintArrayOneLine(string[] arr)
         {
-            for (int i = 0; i < myArr.Length; i++)
+            Console.Write(string.Join(", ", arr));
+            Space();
+        }
+
+        public static void PrintIntArrayValues(int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
             {
-                Console.WriteLine("{0}", myArr[i]);
+                Console.WriteLine("{0}", arr[i]);
             }
         }
 
-        public static void PrintStringArrayValues(string[] myArr)
+        public static void PrintStringArrayValues(string[] arr)
         {
-            for (int i = 0; i < myArr.Length; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
-                Console.WriteLine("{0}", myArr[i]);
+                Console.WriteLine("{0}", arr[i]);
             }
+        }
+
+        public static void PrintIndexAndValues(Array array)
+        {
+            for (int i = array.GetLowerBound(0); i <= array.GetUpperBound(0); i++)
+            {
+                Console.WriteLine("\t[{0}]:\t{1}", i, array.GetValue(i));
+            }
+        }
+
+        public static void PrintValues(Array arr)
+        {
+            IEnumerator myEnumerator = arr.GetEnumerator();
+            int i = 0;
+            int cols = arr.GetLength(arr.Rank - 1);
+            while (myEnumerator.MoveNext())
+            {
+                if (i < cols)
+                {
+                    i++;
+                }
+                else
+                {
+                    Console.WriteLine();
+                    i = 1;
+                }
+                Console.Write("\t{0}", myEnumerator.Current);
+            }
+            Console.WriteLine();
         }
 
         public static void AskChapter()
