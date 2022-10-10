@@ -396,6 +396,19 @@ Program:
         18. GetEnumerator
             1. Int Example
             2. String Example
+        19. GetLength
+        20. GetLongLength
+        21. GetLowerBound
+            1. Int Example
+            2. Multi Dimension Example
+            3. Lower & Upper Bound
+        22. GetUpperBound
+            1. Int Example
+            2. Multi Dimension Example
+        23. GetValue
+            1. Int32 Example
+            2. Int64 Example
+            3. Multi Dimension Example
     2. -
 
 ## 5. Regular Expressions
