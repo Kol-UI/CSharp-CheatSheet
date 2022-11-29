@@ -8,7 +8,8 @@ namespace CSharp_CheatSheet.Menus.MethodsMenus
             Program.Space();
             Console.WriteLine("Which Array Method ?\n1) AsReadOnly  2) BinarySearch  3) Clear  4) Clone  5) ConstrainedCopy  6) ConvertAll  7) Copy" +
                 "\n8) CopyTo  9) CreateInstance  10) Empty  11) Exist  12) Fill  13) Find  14) FindAll  15) FindIndex " +
-                "\n16) FindLast  17) ForEach  18) GetEnumerator  19) GetLength  20) GetLongLength  21) GetLowerBound  22) GetUpperBound  23) GetValue");
+                "\n16) FindLast  17) ForEach  18) GetEnumerator  19) GetLength  20) GetLongLength  21) GetLowerBound " +
+                "\n22) GetUpperBound  23) GetValue  24) IndexOf");
             var MathInput = Console.ReadLine();
             int valueMathInput = int.Parse(MathInput);
             switch (valueMathInput)
@@ -81,6 +82,9 @@ namespace CSharp_CheatSheet.Menus.MethodsMenus
                     break;
                 case 23:
                     Methods.ArrayMethods.GetValue.GetValueMain();
+                    break;
+                case 24:
+                    Methods.ArrayMethods.IndexOf.IndexOfMain();
                     break;
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");

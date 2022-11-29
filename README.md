@@ -409,6 +409,9 @@ Program:
             1. Int32 Example
             2. Int64 Example
             3. Multi Dimension Example
+        24. IndexOf
+            1. IndexOf Int Array
+            2. LastIndexOf Int Array
     2. -
 
 ## 5. Regular Expressions
