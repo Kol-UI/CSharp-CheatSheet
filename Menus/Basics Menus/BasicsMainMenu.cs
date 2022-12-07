@@ -13,7 +13,7 @@ namespace CSharp_CheatSheet
         {
             Program.Space();
             Console.WriteLine("Which Basics ? \n1) User Input\t2) Basic Maths\t3) Conditional Statements  4) Remove Diacritics  5) For Loop  6) Array  7) Search & Sort" +
-                "  8) Random  9) Recursion");
+                "  8) Random  9) Recursion  10) Naming Conventions");
             var BasicsInput = Console.ReadLine();
             int valueBasicsInput = int.Parse(BasicsInput);
             switch (valueBasicsInput)
@@ -45,7 +45,8 @@ namespace CSharp_CheatSheet
                 case 9:
                     RecursionFunctions.RecursionMain();
                     break;    
-                case 10: 
+                case 10:
+                    NamingConventions.NamingConventionsMain();
                     break;
                 default:
                     Console.WriteLine("--- Warning: not acceptable value ! ---\n");

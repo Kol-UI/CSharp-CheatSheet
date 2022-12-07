@@ -8,9 +8,9 @@ Program:
     3. Math
     4. Methods
     5. Regular Expressions
-    6. Containers
-    7. Compare Number
-    8. Convert Celsius
+    6. Exceptions
+    7. -
+    8. -
     9. -
     10. Linq Functions
 
@@ -154,6 +154,26 @@ Program:
         14. Convert Decimal Number to Binary
         15. Reverse a String
         16. Calcul Power Of Number
+    10. Naming Conventions
+        1. Terminology
+            1. Camel Case
+            2. Pascal Case
+            3. Underscore Prefix
+        2. Summary Table
+            1. _lowerCamelCase Rule
+                1. Private Field
+            2. UpperCamelCase Rule
+                1. Protected Field
+                2. Internal Field
+                3. Constant
+                4. Property
+                5. Method
+                6. Class
+            3. IUpperCamelCase Rule
+                1. Interface
+            4. lowerCamelCase Rule
+                1. Local Varible
+                2. Parameter
 
 ## 2. DateTime
 

@@ -91,6 +91,7 @@ namespace CSharp_CheatSheet
             Space();
             Console.WriteLine("Which Chapter ? \n1) C# Basics\n2) DateTime\n3) Math\n4) Methods\n5) Regular Expressions\n6) Exceptions \n7) Containers\n8) Compare Number\n9) Convert Celsius\n10) LINQ Functions");
             var exerciseInput = Console.ReadLine();
+
             int valueInput = int.Parse(exerciseInput);
             switch (valueInput)
             {
