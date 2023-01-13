@@ -9,10 +9,8 @@ Program:
     4. Methods
     5. Regular Expressions
     6. Exceptions
-    7. -
-    8. -
-    9. -
-    10. Linq Functions
+    7. Linq Functions
+    8. Data Structures
 
 ## 1. C# Basics
 
