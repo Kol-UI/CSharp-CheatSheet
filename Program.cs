@@ -89,7 +89,7 @@ namespace CSharp_CheatSheet
         public static void AskChapter()
         {
             Space();
-            Console.WriteLine("Which Chapter ? \n1) C# Basics\n2) DateTime\n3) Math\n4) Methods\n5) Regular Expressions\n6) Exceptions \n7) Containers\n8) Compare Number\n9) Convert Celsius\n10) LINQ Functions");
+            Console.WriteLine("Which Chapter ? \n1) C# Basics\n2) DateTime\n3) Math\n4) Methods\n5) Regular Expressions\n6) Exceptions \n7) Linq Functions\n8) Data Structures\n");
             var exerciseInput = Console.ReadLine();
 
             int valueInput = int.Parse(exerciseInput);
@@ -119,20 +119,21 @@ namespace CSharp_CheatSheet
                     Menus.ExceptionsMenus.MainExceptionsMenu.ExceptionsMenu();
                     AskChapter();
                     break;
-                case 7:
-                    ContainerFunction();
+                case 7: // LINQ Functions
+                    LINQMainMenu.LinqFunctions();
                     AskChapter();
                     break;
-                case 8:
-                    CompareNumber();
+                case 8: // Data Structures
+                    Menus.DataStructuresMenu.DataStructuresMenu.MainMenuDataStructures();
                     AskChapter();
                     break;
                 case 9:
-                    ConvertKelvinToFahrenheit();
+                    CompareNumber();
+                    ContainerFunction();
                     AskChapter();
                     break;
-                case 10: // LINQ
-                    LINQMainMenu.LinqFunctions();
+                case 10:
+                    ConvertKelvinToFahrenheit();
                     AskChapter();
                     break;
                 default:

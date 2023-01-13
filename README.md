@@ -485,6 +485,7 @@ Program:
         10. ECMAScript
 
 ## 6. Exceptions
+
     1. ArgumentNull Exception
     2. IndexOutOfRange Exception
     3. Rank Exception
@@ -492,7 +493,7 @@ Program:
     5. ArgumentOutOfRange Exception
 
 
-## 10. Linq Functions
+## 7. Linq Functions
 
     1. Basic Linq
     2. Find Positive
@@ -577,3 +578,17 @@ Program:
             6. ToList
     7. Subjects Examples
         1. Faro Shuffle
+
+
+## 8. Data Structures
+
+    1. Dictionary
+        1. Create A Dictionary
+        2. Print A Dictionary Using Loop
+        3. Add In Dictionary
+        4. Access Element In Dictionary
+            1. If Input Element Exist
+            2. If Input Element Does Not Exist
+        5. Update An Element In Dictionary
+        6. Remove An Element In Dictionary
+        7. Clear Dictionary
