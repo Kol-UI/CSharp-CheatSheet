@@ -35,7 +35,25 @@ namespace CSharp_CheatSheet
             Console.WriteLine("--- {0} ---", StringTitle);
         }
 
+        public static int[] GenerateRandomNumber(int size)
+		{
+			var array = new int[size];
+			var rand = new Random();
+			var maxNum = 10000;
+
+			for (int i = 0; i < size; i++)
+				array[i] = rand.Next(maxNum + 1);
+
+			return array;
+		}
+
         public static void PrintArrayOneLine(string[] arr)
+        {
+            Console.Write(string.Join(", ", arr));
+            Space();
+        }
+
+        public static void PrintArrayIntOneLine(int[] arr)
         {
             Console.Write(string.Join(", ", arr));
             Space();
@@ -55,6 +73,12 @@ namespace CSharp_CheatSheet
             {
                 Console.WriteLine("{0}", arr[i]);
             }
+        }
+
+        public static void PrintListInt(List<int> list)
+        {
+            Console.WriteLine(string.Join(", ", list));
+            Space();
         }
 
         public static void PrintIndexAndValues(Array array)
@@ -89,7 +113,7 @@ namespace CSharp_CheatSheet
         public static void AskChapter()
         {
             Space();
-            Console.WriteLine("Which Chapter ? \n1) C# Basics\n2) DateTime\n3) Math\n4) Methods\n5) Regular Expressions\n6) Exceptions \n7) Linq Functions\n8) Data Structures\n");
+            Console.WriteLine("Which Chapter ? \n1) C# Basics\n2) DateTime\n3) Math\n4) Methods\n5) Regular Expressions\n6) Exceptions \n7) Linq Functions\n8) Data Structures\n9) Algorithms");
             var exerciseInput = Console.ReadLine();
 
             int valueInput = int.Parse(exerciseInput);
@@ -127,13 +151,14 @@ namespace CSharp_CheatSheet
                     Menus.DataStructuresMenu.DataStructuresMenu.MainMenuDataStructures();
                     AskChapter();
                     break;
-                case 9:
-                    CompareNumber();
-                    ContainerFunction();
+                case 9: // Algorithms
+                    Menus.AlgorithmsMenus.AlgorithmsMenu.MainMenuAlgorithms();
                     AskChapter();
                     break;
                 case 10:
                     ConvertKelvinToFahrenheit();
+                    CompareNumber();
+                    ContainerFunction();
                     AskChapter();
                     break;
                 default:

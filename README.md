@@ -590,3 +590,17 @@ Program:
         5. Update An Element In Dictionary
         6. Remove An Element In Dictionary
         7. Clear Dictionary
+
+## 9. Algorithms
+
+    1. BubbleSort
+    2. InsertionSort
+    3. InsertionSort New List
+    4. SelectionSort
+    5. Shell Sort
+    6. Counting Sort
+    7. Algorithms Comparison
+        1. Very Small Array Comparison
+        2. Small Array Comparison
+        3. Medium Array Comparison
+        4. Large Array Comparison
